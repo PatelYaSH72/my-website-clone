@@ -1,0 +1,203 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@font-face {
+  font-family: "Instrument Serif";
+  src: url("/sites/helena-marsh/fonts/instrument-serif-italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@theme inline {
+  --color-sand: #f3efe6;
+  --color-navy: #080f1e;
+  --color-navy-secondary: #0d172a;
+  --color-forest: #080f1e;
+  --color-forest-secondary: #0d172a;
+  --color-royal: #1e40af;
+  --color-pine: #1d4ed8;
+  --color-brass: #e6c654;
+  --color-gold: #e6c654;
+  --color-yellow-subtle: #e6c654;
+  --color-warm-gray: #dad6cb;
+  --color-muted-stone: #8e9189;
+
+  --font-serif: "Instrument Serif", Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-sans: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+:root {
+  --background: #f3efe6;
+  --foreground: #080f1e;
+  --card: #ffffff;
+  --card-foreground: #080f1e;
+  --popover: #ffffff;
+  --popover-foreground: #080f1e;
+  --primary: #e6c654;
+  --primary-foreground: #080f1e;
+  --secondary: #dad6cb;
+  --secondary-foreground: #080f1e;
+  --muted: #e8e3d8;
+  --muted-foreground: #8e9189;
+  --accent: #e6c654;
+  --accent-foreground: #080f1e;
+  --destructive: #b91c1c;
+  --border: #dad6cb;
+  --input: #dad6cb;
+  --ring: #e6c654;
+  --radius: 0.5rem;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+  background-color: #f3efe6;
+  color: #080f1e;
+}
+
+body {
+  background-color: #f3efe6;
+  color: #080f1e;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: #e6c654;
+  color: #080f1e;
+}
+
+/* Accent Serif italic in headings */
+h1 em, h2 em, h3 em, .serif-italic {
+  font-family: "Instrument Serif", Georgia, serif !important;
+  font-style: italic !important;
+  font-weight: 400 !important;
+  color: #e6c654;
+}
+
+/* Disc rotation animation */
+@keyframes sfx-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: sfx-spin 20s linear infinite;
+}
+
+.animate-spin-slow:hover {
+  animation-duration: 7s;
+}
+
+/* Pulsing badge dot */
+@keyframes sfx-pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.35;
+    transform: scale(0.9);
+  }
+}
+
+.animate-live-pulse {
+  animation: sfx-pulse 2.2s ease-in-out infinite;
+}
+
+@keyframes sfx-ripple {
+  0% {
+    opacity: 0.8;
+    transform: scale(0.4);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.6);
+  }
+}
+
+.animate-live-ripple::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 1px solid #e6c654;
+  opacity: 0;
+  animation: sfx-ripple 2.4s ease-out infinite;
+}
+
+/* Diagonal cuts */
+.clip-diagonal {
+  clip-path: polygon(0 6vw, 100% 0, 100% calc(100% - 6vw), 0 100%);
+  margin-top: -6vw;
+  margin-bottom: -6vw;
+}
+
+.clip-diagonal-top {
+  clip-path: polygon(0 6vw, 100% 0, 100% 100%, 0 100%);
+  margin-top: -6vw;
+}
+
+/* Ticker marquee */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Masked edges for ticker */
+.ticker-mask {
+  mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
