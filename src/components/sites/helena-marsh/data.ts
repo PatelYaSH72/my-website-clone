@@ -95,6 +95,9 @@ export interface MethodStep {
   title: string;
   description: string;
   image: string;
+  timeline?: string;
+  tag?: string;
+  deliverables?: string[];
 }
 
 export const METHOD_STEPS: MethodStep[] = [
@@ -104,6 +107,13 @@ export const METHOD_STEPS: MethodStep[] = [
     description:
       "Before restructuring begins, we conduct a forensic audit of balance sheets, working capital leakage, tax exposures, and hidden covenants. You receive the unedited fiscal truth.",
     image: "/sites/helena-marsh/images/method-audit.webp",
+    timeline: "Weeks 1 — 3",
+    tag: "DIAGNOSTIC AUDIT",
+    deliverables: [
+      "Forensic balance sheet baseline",
+      "Hidden covenant & debt scan",
+      "Working capital leakage audit",
+    ],
   },
   {
     number: "02",
@@ -111,6 +121,13 @@ export const METHOD_STEPS: MethodStep[] = [
     description:
       "We engineer defensible holding structures, cross-border transfer pricing models, debt rationalization, and EBITDA protection. Built for regulatory permanence.",
     image: "/sites/helena-marsh/images/method-structure.webp",
+    timeline: "Weeks 4 — 8",
+    tag: "STRUCTURAL DESIGN",
+    deliverables: [
+      "Holding entity optimization",
+      "Transfer pricing defensibility",
+      "EBITDA protection blueprint",
+    ],
   },
   {
     number: "03",
@@ -118,6 +135,13 @@ export const METHOD_STEPS: MethodStep[] = [
     description:
       "Fortnightly strategic sparring: board paper review, banker covenant negotiations, M&A due diligence defense, and CFO prep before high-stakes committee meetings.",
     image: "/sites/helena-marsh/images/method-board.webp",
+    timeline: "Weeks 9 — 20",
+    tag: "BOARDROOM SPARRING",
+    deliverables: [
+      "Board paper unvarnished review",
+      "Bank covenant defense",
+      "M&A diligence readiness",
+    ],
   },
   {
     number: "04",
@@ -125,6 +149,13 @@ export const METHOD_STEPS: MethodStep[] = [
     description:
       "Quarterly fiscal pulses, working capital velocity tracking, tax savings audits, and statutory defense sign-offs. We iterate until your balance sheet is unshakeable.",
     image: "/sites/helena-marsh/images/method-assurance.webp",
+    timeline: "Quarterly Ongoing",
+    tag: "CONTINUOUS ASSURANCE",
+    deliverables: [
+      "Quarterly fiscal pulse audit",
+      "Tax savings certification",
+      "Statutory defense sign-offs",
+    ],
   },
 ];
 
