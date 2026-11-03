@@ -117,14 +117,14 @@ export function BlogsSection() {
           {/* Primary Featured Blog Hero Card with Reveal */}
           <Link
             href={`/blogs/${featuredBlog.slug}`}
-            className={`group block rounded-3xl p-6 sm:p-8 bg-white/70 border border-[#080F1E]/10 hover:border-[#1E40AF]/30 shadow-sm hover:shadow-xl transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+            className={`group block overflow-hidden rounded-3xl bg-white/70 border border-[#080F1E]/10 hover:border-[#1E40AF]/30 shadow-sm hover:shadow-xl transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
               isRevealed
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-10"
             }`}
             style={{ transitionDelay: "120ms" }}
           >
-            <div className="space-y-6">
+            <div>
               <AnimatedImageCard
                 src={featuredBlog.image}
                 alt={featuredBlog.title}
@@ -134,9 +134,10 @@ export function BlogsSection() {
                 aspectRatio="aspect-[16/9]"
                 index={0}
                 showCaptionBelow={false}
+                flush
               />
 
-              <div className="space-y-3">
+              <div className="p-6 sm:p-8 space-y-3">
                 <div className="flex items-center justify-between text-xs font-mono text-[#8E9189] uppercase tracking-wider">
                   <span>
                     {featuredBlog.date} · {featuredBlog.readTime} READ
@@ -170,46 +171,51 @@ export function BlogsSection() {
               <Link
                 key={blog.slug}
                 href={`/blogs/${blog.slug}`}
-                className={`group flex flex-col justify-between p-6 rounded-2xl bg-white/50 border border-[#080F1E]/10 hover:border-[#1E40AF]/30 hover:bg-white shadow-sm hover:shadow-md transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                className={`group flex flex-col justify-between overflow-hidden rounded-2xl bg-white/50 border border-[#080F1E]/10 hover:border-[#1E40AF]/30 hover:bg-white shadow-sm hover:shadow-md transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
                   isRevealed
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-12"
                 }`}
                 style={{ transitionDelay: `${220 + idx * 120}ms` }}
               >
-                <div className="space-y-4">
+                <div className="flex flex-col flex-1">
                   <AnimatedImageCard
                     src={blog.image}
                     alt={blog.title}
                     badge={blog.tag}
                     date={blog.date}
                     meta={blog.readTime}
-                    aspectRatio="aspect-[4/3]"
+                    aspectRatio="aspect-[16/10]"
                     index={idx + 1}
                     showCaptionBelow={false}
+                    flush
                   />
 
-                  <div className="flex items-center justify-between text-[11px] font-mono text-[#8E9189] uppercase tracking-wider">
-                    <span>
-                      {blog.date} · {blog.readTime}
-                    </span>
-                    {blog.views && (
-                      <span className="text-[#1E40AF] font-medium">{blog.views}</span>
-                    )}
+                  <div className="p-5 sm:p-6 flex flex-col justify-between flex-1 space-y-4">
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-between text-[11px] font-mono text-[#8E9189] uppercase tracking-wider">
+                        <span>
+                          {blog.date} · {blog.readTime}
+                        </span>
+                        {blog.views && (
+                          <span className="text-[#1E40AF] font-medium">{blog.views}</span>
+                        )}
+                      </div>
+
+                      <h4 className="text-lg sm:text-xl font-light text-[#080F1E] group-hover:text-[#1E40AF] transition-colors leading-snug">
+                        {blog.title}
+                      </h4>
+
+                      <p className="text-xs sm:text-sm font-light text-[#080F1E]/70 line-clamp-2 leading-relaxed">
+                        {blog.excerpt}
+                      </p>
+                    </div>
+
+                    <div className="pt-2 flex items-center gap-1.5 text-xs font-mono tracking-wider uppercase text-[#080F1E] group-hover:text-[#1E40AF] transition-colors">
+                      <span>READ ARTICLE</span>
+                      <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                    </div>
                   </div>
-
-                  <h4 className="text-lg sm:text-xl font-light text-[#080F1E] group-hover:text-[#1E40AF] transition-colors leading-snug">
-                    {blog.title}
-                  </h4>
-
-                  <p className="text-xs sm:text-sm font-light text-[#080F1E]/70 line-clamp-2 leading-relaxed">
-                    {blog.excerpt}
-                  </p>
-                </div>
-
-                <div className="pt-4 flex items-center gap-1.5 text-xs font-mono tracking-wider uppercase text-[#080F1E] group-hover:text-[#1E40AF] transition-colors">
-                  <span>READ ARTICLE</span>
-                  <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
                 </div>
               </Link>
             ))}

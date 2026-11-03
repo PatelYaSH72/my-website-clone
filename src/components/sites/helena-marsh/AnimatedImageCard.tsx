@@ -17,6 +17,7 @@ export interface AnimatedImageCardProps {
   className?: string;
   imageClassName?: string;
   showCaptionBelow?: boolean;
+  flush?: boolean;
 }
 
 export function AnimatedImageCard({
@@ -33,6 +34,7 @@ export function AnimatedImageCard({
   className = "",
   imageClassName = "",
   showCaptionBelow = true,
+  flush = false,
 }: AnimatedImageCardProps) {
   const [isRevealed, setIsRevealed] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -43,7 +45,6 @@ export function AnimatedImageCard({
 
     const checkVisibility = () => {
       const rect = el.getBoundingClientRect();
-      // If element is inside or entering viewport
       if (rect.top < window.innerHeight + 60 && rect.bottom > -60) {
         setIsRevealed(true);
         return true;
@@ -51,12 +52,10 @@ export function AnimatedImageCard({
       return false;
     };
 
-    // Check immediately on mount
     if (checkVisibility()) {
       return;
     }
 
-    // IntersectionObserver with threshold 0 so even clipped elements trigger on intersect
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -74,7 +73,6 @@ export function AnimatedImageCard({
 
     observer.observe(el);
 
-    // Window scroll fallback
     const handleScroll = () => {
       if (checkVisibility()) {
         observer.disconnect();
@@ -100,13 +98,25 @@ export function AnimatedImageCard({
     >
       {/* Visual Image Container with bottom-to-top unmask reveal */}
       <div
-        className={`relative w-full ${aspectRatio} overflow-hidden rounded-2xl bg-[#080F1E] border border-[#080F1E]/10 shadow-[0_4px_20px_-8px_rgba(8,15,30,0.12)] group-hover:shadow-[0_16px_36px_-12px_rgba(8,15,30,0.22)] transition-all duration-500`}
+        className={`relative w-full ${aspectRatio} overflow-hidden ${
+          flush
+            ? "rounded-t-[inherit] rounded-b-none border-b border-[#080F1E]/10"
+            : "rounded-2xl border border-[#080F1E]/10 shadow-[0_4px_20px_-8px_rgba(8,15,30,0.12)]"
+        } bg-[#080F1E] group-hover:shadow-[0_16px_36px_-12px_rgba(8,15,30,0.22)] transition-all duration-500`}
         style={{
           clipPath: isRevealed
-            ? "inset(0% 0% 0% 0% round 1rem)"
+            ? flush
+              ? "inset(0% 0% 0% 0%)"
+              : "inset(0% 0% 0% 0% round 1rem)"
+            : flush
+            ? "inset(100% 0% 0% 0%)"
             : "inset(100% 0% 0% 0% round 1rem)",
           WebkitClipPath: isRevealed
-            ? "inset(0% 0% 0% 0% round 1rem)"
+            ? flush
+              ? "inset(0% 0% 0% 0%)"
+              : "inset(0% 0% 0% 0% round 1rem)"
+            : flush
+            ? "inset(100% 0% 0% 0%)"
             : "inset(100% 0% 0% 0% round 1rem)",
           transform: isRevealed ? "translateY(0)" : "translateY(28px)",
           opacity: isRevealed ? 1 : 0.05,
@@ -114,7 +124,7 @@ export function AnimatedImageCard({
           willChange: "clip-path, transform, opacity",
         }}
       >
-        {/* Floating Pill Badge (matches media_1793704213748_4e49cd69.png) */}
+        {/* Floating Pill Badge */}
         {badge && (
           <div className="absolute top-3.5 left-3.5 z-20 pointer-events-none">
             <span className="inline-flex items-center px-2.5 py-1 rounded-[5px] bg-[#FDFBF7]/95 backdrop-blur-md text-[#080F1E] font-mono text-[10px] sm:text-[11px] font-semibold tracking-[0.14em] uppercase shadow-sm border border-[#080F1E]/10">

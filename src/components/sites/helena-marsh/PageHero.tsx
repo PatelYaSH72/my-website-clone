@@ -139,17 +139,17 @@ export function PageHero({
       onMouseLeave={handleMouseLeave}
       className="relative isolate min-h-[120svh] w-full overflow-hidden bg-[#060a14] text-[#F3EFE6] flex flex-col justify-between pt-28 pb-6 sm:pt-36 sm:pb-8 lg:pt-40 lg:pb-10 px-6 sm:px-12 lg:px-16 select-none"
     >
-      {/* 1. BOTTOM 30% ARCHITECTURAL SLAB ANIMATION (Smoothly Blended, Vibrant) */}
+      {/* 1. BOTTOM 30-35% ARCHITECTURAL SLAB ANIMATION (Crisp, Bright, Smoothly Blended) */}
       <div
         ref={slabsContainerRef}
         aria-hidden="true"
-        className="pointer-events-none absolute bottom-0 inset-x-0 h-[30%] min-h-[30vh] sm:min-h-[34vh] -z-20 flex items-stretch gap-1.5 sm:gap-2 px-3 sm:px-6 will-change-transform"
+        className="pointer-events-none absolute bottom-0 inset-x-0 h-[36%] min-h-[35vh] sm:min-h-[40vh] -z-10 flex items-stretch gap-1.5 sm:gap-2 px-3 sm:px-6 will-change-transform"
         style={{
           perspective: "1200px",
           maskImage:
-            "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.2) 20%, rgba(0,0,0,0.85) 60%, black 100%)",
+            "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.3) 10%, rgba(0,0,0,0.85) 28%, black 100%)",
           WebkitMaskImage:
-            "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.2) 20%, rgba(0,0,0,0.85) 60%, black 100%)",
+            "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.3) 10%, rgba(0,0,0,0.85) 28%, black 100%)",
         }}
       >
         {Array.from({ length: bandCols }).map((_, i) => {
@@ -174,18 +174,18 @@ export function PageHero({
                 transition:
                   "transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease, border-color 0.4s ease, box-shadow 0.4s ease",
                 filter: isHovered
-                  ? "brightness(1.10) contrast(1.05)"
+                  ? "brightness(1.12) contrast(1.06)"
                   : isAnotherHovered
-                  ? "brightness(0.88) contrast(0.98)"
-                  : "brightness(1.0) contrast(1.04)",
+                  ? "brightness(0.92) contrast(1.0)"
+                  : "brightness(1.04) contrast(1.05)",
               }}
               className={`group pointer-events-auto relative min-w-0 h-full overflow-hidden rounded-t-[14px] sm:rounded-t-[20px] rounded-b-[4px] border transition-all duration-500 ${
                 isHovered
-                  ? "border-[#E6C654]/60 shadow-[0_0_24px_rgba(230,198,84,0.22)] z-10 bg-[#091122]/60"
-                  : "border-white/[0.10] shadow-[0_4px_16px_rgba(0,0,0,0.3)] z-0 bg-[#070d1a]/40"
+                  ? "border-[#E6C654]/70 shadow-[0_0_28px_rgba(230,198,84,0.25)] z-10 bg-[#091122]/40"
+                  : "border-white/[0.14] shadow-[0_4px_16px_rgba(0,0,0,0.25)] z-0 bg-[#070d1a]/25"
               }`}
             >
-              {/* Registered Sliced Image across bottom 30% slabs */}
+              {/* Registered Sliced Image across bottom slabs - Bright & Sharp */}
               <div
                 className="absolute inset-0 h-full max-w-none transition-transform duration-700 ease-out"
                 style={{
@@ -200,25 +200,25 @@ export function PageHero({
                   fill
                   priority={i === 3 || i === 4}
                   sizes="15vw"
-                  className="object-cover object-[50%_35%]"
+                  className="object-cover object-[50%_25%]"
                 />
               </div>
 
               {/* Monolith Slab Top Indicator */}
               <div
                 aria-hidden="true"
-                className="pointer-events-none absolute top-3 left-3 z-10 flex items-center gap-1.5 opacity-70 group-hover:opacity-100 transition-opacity"
+                className="pointer-events-none absolute top-3 left-3 z-10 flex items-center gap-1.5 opacity-75 group-hover:opacity-100 transition-opacity"
               >
                 <span
                   className={`flex h-3.5 w-3.5 items-center justify-center rounded-full transition-colors ${
                     isHovered
                       ? "bg-[#E6C654] text-[#070b15]"
-                      : "bg-black/50 text-[#E6C654]/80 backdrop-blur-md"
+                      : "bg-black/50 text-[#E6C654]/90 backdrop-blur-md"
                   }`}
                 >
                   <SparkStar className="h-2 w-2" />
                 </span>
-                <span className="hidden font-mono text-[7.5px] font-bold uppercase tracking-widest text-[#E6C654]/80 sm:inline-block">
+                <span className="hidden font-mono text-[7.5px] font-bold uppercase tracking-widest text-[#E6C654]/90 sm:inline-block">
                   {`0${i + 1}`}
                 </span>
               </div>
@@ -235,32 +235,32 @@ export function PageHero({
               {/* Active Golden Glow Flare inside slab */}
               <div
                 aria-hidden="true"
-                className={`pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#E6C654]/15 via-transparent to-transparent transition-opacity duration-500 ${
+                className={`pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#E6C654]/18 via-transparent to-transparent transition-opacity duration-500 ${
                   isHovered ? "opacity-100" : "opacity-0"
                 }`}
               />
 
-              {/* Ambient Dark Gradient Vignette inside each slab */}
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#060a14]/60 via-[#060a14]/15 to-[#060a14]/80" />
+              {/* Gentle bottom edge grounding */}
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#060a14]/40 via-transparent to-[#060a14]/15" />
             </div>
           );
         })}
       </div>
 
-      {/* 2. DIRECTIONAL NAVY BLUE BLEND: Deep solid navy at top, smoothly revealing cards toward bottom */}
+      {/* 2. DIRECTIONAL NAVY BLUE BLEND: Deep solid navy behind the upper 70% editorial block */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-15"
+        className="pointer-events-none absolute inset-x-0 top-0 h-[72%] -z-20"
         style={{
           background:
-            "linear-gradient(180deg, #060a14 0%, #060a14 48%, rgba(6, 10, 20, 0.92) 64%, rgba(6, 10, 20, 0.45) 82%, rgba(6, 10, 20, 0.15) 94%, rgba(6, 10, 20, 0.35) 100%)",
+            "linear-gradient(180deg, #060a14 0%, #060a14 75%, rgba(6, 10, 20, 0.6) 90%, transparent 100%)",
         }}
       />
 
       {/* Royal Blue & Gold Spark Atmosphere */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-10"
+        className="pointer-events-none absolute inset-0 -z-25"
         style={{
           background:
             "radial-gradient(55% 45% at 75% 25%, rgba(30, 64, 175, 0.18) 0%, transparent 70%), radial-gradient(40% 40% at 20% 65%, rgba(230, 198, 84, 0.06) 0%, transparent 65%)",

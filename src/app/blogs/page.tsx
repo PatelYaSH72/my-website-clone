@@ -106,41 +106,46 @@ export default function BlogsPage() {
                 <Link
                   key={article.slug}
                   href={`/blogs/${article.slug}`}
-                  className="group flex flex-col justify-between p-6 rounded-3xl bg-white/70 border border-[#080F1E]/10 hover:border-[#1E40AF]/30 hover:bg-white shadow-sm hover:shadow-xl transition-all duration-500"
+                  className="group flex flex-col justify-between overflow-hidden rounded-3xl bg-white/70 border border-[#080F1E]/10 hover:border-[#1E40AF]/30 hover:bg-white shadow-sm hover:shadow-xl transition-all duration-500"
                 >
-                  <div className="space-y-4">
+                  <div className="flex flex-col flex-1">
                     <AnimatedImageCard
                       src={article.image}
                       alt={article.title}
                       badge={article.tag}
                       date={article.date}
                       meta={article.readTime}
-                      aspectRatio="aspect-[4/3]"
+                      aspectRatio="aspect-[16/10]"
                       index={idx}
                       showCaptionBelow={false}
+                      flush
                     />
 
-                    <div className="flex items-center justify-between text-[11px] font-mono text-[#8E9189] uppercase tracking-wider">
-                      <span>
-                        {article.date} · {article.readTime}
-                      </span>
-                      {article.views && (
-                        <span className="text-[#1E40AF] font-semibold">{article.views}</span>
-                      )}
+                    <div className="p-6 sm:p-7 flex flex-col justify-between flex-1 space-y-4">
+                      <div className="space-y-3">
+                        <div className="flex items-center justify-between text-[11px] font-mono text-[#8E9189] uppercase tracking-wider">
+                          <span>
+                            {article.date} · {article.readTime}
+                          </span>
+                          {article.views && (
+                            <span className="text-[#1E40AF] font-semibold">{article.views}</span>
+                          )}
+                        </div>
+
+                        <h3 className="text-xl sm:text-[22px] font-light leading-snug text-[#080F1E] group-hover:text-[#1E40AF] transition-colors">
+                          {article.title}
+                        </h3>
+
+                        <p className="text-xs sm:text-sm font-light text-[#080F1E]/75 leading-relaxed line-clamp-3">
+                          {article.excerpt}
+                        </p>
+                      </div>
+
+                      <div className="pt-4 mt-2 border-t border-[#080F1E]/10 flex items-center justify-between text-xs font-mono tracking-wider uppercase text-[#080F1E] group-hover:text-[#1E40AF] transition-colors">
+                        <span>READ ADVISORY BLOG</span>
+                        <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                      </div>
                     </div>
-
-                    <h3 className="text-xl sm:text-[22px] font-light leading-snug text-[#080F1E] group-hover:text-[#1E40AF] transition-colors">
-                      {article.title}
-                    </h3>
-
-                    <p className="text-xs sm:text-sm font-light text-[#080F1E]/75 leading-relaxed line-clamp-3">
-                      {article.excerpt}
-                    </p>
-                  </div>
-
-                  <div className="pt-5 mt-4 border-t border-[#080F1E]/10 flex items-center justify-between text-xs font-mono tracking-wider uppercase text-[#080F1E] group-hover:text-[#1E40AF] transition-colors">
-                    <span>READ ADVISORY BLOG</span>
-                    <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
                   </div>
                 </Link>
               ))}

@@ -1,17 +1,5 @@
 "use client";
 
-/**
- * CtaSection — original composition (not a reskin of the Framer template).
- * Needs: `npm i framer-motion`, Tailwind, and your existing ./Icons (ArrowUpRight).
- *
- * Motion plan (one orchestrated entrance + ambient/scroll motion):
- *  1. Headline: word-by-word masked reveal, then body, button, contact strip follow in sequence.
- *  2. Top edge: slanted border that PIVOTS (left-low -> right-low) as the section scrolls in.
- *  3. Photo: scroll parallax + slow drift; glow orb drifts behind it.
- *  4. Button: magnetic hover + pulse ring. Contact hairline draws in.
- *  All motion respects prefers-reduced-motion.
- */
-
 import { useRef, type MouseEvent, type ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -24,9 +12,8 @@ import {
   useTransform,
   type Variants,
 } from "framer-motion";
-import { ArrowUpRight } from "./Icons";
+import { ArrowUpRight, SparkStar } from "./Icons";
 
-// ⚠️ PLACEHOLDER COPY — get the client to approve. Never reuse the template's text.
 const COPY = {
   headline: "Bring us the messy version of your numbers.",
   body: "A short, no-obligation call to see where you stand, what is coming up, and whether we are the right fit, before any paperwork.",
@@ -35,13 +22,12 @@ const COPY = {
   offices: "BKC, Mumbai and Mayfair, London",
 };
 
-// Rename this folder out of "helena-marsh" (template leftover) in your repo.
 const IMAGE_SRC = "/sites/helena-marsh/images/fenil-speaking.webp";
 
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
-const EDGE = "9vw"; // slant depth of the top border
-const CLIP_START = `polygon(0% ${EDGE}, 100% 0vw, 100% 100%, 0% 100%)`;
-const CLIP_END = `polygon(0% 0vw, 100% ${EDGE}, 100% 100%, 0% 100%)`;
+const EDGE = "8vw"; // Consistent slant depth: Left is lower, Right is upper
+const CLIP_START = "polygon(0% 16vw, 100% 6vw, 100% 100%, 0% 100%)";
+const CLIP_END = `polygon(0% ${EDGE}, 100% 0vw, 100% 100%, 0% 100%)`;
 const PHOTO_MASK = "linear-gradient(270deg, #000 30%, transparent 92%)";
 
 const stagger = (gap: number, delay = 0): Variants => ({
@@ -78,7 +64,6 @@ function MagneticCta({
   const sx = useSpring(x, { stiffness: 220, damping: 16, mass: 0.4 });
   const sy = useSpring(y, { stiffness: 220, damping: 16, mass: 0.4 });
 
-  // Listeners sit on a static outer box so the moving button can't feed back into the maths.
   const onMove = (e: MouseEvent<HTMLDivElement>) => {
     if (reduce) return;
     const r = e.currentTarget.getBoundingClientRect();
@@ -127,8 +112,13 @@ export function CtaSection() {
     target: ref,
     offset: ["start end", "end start"],
   });
-  const clipPath = useTransform(scrollYProgress, [0, 0.5], [CLIP_START, CLIP_END]);
-  const photoY = useTransform(scrollYProgress, [0, 1], ["-8%", "8%"]);
+
+  // Consistently sloped: Left is always lower, Right is always higher
+  const clipPath = useTransform(scrollYProgress, [0, 0.45], [CLIP_START, CLIP_END]);
+
+  // Dynamic parallax motion for the background portrait
+  const photoY = useTransform(scrollYProgress, [0, 1], ["-14%", "14%"]);
+  const photoScale = useTransform(scrollYProgress, [0, 1], [1.06, 1.16]);
 
   const words = COPY.headline.split(" ");
 
@@ -137,52 +127,74 @@ export function CtaSection() {
       ref={ref}
       id="contact"
       style={{
-        clipPath: reduce ? CLIP_START : clipPath,
+        clipPath: reduce ? CLIP_END : clipPath,
         marginTop: `-${EDGE}`,
         paddingTop: `calc(${EDGE} + 6rem)`,
       }}
       className="relative z-10 overflow-hidden bg-[#080F1E] px-6 pb-24 text-[#F3EFE6] sm:pb-32"
     >
-      {/* Background: drifting glow, masked photo, bottom fade */}
+      {/* Background: moving ambient auroras & dynamic animated photo */}
       <div aria-hidden className="pointer-events-none absolute inset-0">
+        {/* Pulsing Royal Blue Aurora */}
         <motion.div
           className="absolute -right-[10%] top-[5%] h-[75vh] w-[75vh] rounded-full"
           style={{
             background:
-              "radial-gradient(circle, rgba(28,70,160,.55) 0%, transparent 65%)",
+              "radial-gradient(circle, rgba(28,70,160,.60) 0%, transparent 65%)",
           }}
-          animate={reduce ? undefined : { x: [0, -60, 20, 0], y: [0, 40, -30, 0] }}
-          transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
+          animate={reduce ? undefined : { x: [0, -50, 20, 0], y: [0, 35, -25, 0] }}
+          transition={{ duration: 16, repeat: Infinity, ease: "easeInOut" }}
         />
+
+        {/* Ambient Champagne Gold Spark Flare */}
+        <motion.div
+          className="absolute right-[20%] top-[25%] h-[50vh] w-[50vh] rounded-full"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(230,198,84,.14) 0%, transparent 70%)",
+          }}
+          animate={reduce ? undefined : { scale: [1, 1.25, 1], opacity: [0.6, 0.95, 0.6] }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+        />
+
+        {/* Dynamic Background Image with Scroll Parallax & Organic Motion */}
         <div
-          className="absolute inset-y-0 right-0 w-full opacity-40 lg:w-[68%] lg:opacity-80"
+          className="absolute inset-y-0 right-0 w-full opacity-45 lg:w-[68%] lg:opacity-85"
           style={{ maskImage: PHOTO_MASK, WebkitMaskImage: PHOTO_MASK }}
         >
           <motion.div
-            style={reduce ? undefined : { y: photoY }}
-            className="absolute inset-x-0 -bottom-[10%] -top-[10%]"
+            style={reduce ? undefined : { y: photoY, scale: photoScale }}
+            className="absolute inset-x-0 -bottom-[15%] -top-[15%]"
           >
             <motion.div
               className="absolute inset-0"
-              animate={reduce ? undefined : { scale: [1.04, 1.14, 1.04] }}
-              transition={{ duration: 30, repeat: Infinity, ease: "easeInOut" }}
+              animate={
+                reduce
+                  ? undefined
+                  : {
+                      x: [0, -16, 0],
+                      y: [0, 10, 0],
+                    }
+              }
+              transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
             >
-              {/* Decorative background, so empty alt */}
               <Image
                 src={IMAGE_SRC}
-                alt=""
+                alt="CA Fenil Shah — Boardroom Keynote"
                 fill
                 sizes="(min-width: 1024px) 68vw, 100vw"
-                className="object-cover object-[65%_20%]"
+                className="object-cover object-[65%_20%] filter contrast-[1.08] brightness-[0.98]"
               />
             </motion.div>
           </motion.div>
         </div>
+
+        {/* Gradient Overlay for Text Readability */}
         <div
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(180deg, rgba(8,15,30,.65) 0%, rgba(8,15,30,0) 35%, #080F1E 100%)",
+              "linear-gradient(180deg, rgba(8,15,30,.70) 0%, rgba(8,15,30,0) 35%, #080F1E 100%)",
           }}
         />
       </div>
@@ -194,6 +206,11 @@ export function CtaSection() {
           viewport={{ once: true, amount: 0.3 }}
           variants={stagger(0.12)}
         >
+          <motion.div variants={riseV} className="mb-6 flex items-center gap-2 text-xs font-mono uppercase tracking-[0.2em] text-[#E6C654]">
+            <SparkStar className="h-3 w-3 animate-spin-slow text-[#E6C654]" />
+            <span>EXECUTIVE MANDATE INQUIRY</span>
+          </motion.div>
+
           <motion.h2
             variants={stagger(0.07)}
             className="max-w-4xl font-serif text-[clamp(44px,7vw,112px)] font-normal leading-[1.04] tracking-tight"
