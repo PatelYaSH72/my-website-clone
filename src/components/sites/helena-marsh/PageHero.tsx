@@ -174,24 +174,24 @@ export function PageHero({
                 transition:
                   "transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease, border-color 0.4s ease, box-shadow 0.4s ease",
                 filter: isHovered
-                  ? "brightness(1.12) contrast(1.06)"
+                  ? "brightness(1.15) contrast(1.08) saturate(1.18)"
                   : isAnotherHovered
-                  ? "brightness(0.92) contrast(1.0)"
-                  : "brightness(1.04) contrast(1.05)",
+                  ? "brightness(0.70) contrast(0.98) grayscale(40%)"
+                  : "brightness(0.88) contrast(1.04) saturate(1.02)",
               }}
               className={`group pointer-events-auto relative min-w-0 h-full overflow-hidden rounded-t-[14px] sm:rounded-t-[20px] rounded-b-[4px] border transition-all duration-500 ${
                 isHovered
-                  ? "border-[#E6C654]/70 shadow-[0_0_28px_rgba(230,198,84,0.25)] z-10 bg-[#091122]/40"
-                  : "border-white/[0.14] shadow-[0_4px_16px_rgba(0,0,0,0.25)] z-0 bg-[#070d1a]/25"
+                  ? "border-[#E6C654] shadow-[0_0_40px_rgba(230,198,84,0.35)] z-10 bg-[#091122]"
+                  : "border-white/[0.12] shadow-[0_4px_20px_rgba(0,0,0,0.4)] z-0 bg-[#070d1a]"
               }`}
             >
-              {/* Registered Sliced Image across bottom slabs - Bright & Sharp */}
+              {/* Registered Sliced Image across bottom slabs - Tuned to Home Page Hero Mood */}
               <div
                 className="absolute inset-0 h-full max-w-none transition-transform duration-700 ease-out"
                 style={{
                   width: `${bandCols * 100}%`,
                   left: `-${i * 100}%`,
-                  transform: isHovered ? "scale(1.02)" : "scale(1.0)",
+                  transform: isHovered ? "scale(1.03)" : "scale(1.0)",
                 }}
               >
                 <Image
@@ -213,12 +213,12 @@ export function PageHero({
                   className={`flex h-3.5 w-3.5 items-center justify-center rounded-full transition-colors ${
                     isHovered
                       ? "bg-[#E6C654] text-[#070b15]"
-                      : "bg-black/50 text-[#E6C654]/90 backdrop-blur-md"
+                      : "bg-black/60 text-[#E6C654]/80 backdrop-blur-md"
                   }`}
                 >
                   <SparkStar className="h-2 w-2" />
                 </span>
-                <span className="hidden font-mono text-[7.5px] font-bold uppercase tracking-widest text-[#E6C654]/90 sm:inline-block">
+                <span className="hidden font-mono text-[7.5px] font-bold uppercase tracking-widest text-[#E6C654]/80 sm:inline-block">
                   {`0${i + 1}`}
                 </span>
               </div>
@@ -235,13 +235,13 @@ export function PageHero({
               {/* Active Golden Glow Flare inside slab */}
               <div
                 aria-hidden="true"
-                className={`pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#E6C654]/18 via-transparent to-transparent transition-opacity duration-500 ${
+                className={`pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#E6C654]/20 via-[#1E40AF]/10 to-transparent transition-opacity duration-500 ${
                   isHovered ? "opacity-100" : "opacity-0"
                 }`}
               />
 
-              {/* Gentle bottom edge grounding */}
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#060a14]/40 via-transparent to-[#060a14]/15" />
+              {/* Ambient Dark Gradient Vignette inside each slab - Exactly matched to Home page hero brightness */}
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#060a14]/85 via-[#060a14]/45 to-[#060a14]/50" />
             </div>
           );
         })}
