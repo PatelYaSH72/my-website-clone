@@ -38,6 +38,25 @@ export function ResultsSection() {
             },
           }
         );
+
+        // Image curtain unmask
+        const imgWrap = card.querySelector(".case-image-wrapper");
+        if (imgWrap) {
+          gsap.fromTo(
+            imgWrap,
+            { clipPath: "inset(14% 0% 14% 0%)" },
+            {
+              clipPath: "inset(0% 0% 0% 0%)",
+              duration: 1.1,
+              ease: "power3.out",
+              scrollTrigger: {
+                trigger: card,
+                start: "top 88%",
+                toggleActions: "play none none none",
+              },
+            }
+          );
+        }
       });
     }, container);
 
@@ -125,8 +144,8 @@ export function ResultsSection() {
                   }}
                   className={`space-y-6 ${isEven ? "lg:translate-y-36" : ""}`}
                 >
-                  {/* Photo with rounded-[4px] matching Framer */}
-                  <div className="relative w-full aspect-[4/3.5] rounded-[4px] overflow-hidden bg-[#0D1C38] shadow-2xl">
+                  {/* Photo with rounded-[4px] and curtain reveal */}
+                  <div className="case-image-wrapper relative w-full aspect-[4/3.5] rounded-[4px] overflow-hidden bg-[#0D1C38] shadow-2xl">
                     <Image
                       src={c.image}
                       alt={c.title}

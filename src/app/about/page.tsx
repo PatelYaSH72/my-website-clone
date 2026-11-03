@@ -1,8 +1,8 @@
 import React from "react";
 import type { Metadata } from "next";
-import Image from "next/image";
 import { Header } from "@/components/sites/helena-marsh/Header";
 import { PageHero } from "@/components/sites/helena-marsh/PageHero";
+import { CareerTimelineHorizontal } from "@/components/sites/helena-marsh/CareerTimelineHorizontal";
 import { VoicesSection } from "@/components/sites/helena-marsh/VoicesSection";
 import { CtaSection } from "@/components/sites/helena-marsh/CtaSection";
 import { Footer } from "@/components/sites/helena-marsh/Footer";
@@ -86,54 +86,8 @@ export default function AboutPage() {
           image="/sites/helena-marsh/images/fenil-arch.png"
         />
 
-        {/* Timeline Section */}
-        <section className="py-24 sm:py-32 px-6 max-w-[1360px] mx-auto">
-          <div className="space-y-16">
-            <div className="border-b border-[#080F1E]/15 pb-8">
-              <p className="text-xs font-mono tracking-widest uppercase text-[#8E9189] mb-3">
-                THE CAREER TIMELINE
-              </p>
-              <h2 className="text-[clamp(32px,4vw,56px)] leading-[1.05] tracking-tight font-light text-[#080F1E]">
-                How the practice was <span className="font-serif italic text-[#E6C654]">built.</span>
-              </h2>
-            </div>
-
-            {/* Alternating Timeline */}
-            <div className="space-y-12 sm:space-y-16">
-              {timeline.map((item, i) => (
-                <div
-                  key={item.year}
-                  className={`grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center p-8 sm:p-10 rounded-3xl border border-[#080F1E]/10 ${
-                    i % 2 === 0 ? "bg-white" : "bg-[#DAD6CB]/40"
-                  }`}
-                >
-                  <div className={`lg:col-span-7 space-y-4 ${i % 2 === 1 ? "lg:order-2" : ""}`}>
-                    <span className="text-3xl sm:text-4xl font-mono text-[#E6C654] tracking-tight block">
-                      {item.year}
-                    </span>
-                    <h3 className="text-2xl sm:text-3xl font-light text-[#080F1E]">
-                      {item.title}
-                    </h3>
-                    <p className="text-[16px] sm:text-[17px] font-light text-[#080F1E]/75 leading-relaxed max-w-xl">
-                      {item.description}
-                    </p>
-                  </div>
-
-                  <div className={`lg:col-span-5 ${i % 2 === 1 ? "lg:order-1" : ""}`}>
-                    <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md bg-[#080F1E]">
-                      <Image
-                        src={item.image}
-                        alt={item.title}
-                        fill
-                        className="object-cover filter grayscale contrast-105"
-                      />
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        {/* Horizontal Career Timeline Section */}
+        <CareerTimelineHorizontal timeline={timeline} />
 
         {/* House Rules */}
         <section className="py-24 sm:py-32 px-6 max-w-[1360px] mx-auto border-t border-[#080F1E]/15">

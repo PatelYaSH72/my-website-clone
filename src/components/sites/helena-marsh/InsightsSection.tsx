@@ -1,111 +1,91 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ARTICLES } from "./data";
-import { ArrowRight } from "./Icons";
+import { ArrowRight, DiamondMark } from "./Icons";
 
 export function InsightsSection() {
-  const [filter, setFilter] = useState("ALL");
-  const filters = ["ALL", "GOVERNANCE", "CFO TRANSITIONS", "WORKING CAPITAL", "CAPITAL ALLOCATION"];
-
-  const filteredArticles =
-    filter === "ALL" ? ARTICLES : ARTICLES.filter((a) => a.tag.toUpperCase() === filter);
+  // Show all 4 core editorial essays in the clean 4-column layout from reference
+  const articles = ARTICLES.slice(0, 4);
 
   return (
-    <section className="relative py-28 sm:py-36 px-6 max-w-[1360px] mx-auto z-10">
-      {/* Head */}
-      <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12 border-b border-[#080F1E]/15 pb-8">
+    <section id="insights" className="relative py-28 sm:py-36 px-6 max-w-[1360px] mx-auto z-10 bg-[#F3EFE6] text-[#080F1E]">
+      {/* Header Row matching reference */}
+      <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12 sm:mb-16 border-b border-[#080F1E]/15 pb-8">
         <div>
-          <p className="text-xs font-mono tracking-widest uppercase text-[#8E9189] mb-3">
-            INSIGHTS & PERSPECTIVES
-          </p>
-          <h2 className="text-[clamp(32px,4vw,56px)] leading-[1.05] tracking-tight font-light text-[#080F1E]">
-            Notes from <span className="font-serif italic text-[#E6C654]">the audit desk.</span>
+          <div className="flex items-center gap-2.5 mb-3">
+            <DiamondMark className="w-2.5 h-2.5 bg-[#E6C654]" />
+            <p className="text-xs font-mono tracking-[0.2em] uppercase text-[#8E9189]">
+              INSIGHTS & ESSAYS
+            </p>
+          </div>
+          <h2 className="text-[clamp(36px,4.5vw,64px)] leading-[1.04] tracking-tight font-light text-[#080F1E]">
+            Notes from the{" "}
+            <span className="font-serif italic text-[#E6C654]">audit desk.</span>
           </h2>
         </div>
 
-        {/* Filter Pills */}
-        <div className="flex flex-wrap items-center gap-2">
-          {filters.map((f) => (
-            <button
-              key={f}
-              onClick={() => setFilter(f)}
-              className={`px-3.5 py-1.5 rounded-full text-xs font-mono tracking-wider transition-all cursor-pointer ${
-                filter === f
-                  ? "bg-[#080F1E] text-[#F3EFE6] shadow-sm"
-                  : "bg-white/80 hover:bg-white text-[#080F1E]/70 border border-[#080F1E]/10"
-              }`}
-            >
-              {f}
-            </button>
-          ))}
-        </div>
+        {/* Top-Right "All insights ->" Pill Button */}
+        <Link
+          href="/insights"
+          className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-[#080F1E]/20 bg-white/60 hover:bg-[#080F1E] hover:text-[#F3EFE6] hover:border-[#080F1E] text-sm font-medium transition-all duration-300 self-start sm:self-end shadow-sm cursor-pointer group"
+        >
+          <span>All insights</span>
+          <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+        </Link>
       </div>
 
-      {/* Articles Grid: First article featured full-width if ALL is active */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
-        {filteredArticles.map((article, idx) => {
-          const isFeatured = filter === "ALL" && idx === 0;
-
-          return (
-            <Link
-              key={article.slug}
-              href={`/insights/${article.slug}`}
-              className={`group block rounded-3xl overflow-hidden bg-white border border-[#080F1E]/10 shadow-sm hover:shadow-xl transition-all duration-300 ${
-                isFeatured ? "md:col-span-2" : ""
-              }`}
-            >
-              {/* Cover Image */}
-              <div
-                className={`relative w-full overflow-hidden bg-[#080F1E] ${
-                  isFeatured ? "aspect-[21/9]" : "aspect-[16/9]"
-                }`}
-              >
+      {/* 4-Column Card Grid matching video screenshot */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        {articles.map((article) => (
+          <Link
+            key={article.slug}
+            href={`/insights/${article.slug}`}
+            className="group flex flex-col justify-between"
+          >
+            <div>
+              {/* Photo Frame with Category Badge */}
+              <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden bg-[#080F1E] shadow-sm group-hover:shadow-lg transition-shadow duration-300">
                 <Image
                   src={article.image}
                   alt={article.title}
                   fill
                   className="object-cover filter grayscale contrast-105 group-hover:scale-105 group-hover:grayscale-0 transition-all duration-500"
-                  sizes={isFeatured ? "(max-width: 1200px) 100vw, 1360px" : "(max-width: 768px) 100vw, 680px"}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 320px"
                 />
-                <div className="absolute top-4 left-4 flex items-center gap-2">
-                  <span className="bg-[#080F1E]/85 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-mono text-[#E6C654] tracking-widest uppercase">
-                    {article.tag}
-                  </span>
-                  <span className="bg-[#080F1E]/85 backdrop-blur-md px-2.5 py-1 rounded-full text-[11px] font-mono text-[#F3EFE6]/70">
-                    {article.readTime}
-                  </span>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#080F1E]/40 via-transparent to-transparent pointer-events-none" />
+
+                {/* Floating Category Pill in Upper-Left */}
+                <div className="absolute top-3.5 left-3.5 z-10 px-2.5 py-1 rounded-md bg-white/90 backdrop-blur-sm text-[10px] font-mono tracking-wider uppercase text-[#080F1E] font-medium shadow-sm">
+                  {article.tag}
                 </div>
               </div>
 
-              {/* Content */}
-              <div className="p-6 sm:p-8 space-y-4">
-                <span className="text-xs font-mono text-[#8E9189] block tracking-wider uppercase">
-                  {article.date}
-                </span>
+              {/* Date & Read Time */}
+              <p className="mt-4 text-[11px] font-mono text-[#8E9189] tracking-wider uppercase">
+                {article.date} · {article.readTime}
+              </p>
 
-                <h3
-                  className={`font-light text-[#080F1E] group-hover:text-[#E6C654] transition-colors leading-snug ${
-                    isFeatured ? "text-2xl sm:text-3xl lg:text-4xl" : "text-2xl"
-                  }`}
-                >
-                  {article.title}
-                </h3>
+              {/* Title */}
+              <h3 className="mt-2 text-xl sm:text-[22px] font-light leading-snug text-[#080F1E] group-hover:text-[#E6C654] transition-colors">
+                {article.title}
+              </h3>
 
-                <p className="text-[#080F1E]/70 text-[15px] sm:text-base font-light leading-relaxed max-w-3xl">
-                  {article.excerpt}
-                </p>
+              {/* Excerpt */}
+              <p className="mt-2 text-sm font-light text-[#080F1E]/70 leading-relaxed line-clamp-3">
+                {article.excerpt}
+              </p>
+            </div>
 
-                <div className="pt-2 flex items-center gap-2 text-sm font-medium text-[#E6C654] group-hover:text-[#F0D268]">
-                  <span>Read perspective</span>
-                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                </div>
-              </div>
-            </Link>
-          );
-        })}
+            {/* Read Link */}
+            <div className="pt-4 mt-2 flex items-center gap-1.5 text-xs font-mono tracking-wider uppercase text-[#080F1E] group-hover:text-[#E6C654] transition-colors">
+              <span>READ</span>
+              <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+            </div>
+          </Link>
+        ))}
       </div>
     </section>
   );

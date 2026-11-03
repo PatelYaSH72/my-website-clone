@@ -7,6 +7,7 @@ export const NAV_LINKS: NavLink[] = [
   { label: "Advisory", href: "/coaching" },
   { label: "Results", href: "/results" },
   { label: "About", href: "/about" },
+  { label: "Gallery", href: "/gallery" },
   { label: "Insights", href: "/insights" },
   { label: "Speaking", href: "/speaking" },
 ];
@@ -555,5 +556,139 @@ export const FAQ_ITEMS: FaqItem[] = [
     answer:
       "Yes, through The Institutional Bench engagement. We advise CFOs, finance directors, and board audit committees collectively, provided the managing director or board chair participates in primary review milestones.",
     page: "coaching",
+  },
+];
+
+
+export interface GalleryItem {
+  id: string;
+  title: string;
+  category: string;
+  collection: "Boardroom Deliberations" | "Global Summits" | "Due Diligence & Audits" | "Advisory Engagements";
+  year: string;
+  location: string;
+  image: string;
+  description: string;
+  featured?: boolean;
+}
+
+export const GALLERY_COLLECTIONS = [
+  "All Collections",
+  "Boardroom Deliberations",
+  "Global Summits",
+  "Due Diligence & Audits",
+  "Advisory Engagements",
+] as const;
+
+export const GALLERY_ITEMS: GalleryItem[] = [
+  {
+    id: "gal-1",
+    title: "Series D Pre-IPO Audit Defense",
+    category: "Audit Defense",
+    collection: "Due Diligence & Audits",
+    year: "2026",
+    location: "Platina, BKC Mumbai",
+    image: "/sites/helena-marsh/images/case-fintech.webp",
+    description: "Closed-door forensic audit clearance for fintech unicorn preceding formal statutory filing.",
+    featured: true,
+  },
+  {
+    id: "gal-2",
+    title: "Sovereign Debt & Capital Restructuring",
+    category: "Capital Advisory",
+    collection: "Boardroom Deliberations",
+    year: "2025",
+    location: "Mayfair, London",
+    image: "/sites/helena-marsh/images/who-ceos.webp",
+    description: "Promoter debt rationalization and covenant defense session with European institutional lenders.",
+    featured: true,
+  },
+  {
+    id: "gal-3",
+    title: "Global Balance Sheet Governance Keynote",
+    category: "Keynote Address",
+    collection: "Global Summits",
+    year: "2026",
+    location: "Marina Bay, Singapore",
+    image: "/sites/helena-marsh/images/fenil-speaking.webp",
+    description: "Keynote on Sovereign Balance Sheet Architecture & EBITDA Permanence for Asia-Pacific enterprise promoters.",
+    featured: true,
+  },
+  {
+    id: "gal-4",
+    title: "Industrial Conglomerate Tax Architecture",
+    category: "Tax Structuring",
+    collection: "Due Diligence & Audits",
+    year: "2025",
+    location: "Ahmedabad & Mumbai",
+    image: "/sites/helena-marsh/images/case-manufacturing.webp",
+    description: "Cross-border holding entity restructuring and transfer pricing defense across 32 subsidiary units.",
+    featured: false,
+  },
+  {
+    id: "gal-5",
+    title: "Executive Committee Strategic Sparring",
+    category: "Boardroom",
+    collection: "Boardroom Deliberations",
+    year: "2026",
+    location: "BKC, Mumbai",
+    image: "/sites/helena-marsh/images/who-executives.webp",
+    description: "Fortnightly strategic review with Group CFO and audit committee chairs on cash-flow resilience.",
+    featured: true,
+  },
+  {
+    id: "gal-6",
+    title: "HealthTech Cross-Border M&A Valuation",
+    category: "M&A Valuation",
+    collection: "Due Diligence & Audits",
+    year: "2025",
+    location: "London & Zurich",
+    image: "/sites/helena-marsh/images/case-healthtech.webp",
+    description: "IBBI registered valuation and cap-table audit for cross-border hospital network acquisition.",
+    featured: false,
+  },
+  {
+    id: "gal-7",
+    title: "Promoters Closed-Door Round Table",
+    category: "Promoter Counsel",
+    collection: "Advisory Engagements",
+    year: "2026",
+    location: "The Oberoi, Mumbai",
+    image: "/sites/helena-marsh/images/who-founders.webp",
+    description: "Private gathering of first-generation industrial promoters navigating succession and capital allocation.",
+    featured: true,
+  },
+  {
+    id: "gal-8",
+    title: "Statutory Assurance & Working Capital War Room",
+    category: "Working Capital",
+    collection: "Due Diligence & Audits",
+    year: "2026",
+    location: "BKC, Mumbai",
+    image: "/sites/helena-marsh/images/manifesto-ledger.webp",
+    description: "Multi-entity trial balance reconciliation and ledger liquidity unlock session.",
+    featured: false,
+  },
+  {
+    id: "gal-9",
+    title: "Institutional Audit Committee Address",
+    category: "Keynote Address",
+    collection: "Global Summits",
+    year: "2025",
+    location: "New Delhi",
+    image: "/sites/helena-marsh/images/fenil-arch.png",
+    description: "Address to institutional audit chairs on Ind AS/IFRS statutory compliance and forensic vigilance.",
+    featured: false,
+  },
+  {
+    id: "gal-10",
+    title: "Finance Leadership Bench Sparring",
+    category: "Bench Advisory",
+    collection: "Advisory Engagements",
+    year: "2026",
+    location: "Bangalore",
+    image: "/sites/helena-marsh/images/who-teams.webp",
+    description: "Evaluating internal financial controls and grooming scaleup finance directors for CFO succession.",
+    featured: false,
   },
 ];
