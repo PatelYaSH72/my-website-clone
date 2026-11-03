@@ -1,9 +1,35 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { VOICES } from "./data";
+import { initGSAP, isReducedMotion } from "@/lib/animations/gsap";
 
 export function VoicesSection() {
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    if (isReducedMotion()) return;
+
+    const { ScrollTrigger } = initGSAP();
+    const section = sectionRef.current;
+    if (!section) return;
+
+    // Pin the VoicesSection when its bottom reaches the bottom of the viewport,
+    // allowing the following section (AboutSection) to slide smoothly UP and OVER it!
+    const trigger = ScrollTrigger.create({
+      trigger: section,
+      start: "bottom bottom",
+      end: "+=100%",
+      pin: true,
+      pinSpacing: false,
+      anticipatePin: 1,
+    });
+
+    return () => {
+      trigger.kill();
+    };
+  }, []);
+
   const getThemeClasses = (theme: string) => {
     switch (theme) {
       case "dark":
@@ -21,7 +47,11 @@ export function VoicesSection() {
   };
 
   return (
-    <section id="voices" className="relative w-full bg-[#F3EFE6] py-28 sm:py-36 z-10">
+    <section
+      id="voices"
+      ref={sectionRef}
+      className="relative w-full bg-[#F3EFE6] py-28 sm:py-36 z-10"
+    >
       <div className="max-w-[1360px] mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Left Column: Sticky Title & Description */}

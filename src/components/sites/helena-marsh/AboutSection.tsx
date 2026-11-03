@@ -150,7 +150,7 @@ export function AboutSection() {
     <section
       id="about"
       ref={containerRef}
-      className="relative w-full bg-[#F3EFE6] text-[#080F1E] overflow-hidden z-20"
+      className="relative w-full bg-[#F3EFE6] text-[#080F1E] overflow-hidden z-20 shadow-[0_-30px_70px_rgba(0,0,0,0.22)]"
     >
       {/* Pinned Desktop Experience (Shown on lg and above) */}
       <div className="hidden lg:flex relative h-screen w-full overflow-hidden items-center justify-center">
