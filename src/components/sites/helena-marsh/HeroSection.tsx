@@ -7,12 +7,28 @@ import { HERO_QUOTES, HERO_STATS } from "./data";
 import { ArrowRight, SparkStar, ElectricBolt } from "./Icons";
 import { initGSAP, isReducedMotion } from "@/lib/animations/gsap";
 
+interface MonolithSlab {
+  id: number;
+  num: string;
+  label: string;
+  innerLeftPercent: number;
+}
+
+const MONOLITH_SLABS: MonolithSlab[] = [
+  { id: 0, num: "01", label: "PULSE", innerLeftPercent: 0 },
+  { id: 1, num: "02", label: "CAPITAL", innerLeftPercent: -100 },
+  { id: 2, num: "03", label: "CORE", innerLeftPercent: -200 },
+  { id: 3, num: "04", label: "GOVERNANCE", innerLeftPercent: -300 },
+  { id: 4, num: "05", label: "VALUE", innerLeftPercent: -400 },
+];
+
 export function HeroSection() {
   const [activeQuote, setActiveQuote] = useState(0);
-  const [mouseOffset, setMouseOffset] = useState({ x: 0, y: 0 });
+  const [hoveredSlab, setHoveredSlab] = useState<number | null>(null);
+  const [mouseTilt, setMouseTilt] = useState({ x: 0, y: 0 });
 
   const heroRef = useRef<HTMLElement>(null);
-  const bgImageRef = useRef<HTMLDivElement>(null);
+  const slabsContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const quoteTimer = window.setInterval(() => {
@@ -26,9 +42,9 @@ export function HeroSection() {
     }
 
     const hero = heroRef.current;
-    const bgImage = bgImageRef.current;
+    const slabsContainer = slabsContainerRef.current;
 
-    if (!hero || !bgImage) {
+    if (!hero || !slabsContainer) {
       return () => window.clearInterval(quoteTimer);
     }
 
@@ -68,10 +84,25 @@ export function HeroSection() {
           "-=0.3"
         );
 
-      // Subtle scroll scrub on the background image
-      gsap.to(bgImage, {
-        yPercent: 8,
-        scale: 1.08,
+      // Staggered vertical unmask of the 5 full-screen background monoliths
+      gsap.fromTo(
+        "[data-bg-monolith]",
+        { clipPath: "inset(100% 0 0 0)", autoAlpha: 0.2 },
+        {
+          clipPath: "inset(0% 0 0 0)",
+          autoAlpha: 1,
+          duration: 1.3,
+          stagger: 0.08,
+          delay: 0.15,
+          ease: "power4.inOut",
+          clearProps: "clipPath",
+        }
+      );
+
+      // Subtle scroll scrub on the monoliths container
+      gsap.to(slabsContainer, {
+        yPercent: 6,
+        scale: 1.05,
         ease: "none",
         scrollTrigger: {
           trigger: hero,
@@ -91,9 +122,14 @@ export function HeroSection() {
   const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
     if (isReducedMotion()) return;
     const { clientX, clientY } = e;
-    const x = (clientX / window.innerWidth - 0.5) * 20;
-    const y = (clientY / window.innerHeight - 0.5) * 16;
-    setMouseOffset({ x, y });
+    const x = clientX / window.innerWidth - 0.5;
+    const y = clientY / window.innerHeight - 0.5;
+    setMouseTilt({ x, y });
+  };
+
+  const handleMouseLeave = () => {
+    setMouseTilt({ x: 0, y: 0 });
+    setHoveredSlab(null);
   };
 
   const quote = HERO_QUOTES[activeQuote];
@@ -102,88 +138,137 @@ export function HeroSection() {
     <section
       ref={heroRef}
       onMouseMove={handleMouseMove}
-      className="relative isolate min-h-[100svh] w-full overflow-hidden bg-[#070b15] text-[#F3EFE6] flex flex-col justify-between pt-28 pb-8 sm:pt-36 sm:pb-10 lg:pt-38 lg:pb-12 px-5 sm:px-8 lg:px-12"
+      onMouseLeave={handleMouseLeave}
+      className="relative isolate min-h-[100svh] w-full overflow-hidden bg-[#060a14] text-[#F3EFE6] flex flex-col justify-between pt-28 pb-8 sm:pt-36 sm:pb-10 lg:pt-38 lg:pb-12 px-5 sm:px-8 lg:px-12"
     >
-      {/* 1. FULL-SCREEN CINEMATIC BACKDROP (Option A: Sovereign Panoramic Monolith) */}
+      {/* 1. FULL-SCREEN 5 MONOLITH ARCHITECTURAL BACKDROP (Option B) */}
       <div
-        ref={bgImageRef}
+        ref={slabsContainerRef}
         aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -z-30 h-full w-full flex items-stretch gap-1.5 sm:gap-2.5 p-1 sm:p-2 will-change-transform"
         style={{
-          transform: `translate3d(${mouseOffset.x * -0.5}px, ${mouseOffset.y * -0.5}px, 0) scale(1.04)`,
-          transition: "transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)",
+          perspective: "1200px",
         }}
-        className="pointer-events-none absolute inset-0 -z-30 h-full w-full will-change-transform"
       >
-        <Image
-          src="/sites/helena-marsh/images/fenil-portrait.png"
-          alt="CA Fenil Shah — Chartered Accountant & Strategic Financial Advisory"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-[50%_18%] grayscale-[25%] contrast-[1.08] brightness-[0.72]"
-        />
+        {MONOLITH_SLABS.map((slab) => {
+          const isHovered = hoveredSlab === slab.id;
+          const isAnotherHovered = hoveredSlab !== null && !isHovered;
+          const distFromCenter = slab.id - 2;
+
+          // 3D kinetic parallax wave
+          const rotateY = mouseTilt.x * (10 + Math.abs(distFromCenter) * 3);
+          const translateY = mouseTilt.y * (8 + (slab.id % 2) * 4);
+          const translateZ = isHovered ? 24 : -Math.abs(distFromCenter) * 6;
+
+          return (
+            <div
+              key={slab.id}
+              data-bg-monolith
+              onMouseEnter={() => setHoveredSlab(slab.id)}
+              style={{
+                flex: 1,
+                transform: `rotateY(${rotateY}deg) translateY(${translateY}px) translateZ(${translateZ}px)`,
+                transition: "transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease, border-color 0.4s ease, box-shadow 0.4s ease",
+                filter: isHovered
+                  ? "brightness(1.1) contrast(1.08)"
+                  : isAnotherHovered
+                  ? "brightness(0.65) contrast(0.95) grayscale(65%)"
+                  : "brightness(0.85) contrast(1.05) grayscale(15%)",
+              }}
+              className={`group pointer-events-auto relative min-w-0 h-full overflow-hidden rounded-[12px] sm:rounded-[18px] border transition-all ${
+                isHovered
+                  ? "border-[#E6C654]/85 shadow-[0_0_40px_rgba(230,198,84,0.30)] z-20 bg-[#091122]"
+                  : slab.id === 2
+                  ? "border-white/[0.18] shadow-[0_4px_24px_rgba(0,0,0,0.5)] z-10 bg-[#070d1a]"
+                  : "border-white/[0.12] shadow-[0_4px_20px_rgba(0,0,0,0.4)] z-0 bg-[#070d1a]"
+              }`}
+            >
+              {/* Registered Portrait Slice across all 5 full-screen monoliths */}
+              <div
+                className="absolute inset-0 h-full max-w-none transition-transform duration-700 ease-out"
+                style={{
+                  width: "500%",
+                  left: `${slab.innerLeftPercent}%`,
+                  transform: isHovered ? "scale(1.04)" : "scale(1.01)",
+                }}
+              >
+                <Image
+                  src="/sites/helena-marsh/images/fenil-portrait.png"
+                  alt={`CA Fenil Shah — Monolith ${slab.num}`}
+                  fill
+                  priority={slab.id === 2 || slab.id === 1}
+                  sizes="20vw"
+                  className="object-cover object-[50%_18%]"
+                />
+              </div>
+
+              {/* Monolith Header Indicator */}
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute top-3 sm:top-5 left-3 sm:left-4 z-10 flex items-center gap-1.5"
+              >
+                <span
+                  className={`flex h-4 w-4 items-center justify-center rounded-full transition-colors ${
+                    isHovered
+                      ? "bg-[#E6C654] text-[#070b15] shadow-[0_0_8px_#E6C654]"
+                      : "bg-black/60 text-[#E6C654]/80 backdrop-blur-md"
+                  }`}
+                >
+                  <SparkStar className="h-2.5 w-2.5" />
+                </span>
+                <span className="hidden font-mono text-[8px] font-bold uppercase tracking-widest text-[#E6C654]/90 sm:inline-block">
+                  {`${slab.num} · ${slab.label}`}
+                </span>
+              </div>
+
+              {/* Traveling Voltage Surge along the vertical seam */}
+              <div
+                aria-hidden="true"
+                className="animate-voltage-surge right-0"
+                style={{
+                  animationDelay: `${slab.id * 0.7}s`,
+                }}
+              />
+
+              {/* Ambient Dark Gradient Vignette inside each slab */}
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#060a14]/80 via-transparent to-[#060a14]/30" />
+            </div>
+          );
+        })}
       </div>
 
-      {/* 2. MULTI-LAYER DARK CINEMATIC VIGNETTE & RADIAL AURORA */}
-      {/* Deep Center Dimming for Razor-Sharp Text Readability */}
+      {/* 2. CENTER RADIAL VIGNETTE FOR OPTIMAL EDITORIAL CONTRAST */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 -z-20"
         style={{
           background:
-            "radial-gradient(ellipse at 50% 48%, rgba(7, 11, 21, 0.78) 0%, rgba(7, 11, 21, 0.92) 58%, #070b15 100%)",
+            "radial-gradient(ellipse at 50% 48%, rgba(6, 10, 20, 0.56) 0%, rgba(6, 10, 20, 0.84) 58%, #060a14 98%)",
         }}
       />
 
-      {/* Top and Bottom Gradient Blends */}
+      {/* Ambient Top and Bottom Dark Gradient Fades */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-[#070b15]/90 via-transparent to-[#070b15]/95"
+        className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-[#060a14]/95 via-transparent to-[#060a14]/95"
       />
 
-      {/* Ambient Royal Blue & Champagne Gold Voltage Flares */}
+      {/* Royal Blue & Gold Aurora Core */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 -z-10"
         style={{
           background:
-            "radial-gradient(65% 55% at 50% 28%, rgba(30, 64, 175, 0.26) 0%, transparent 72%), radial-gradient(45% 40% at 50% 65%, rgba(230, 198, 84, 0.12) 0%, transparent 68%)",
+            "radial-gradient(65% 55% at 50% 28%, rgba(30, 64, 175, 0.22) 0%, transparent 72%), radial-gradient(45% 40% at 50% 65%, rgba(230, 198, 84, 0.10) 0%, transparent 68%)",
         }}
       />
-
-      {/* Architectural Micro-Grid Texture */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-10 opacity-[0.035]"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(230, 198, 84, 0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(230, 198, 84, 0.4) 1px, transparent 1px)",
-          backgroundSize: "64px 64px",
-        }}
-      />
-
-      {/* Floating Spark Energy Constellations */}
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        <span className="absolute top-[22%] left-[12%] animate-spark-float text-[#E6C654]/40">
-          <SparkStar className="h-3 w-3" />
-        </span>
-        <span className="absolute top-[32%] right-[14%] animate-spark-float text-[#E6C654]/30" style={{ animationDelay: "1.2s" }}>
-          <SparkStar className="h-3.5 w-3.5" />
-        </span>
-        <span className="absolute bottom-[28%] left-[18%] animate-spark-float text-[#E6C654]/25" style={{ animationDelay: "2.4s" }}>
-          <SparkStar className="h-2.5 w-2.5" />
-        </span>
-        <span className="absolute top-[18%] right-[28%] animate-spark-float text-[#E6C654]/20" style={{ animationDelay: "0.8s" }}>
-          <SparkStar className="h-2 w-2" />
-        </span>
-      </div>
 
       {/* 3. CENTER CONTENT: EDITORIAL POWER TYPOGRAPHY */}
-      <div className="relative z-10 mx-auto my-auto flex w-full max-w-[1240px] flex-col items-center text-center">
+      <div className="relative z-20 mx-auto my-auto flex w-full max-w-[1240px] flex-col items-center text-center">
         {/* Eyebrow Pill */}
         <div
           data-hero-reveal="eyebrow"
-          className="mb-6 sm:mb-8 inline-flex items-center gap-2.5 rounded-full border border-[#E6C654]/35 bg-[#070b15]/85 px-4 py-1.5 text-[11px] sm:text-[12px] font-mono uppercase tracking-[0.18em] text-[#E6C654] shadow-[0_0_24px_rgba(230,198,84,0.18)] backdrop-blur-xl"
+          className="mb-6 sm:mb-8 inline-flex items-center gap-2.5 rounded-full border border-[#E6C654]/35 bg-[#070b15]/90 px-4 py-1.5 text-[11px] sm:text-[12px] font-mono uppercase tracking-[0.18em] text-[#E6C654] shadow-[0_0_24px_rgba(230,198,84,0.18)] backdrop-blur-xl"
         >
           <SparkStar className="h-3 w-3 animate-spin-slow" />
           <span>NOW ACCEPTING Q2 · THREE ADVISORY MANDATES REMAINING</span>
@@ -228,9 +313,9 @@ export function HeroSection() {
 
           <Link
             href="/services"
-            className="group inline-flex w-full sm:w-auto min-h-[56px] items-center justify-center sm:justify-between gap-4 rounded-full border border-white/20 bg-[#070b15]/65 py-2 pl-6 pr-2.5 text-[14px] font-medium text-[#F3EFE6] backdrop-blur-xl transition-all duration-300 hover:border-[#E6C654]/60 hover:bg-white/[0.08]"
+            className="group inline-flex w-full sm:w-auto min-h-[56px] items-center justify-center sm:justify-between gap-4 rounded-full border border-white/20 bg-[#070b15]/75 py-2 pl-6 pr-2.5 text-[14px] font-medium text-[#F3EFE6] backdrop-blur-xl transition-all duration-300 hover:border-[#E6C654]/60 hover:bg-white/[0.08]"
           >
-            <span>Explore advisory mandates</span>
+            <span>Explore three advisory mandates</span>
             <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-[#F3EFE6] transition-transform duration-300 group-hover:translate-x-0.5">
               <ArrowRight className="h-4 w-4" />
             </span>
@@ -243,8 +328,8 @@ export function HeroSection() {
         data-hero-reveal="dock"
         className="relative z-20 mx-auto w-full max-w-[1360px] mt-8"
       >
-        <div className="grid grid-cols-1 md:grid-cols-12 items-center gap-4 rounded-[22px] border border-white/15 bg-[#080d19]/85 p-3 sm:p-4 shadow-[0_24px_80px_rgba(0,0,0,0.65)] backdrop-blur-2xl">
-          {/* LEFT 3 STATS (8 Columns on desktop) */}
+        <div className="grid grid-cols-1 md:grid-cols-12 items-center gap-4 rounded-[22px] border border-white/15 bg-[#080d19]/90 p-3 sm:p-4 shadow-[0_24px_80px_rgba(0,0,0,0.65)] backdrop-blur-2xl">
+          {/* LEFT 3 STATS */}
           <div className="md:col-span-7 lg:col-span-8 grid grid-cols-3 divide-x divide-white/10 py-1">
             {HERO_STATS.map((stat, idx) => (
               <div
@@ -261,7 +346,7 @@ export function HeroSection() {
             ))}
           </div>
 
-          {/* RIGHT LIVE CLIENT TESTIMONIAL CAPSULE (5 Columns on desktop) */}
+          {/* RIGHT LIVE CLIENT TESTIMONIAL CAPSULE */}
           <div className="md:col-span-5 lg:col-span-4 rounded-xl border border-white/10 bg-[#0c1426]/90 p-3 sm:p-3.5 flex flex-col justify-between gap-2">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-1.5 text-[9px] font-mono uppercase tracking-widest text-[#E6C654]">
