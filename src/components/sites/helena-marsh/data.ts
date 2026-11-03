@@ -8,7 +8,7 @@ export const NAV_LINKS: NavLink[] = [
   { label: "Services", href: "/services" },
   { label: "About", href: "/about" },
   { label: "Gallery", href: "/gallery" },
-  { label: "Insights", href: "/insights" },
+  { label: "Blogs", href: "/blogs" },
   { label: "Speaking", href: "/speaking" },
 ];
 
@@ -348,6 +348,9 @@ export interface Article {
   title: string;
   excerpt: string;
   image: string;
+  views?: string;
+  viewsCount?: number;
+  featured?: boolean;
   leadQuote?: string;
   leadParagraph?: string;
   sections?: { heading?: string; paragraphs: string[]; quote?: string; list?: string[] }[];
@@ -359,6 +362,9 @@ export const ARTICLES: Article[] = [
     tag: "GOVERNANCE",
     date: "SEPTEMBER 2026",
     readTime: "6 MIN",
+    views: "24.8K views",
+    viewsCount: 24800,
+    featured: true,
     title: "The Board Paper Nobody Reads: Fixing Financial Reporting Before It Destroys Value",
     excerpt:
       "If your board only reads the EBITDA summary and ignores the footnotes, your governance is theatre. How to bring forensic honesty back into the boardroom.",
@@ -393,6 +399,9 @@ export const ARTICLES: Article[] = [
     tag: "CFO TRANSITIONS",
     date: "AUGUST 2026",
     readTime: "8 MIN",
+    views: "38.2K views",
+    viewsCount: 38200,
+    featured: true,
     title: "Your First Ninety Days as CFO: Establishing Fiscal Authority Over Inherited Numbers",
     excerpt:
       "New CFOs arrive with grand ERP and restructuring plans. The ones who succeed arrive with forensic audits and a zero-tolerance policy on legacy assumptions.",
@@ -427,6 +436,9 @@ export const ARTICLES: Article[] = [
     tag: "WORKING CAPITAL",
     date: "JULY 2026",
     readTime: "5 MIN",
+    views: "41.5K views",
+    viewsCount: 41500,
+    featured: true,
     title: "EBITDA Is Not Cash: The Working Capital Traps That Destroy Profitable Companies",
     excerpt:
       "Profitable on the P&L, asphyxiated on the balance sheet. How rapid scale creates lethal cashflow compression.",
@@ -460,6 +472,9 @@ export const ARTICLES: Article[] = [
     tag: "CAPITAL ALLOCATION",
     date: "JUNE 2026",
     readTime: "7 MIN",
+    views: "19.3K views",
+    viewsCount: 19300,
+    featured: false,
     title: "Capital Allocation Under Uncertainty: Distinguishing Reversible vs Irreversible Balance Sheet Bets",
     excerpt:
       "Capital stewardship is a discipline of restraint. Some capital expenditure decisions can be rolled back; some permanently alter your solvency profile.",
@@ -484,6 +499,150 @@ export const ARTICLES: Article[] = [
           "Stress-test cashflows against a 30% drop in margin and 200 bps hike in debt financing costs.",
           "Avoid financing long-term illiquid assets with short-term working capital lines.",
           "Ensure M&A returns exceed Weighted Average Cost of Capital (WACC) with a minimum 400 bps margin of safety.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "promoter-debt-defense",
+    tag: "DEBT COVENANTS",
+    date: "OCTOBER 2026",
+    readTime: "9 MIN",
+    views: "47.9K views",
+    viewsCount: 47900,
+    featured: true,
+    title: "Defending Promoter Balance Sheets Against Predatory Debt Covenants",
+    excerpt:
+      "How institutional lenders quietly insert leverage traps into mezzanine credit agreements, and how promoters can restructure covenants before default triggers.",
+    image: "/sites/helena-marsh/images/who-ceos.webp",
+    leadQuote: "Debt covenants are written in peace to be weaponized in volatility.",
+    leadParagraph:
+      "Promoters often celebrate closing ₹500 Cr credit lines without realizing the covenants stipulate immediate acceleration if DSCR slips by 0.1x. Restructuring debt terms before quarterly stress is the single highest-ROI activity an executive board can undertake.",
+    sections: [
+      {
+        heading: "The hidden triggers in corporate debt agreements",
+        paragraphs: [
+          "Lenders routinely include cross-default clauses connecting unrelated subsidiary guarantees to the parent entity. Under distress, a minor vendor dispute in an operating unit can trigger technical insolvency across the entire holding group.",
+        ],
+        quote: "Read debt covenants through the eyes of a hostile takeover bidder, because that is who buys the debt at discount.",
+      },
+      {
+        heading: "Negotiating covenant headroom during expansion",
+        paragraphs: [
+          "Establish covenant resets tied to capex commissioning phases, and ensure EBITDA definitions account for one-time restructuring costs.",
+        ],
+        list: [
+          "Exclude non-recourse project finance debt from consolidated parent solvency ratios.",
+          "Mandate cure periods of at least 60 business days before technical default declarations.",
+          "Secure seasonal working capital headroom waivers before cyclical inventory buildups.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "indas-ifrs-transition-playbook",
+    tag: "STATUTORY ASSURANCE",
+    date: "OCTOBER 2026",
+    readTime: "8 MIN",
+    views: "29.4K views",
+    viewsCount: 29400,
+    featured: false,
+    title: "Navigating the Ind AS / IFRS Transition: What Big-4 Auditors Scrutinize Most",
+    excerpt:
+      "A technical breakdown of fair valuation accounting, expected credit loss provisions, and lease accounting traps under Ind AS 115 and 116.",
+    image: "/sites/helena-marsh/images/method-audit.webp",
+    leadQuote: "Statutory compliance is not an exercise in form-filling; it is defense of corporate credibility.",
+    leadParagraph:
+      "Transitioning from Indian GAAP to Ind AS / IFRS disrupts historical EBITDA calculations. Revenue recognition under Ind AS 115 and asset lease recognition under Ind AS 116 can unexpectedly compress reported equity if mismanaged.",
+    sections: [
+      {
+        heading: "Expected Credit Loss (ECL) provisioning traps",
+        paragraphs: [
+          "Auditors are applying unprecedented forensic scrutiny to overdue accounts receivable aging beyond 180 days. Blanket provisions directly impair net worth unless supported by documented recovery histories.",
+        ],
+        quote: "Unverifiable revenue recognized early is tomorrow's statutory audit qualification.",
+      },
+      {
+        heading: "Pre-empting Big-4 audit committee queries",
+        paragraphs: [
+          "Prepare technical position papers on contract assets and compound financial instruments at least 60 days before the statutory audit starts.",
+        ],
+        list: [
+          "Formalize independent registered valuer certifications for all unquoted investments.",
+          "Reconcile deferred tax asset recognitions against 3-year projected taxable profits.",
+          "Maintain audit-trail logs compliant with MCA statutory ledger requirements.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "the-anatomy-of-forensic-ledgers",
+    tag: "FORENSIC AUDIT",
+    date: "SEPTEMBER 2026",
+    readTime: "6 MIN",
+    views: "33.7K views",
+    viewsCount: 33700,
+    featured: false,
+    title: "The Anatomy of Forensic Ledgers: Spotting EBITDA Leaks in ERP Systems",
+    excerpt:
+      "Unreconciled suspense accounts, vendor rebates, and capitalized R&D: where middle management hides operational margin erosion.",
+    image: "/sites/helena-marsh/images/manifesto-ledger.webp",
+    leadQuote: "ERP systems are only as truthful as the parameters configured into their general ledger mapping.",
+    leadParagraph:
+      "In high-growth companies with multiple operating entities, millions of rupees quietly evaporate through unmapped clearing accounts, duplicate vendor masters, and off-book purchase commitments that evade standard monthly MIS reviews.",
+    sections: [
+      {
+        heading: "The three most common general ledger vulnerabilities",
+        paragraphs: [
+          "Suspense accounts that carry balances for over 90 days are almost always unbooked operational costs or uncollected cash discrepancies. Similarly, vendor credit notes often sit unreconciled while payments continue uninterrupted.",
+        ],
+        quote: "If an entry cannot be explained to a high-school student in two sentences, it belongs in an audit red-flag memo.",
+      },
+      {
+        heading: "Automating forensic exception detection",
+        paragraphs: [
+          "Deploy automated weekly ledger interrogation scripts comparing purchase orders, goods receipt notes (GRN), and invoice disbursements.",
+        ],
+        list: [
+          "Flag payments made to vendors whose bank IFSC codes or PAN match employee master data.",
+          "Isolate all journal entries posted outside standard business operating hours.",
+          "Enforce zero tolerance for manual adjustments posted directly to revenue accounts.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "boardroom-equilibrium-in-crisis",
+    tag: "EXECUTIVE EQUILIBRIUM",
+    date: "AUGUST 2026",
+    readTime: "10 MIN",
+    views: "52.1K views",
+    viewsCount: 52100,
+    featured: true,
+    title: "Boardroom Equilibrium: Staying Composed When ₹1,000+ Cr Is Under Sovereign Scrutiny",
+    excerpt:
+      "Psychological resilience and decision hygiene when credit rating agencies, tax authorities, and promoter factions collide in closed-door sessions.",
+    image: "/sites/helena-marsh/images/who-founders.webp",
+    leadQuote: "When everyone in the room is panicking, the leader with the clear balance sheet controls the room.",
+    leadParagraph:
+      "Under high-stakes audit or debt renegotiation, intellectual capability matters far less than emotional self-mastery. The quickest way to lose ₹100 Cr in valuation is to react defensively to aggressive questioning from consortium lenders or regulators.",
+    sections: [
+      {
+        heading: "The psychology of high-stakes financial confrontations",
+        paragraphs: [
+          "Hostile questions are designed to elicit hasty commitments. In boardroom finance, silence is an asset. Never negotiate or clarify balance sheet positions without referencing verified statutory trial balances.",
+        ],
+        quote: "Clarity is calm. Uncertainty breeds panic. Ground every word in the verified ledger.",
+      },
+      {
+        heading: "The five-step crisis composure checklist",
+        paragraphs: [
+          "Establish a unified single-spokesperson protocol with legal counsel and statutory auditors before any external stakeholder meeting.",
+        ],
+        list: [
+          "Separate immediate operational cash liquidity needs from long-term capital restructure debates.",
+          "Provide factual documentation within 24 hours rather than offering verbal assurances in the room.",
+          "Maintain daily physical stamina and cognitive hygiene; fatigue is where fatal concessions are made.",
         ],
       },
     ],

@@ -10,7 +10,7 @@ import { ResultsSection } from "@/components/sites/helena-marsh/ResultsSection";
 import { VoicesSection } from "@/components/sites/helena-marsh/VoicesSection";
 import { AboutSection } from "@/components/sites/helena-marsh/AboutSection";
 import { GallerySection } from "@/components/sites/helena-marsh/GallerySection";
-import { InsightsSection } from "@/components/sites/helena-marsh/InsightsSection";
+import { BlogsSection } from "@/components/sites/helena-marsh/BlogsSection";
 import { FaqSection } from "@/components/sites/helena-marsh/FaqSection";
 import { CtaSection } from "@/components/sites/helena-marsh/CtaSection";
 import { Footer } from "@/components/sites/helena-marsh/Footer";
@@ -30,7 +30,7 @@ export default function Home() {
         <VoicesSection />
         <AboutSection />
         <GallerySection />
-        <InsightsSection />
+        <BlogsSection />
         <FaqSection />
         <CtaSection />
       </main>
