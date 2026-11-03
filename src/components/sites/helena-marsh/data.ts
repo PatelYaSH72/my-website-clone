@@ -5,7 +5,7 @@ export interface NavLink {
 
 export const NAV_LINKS: NavLink[] = [
   { label: "Advisory", href: "/coaching" },
-  { label: "Results", href: "/results" },
+  { label: "Services", href: "/services" },
   { label: "About", href: "/about" },
   { label: "Gallery", href: "/gallery" },
   { label: "Insights", href: "/insights" },
@@ -564,8 +564,10 @@ export interface GalleryItem {
   id: string;
   title: string;
   category: string;
+  badge?: string;
   collection: "Boardroom Deliberations" | "Global Summits" | "Due Diligence & Audits" | "Advisory Engagements";
   year: string;
+  date?: string;
   location: string;
   image: string;
   description: string;
@@ -585,8 +587,10 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     id: "gal-1",
     title: "Series D Pre-IPO Audit Defense",
     category: "Audit Defense",
+    badge: "DUE DILIGENCE",
     collection: "Due Diligence & Audits",
     year: "2026",
+    date: "SEPTEMBER, 2026",
     location: "Platina, BKC Mumbai",
     image: "/sites/helena-marsh/images/case-fintech.webp",
     description: "Closed-door forensic audit clearance for fintech unicorn preceding formal statutory filing.",
@@ -596,8 +600,10 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     id: "gal-2",
     title: "Sovereign Debt & Capital Restructuring",
     category: "Capital Advisory",
+    badge: "TRANSITIONS",
     collection: "Boardroom Deliberations",
     year: "2025",
+    date: "AUGUST, 2025",
     location: "Mayfair, London",
     image: "/sites/helena-marsh/images/who-ceos.webp",
     description: "Promoter debt rationalization and covenant defense session with European institutional lenders.",
@@ -607,8 +613,10 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     id: "gal-3",
     title: "Global Balance Sheet Governance Keynote",
     category: "Keynote Address",
+    badge: "SELF-AWARENESS",
     collection: "Global Summits",
     year: "2026",
+    date: "JULY, 2026",
     location: "Marina Bay, Singapore",
     image: "/sites/helena-marsh/images/fenil-speaking.webp",
     description: "Keynote on Sovereign Balance Sheet Architecture & EBITDA Permanence for Asia-Pacific enterprise promoters.",
@@ -618,19 +626,23 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     id: "gal-4",
     title: "Industrial Conglomerate Tax Architecture",
     category: "Tax Structuring",
+    badge: "TAX GOVERNANCE",
     collection: "Due Diligence & Audits",
     year: "2025",
+    date: "NOVEMBER, 2025",
     location: "Ahmedabad & Mumbai",
     image: "/sites/helena-marsh/images/case-manufacturing.webp",
     description: "Cross-border holding entity restructuring and transfer pricing defense across 32 subsidiary units.",
-    featured: false,
+    featured: true,
   },
   {
     id: "gal-5",
     title: "Executive Committee Strategic Sparring",
     category: "Boardroom",
+    badge: "BOARD AUDIT",
     collection: "Boardroom Deliberations",
     year: "2026",
+    date: "JUNE, 2026",
     location: "BKC, Mumbai",
     image: "/sites/helena-marsh/images/who-executives.webp",
     description: "Fortnightly strategic review with Group CFO and audit committee chairs on cash-flow resilience.",
@@ -640,8 +652,10 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     id: "gal-6",
     title: "HealthTech Cross-Border M&A Valuation",
     category: "M&A Valuation",
+    badge: "CAPITAL COVENANTS",
     collection: "Due Diligence & Audits",
     year: "2025",
+    date: "OCTOBER, 2025",
     location: "London & Zurich",
     image: "/sites/helena-marsh/images/case-healthtech.webp",
     description: "IBBI registered valuation and cap-table audit for cross-border hospital network acquisition.",
@@ -651,8 +665,10 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     id: "gal-7",
     title: "Promoters Closed-Door Round Table",
     category: "Promoter Counsel",
+    badge: "EQUILIBRIUM",
     collection: "Advisory Engagements",
     year: "2026",
+    date: "MAY, 2026",
     location: "The Oberoi, Mumbai",
     image: "/sites/helena-marsh/images/who-founders.webp",
     description: "Private gathering of first-generation industrial promoters navigating succession and capital allocation.",
@@ -662,8 +678,10 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     id: "gal-8",
     title: "Statutory Assurance & Working Capital War Room",
     category: "Working Capital",
+    badge: "FORENSIC LEDGER",
     collection: "Due Diligence & Audits",
     year: "2026",
+    date: "APRIL, 2026",
     location: "BKC, Mumbai",
     image: "/sites/helena-marsh/images/manifesto-ledger.webp",
     description: "Multi-entity trial balance reconciliation and ledger liquidity unlock session.",
@@ -673,8 +691,10 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     id: "gal-9",
     title: "Institutional Audit Committee Address",
     category: "Keynote Address",
+    badge: "STATUTORY RIGOR",
     collection: "Global Summits",
     year: "2025",
+    date: "DECEMBER, 2025",
     location: "New Delhi",
     image: "/sites/helena-marsh/images/fenil-arch.png",
     description: "Address to institutional audit chairs on Ind AS/IFRS statutory compliance and forensic vigilance.",
@@ -684,11 +704,227 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     id: "gal-10",
     title: "Finance Leadership Bench Sparring",
     category: "Bench Advisory",
+    badge: "FELLOWSHIP",
     collection: "Advisory Engagements",
     year: "2026",
+    date: "MARCH, 2026",
     location: "Bangalore",
     image: "/sites/helena-marsh/images/who-teams.webp",
     description: "Evaluating internal financial controls and grooming scaleup finance directors for CFO succession.",
     featured: false,
   },
+  {
+    id: "gal-11",
+    title: "Pre-Listing Treasury Rationalization Session",
+    category: "Treasury",
+    badge: "SOVEREIGN ALPHA",
+    collection: "Boardroom Deliberations",
+    year: "2026",
+    date: "FEBRUARY, 2026",
+    location: "Nariman Point, Mumbai",
+    image: "/sites/helena-marsh/images/case-conglomerate.webp",
+    description: "Rationalizing working capital lines and debt maturity covenants before public market prospectus filing.",
+    featured: true,
+  },
+  {
+    id: "gal-12",
+    title: "Forensic General Ledger Integrity Review",
+    category: "Forensic Audit",
+    badge: "BALANCE SHEET",
+    collection: "Due Diligence & Audits",
+    year: "2025",
+    date: "SEPTEMBER, 2025",
+    location: "BKC, Mumbai",
+    image: "/sites/helena-marsh/images/article-diligence.webp",
+    description: "Deep-dive ERP forensic audit identifying ₹28 Cr untracked operational leakages across 14 divisions.",
+    featured: false,
+  },
+  {
+    id: "gal-13",
+    title: "Sovereign Wealth Fund Advisory Session",
+    category: "Sovereign Fund",
+    badge: "DISA PRINCIPLES",
+    collection: "Global Summits",
+    year: "2026",
+    date: "JANUARY, 2026",
+    location: "DIFC, Dubai",
+    image: "/sites/helena-marsh/images/manifesto-bkc.webp",
+    description: "Advising institutional allocation chairs on fiscal governance and tax structuring in India corridors.",
+    featured: true,
+  },
+  {
+    id: "gal-14",
+    title: "First 90 Days CFO Transition Sparring",
+    category: "CFO Trajectory",
+    badge: "CFO TRANSITIONS",
+    collection: "Advisory Engagements",
+    year: "2026",
+    date: "JULY, 2026",
+    location: "Worli, Mumbai",
+    image: "/sites/helena-marsh/images/fenil-portrait.png",
+    description: "One-on-one strategic preparation for incoming CFO before their inaugural board audit committee meeting.",
+    featured: false,
+  },
+  {
+    id: "gal-15",
+    title: "Cross-Border Transfer Pricing Defense",
+    category: "Tax Structuring",
+    badge: "FISCAL DEFENSE",
+    collection: "Due Diligence & Audits",
+    year: "2025",
+    date: "AUGUST, 2025",
+    location: "Singapore & Mumbai",
+    image: "/sites/helena-marsh/images/article-tax.webp",
+    description: "Arm's length documentation and transfer pricing defense across Singapore, UK, and India entities.",
+    featured: true,
+  },
 ];
+
+export interface ServiceMandate {
+  id: string;
+  number: string;
+  title: string;
+  badge: string;
+  tagline: string;
+  description: string;
+  focus: string[];
+  deliverables: string[];
+  metrics: { value: string; label: string }[];
+  targetAudience: string;
+  duration: string;
+  image: string;
+  ctaText: string;
+  href: string;
+}
+
+export const SERVICE_MANDATES: ServiceMandate[] = [
+  {
+    id: "business-consultancy",
+    number: "01",
+    title: "Business Consultancy",
+    badge: "MANDATE I · ENTERPRISE ARCHITECTURE",
+    tagline: "Corporate restructuring, fiscal modeling & M&A due diligence.",
+    description:
+      "Transforming regulatory compliance into balance sheet alpha. We restructure multi-tier holding entities, rationalize debt covenants, model Ind AS / IFRS compliance, and conduct unvarnished buy-side/sell-side financial due diligence before institutional capital commits.",
+    focus: [
+      "Ind AS / IFRS compliance and statutory audit preparation",
+      "EBITDA leak diagnostics and operational margin reclamation",
+      "Working capital velocity & cash conversion cycle acceleration",
+      "Debt covenant defense, promoter leverage & refinancing models",
+      "Buy-side & sell-side forensic financial due diligence",
+    ],
+    deliverables: [
+      "Multi-entity consolidation & tax architecture roadmap",
+      "Forensic EBITDA leak report & working capital unlock",
+      "IBBI / ICAI compliant valuation & diligence defense pack",
+      "Board-ready audit committee presentation suite",
+    ],
+    metrics: [
+      { value: "₹14,000+ Cr", label: "Assets Assured" },
+      { value: "₹42 Cr", label: "EBITDA Leaks Plugged" },
+      { value: "32 Units", label: "Entities Restructured" },
+    ],
+    targetAudience: "Promoters, Board of Directors, Managing Directors & Private Equity portfolio companies.",
+    duration: "4 to 16 Weeks",
+    image: "/sites/helena-marsh/images/case-fintech.webp",
+    ctaText: "Inquire about Business Consultancy",
+    href: "/book?service=business-consultancy",
+  },
+  {
+    id: "career-consultation",
+    number: "02",
+    title: "Career Consultation",
+    badge: "MANDATE II · EXECUTIVE TRAJECTORY",
+    tagline: "Executive trajectory, CFO transition & fiscal authority.",
+    description:
+      "The transition from controller or VP Finance to the CFO chair is the most perilous jump in corporate leadership. We equip finance executives with the strategic armor, board presence, and forensic mastery required to command respect from day one.",
+    focus: [
+      "The First 90 Days Playbook: establishing immediate authority",
+      "Conducting an uncompromising forensic baseline on inherited numbers",
+      "Mastering the promoter dynamic and board sparring sessions",
+      "Audit Committee leadership and credit rating agency defense",
+      "Repositioning from technical accountant to strategic commercial partner",
+    ],
+    deliverables: [
+      "Inaugural 90-Day CFO board roadmap & audit checklist",
+      "Executive balance sheet defense & rehearsal simulations",
+      "Direct priority counsel during critical board cycles",
+      "Personal career trajectory mapping for CFO succession",
+    ],
+    metrics: [
+      { value: "90 Days", label: "Execution Blueprint" },
+      { value: "100%", label: "Audit Committee Alignment" },
+      { value: "0", label: "Inherited Surprises" },
+    ],
+    targetAudience: "New CFOs, Group Financial Controllers, Finance Directors, and Promoters scaling finance leadership.",
+    duration: "14 Weeks (Structured Sprint)",
+    image: "/sites/helena-marsh/images/who-executives.webp",
+    ctaText: "Apply for Career Consultation",
+    href: "/book?service=career-consultation",
+  },
+  {
+    id: "mentoring",
+    number: "03",
+    title: "Mentoring",
+    badge: "MANDATE III · NEXT-GEN FELLOWSHIP",
+    tagline: "Fellowship for emerging finance leaders & young partners.",
+    description:
+      "A highly selective 1-on-1 fellowship for exceptional Chartered Accountants and rising corporate finance practitioners. Grounded in Socratic inquiry, forensic ledgers, DISA principles, and real-world high-stakes statutory rigor.",
+    focus: [
+      "1-on-1 Socratic sparring on live balance sheet anomalies",
+      "DISA and forensic audit techniques that standard courses miss",
+      "Navigating regulatory bodies (ICAI, NFRA, RBI, SEBI) with integrity",
+      "Developing sovereign judgment when data is incomplete or ambiguous",
+      "Building a peerless professional reputation and partner practice",
+    ],
+    deliverables: [
+      "Bi-weekly private sparring and ledger post-mortem reviews",
+      "Access to proprietary working capital & restructuring frameworks",
+      "Lifelong fellowship network of elite finance practitioners",
+      "Direct guidance on high-stakes career crossroads",
+    ],
+    metrics: [
+      { value: "1-on-1", label: "Socratic Sparring" },
+      { value: "180+", label: "Mandate Case Archives" },
+      { value: "12 Leaders", label: "Max Cohort Size" },
+    ],
+    targetAudience: "Chartered Accountants with 3–10 years experience, aspiring partners, and scaleup finance heads.",
+    duration: "6 or 12 Months",
+    image: "/sites/helena-marsh/images/who-teams.webp",
+    ctaText: "Apply for Mentoring Fellowship",
+    href: "/book?service=mentoring",
+  },
+  {
+    id: "life-lessons-coaching",
+    number: "04",
+    title: "Life Lessons / Coaching",
+    badge: "MANDATE IV · EXECUTIVE EQUILIBRIUM",
+    tagline: "High-stakes boardroom equilibrium & personal longevity.",
+    description:
+      "When ₹1,000+ Cr is hanging in the balance, promoter pressure is suffocating, and statutory deadlines loom, technical skill alone is insufficient. This mandate provides confidential psychological grounding, decision hygiene, and equilibrium for finance leaders in the eye of the storm.",
+    focus: [
+      "High-stakes boardroom composure under severe promoter tension",
+      "Managing lender scrutiny and credit rating downgrade pressures",
+      "Cognitive clarity and decision hygiene during restructuring crises",
+      "Preventing executive burnout while maintaining razor-sharp vigilance",
+      "Ethical backbone: standing firm when asked to compromise ledgers",
+    ],
+    deliverables: [
+      "Confidential monthly or bi-weekly strategic equilibrium retainer",
+      "24/7 priority emergency line for acute boardroom emergencies",
+      "Personal leadership longevity & resilience framework",
+      "Unflinching, independent sounding board with absolute discretion",
+    ],
+    metrics: [
+      { value: "24/7", label: "Emergency Advisory Line" },
+      { value: "100%", label: "Irrevocable Confidentiality" },
+      { value: "15+ Yrs", label: "Boardroom Wisdom" },
+    ],
+    targetAudience: "Founders, Promoters, CFOs, and Managing Partners managing severe scale, litigation, or debt renegotiation.",
+    duration: "Annual Retainer (12 Months)",
+    image: "/sites/helena-marsh/images/who-founders.webp",
+    ctaText: "Inquire about Life Lessons & Coaching",
+    href: "/book?service=life-lessons-coaching",
+  },
+];
+

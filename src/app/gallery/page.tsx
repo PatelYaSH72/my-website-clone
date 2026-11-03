@@ -6,8 +6,9 @@ import { Header } from "@/components/sites/helena-marsh/Header";
 import { PageHero } from "@/components/sites/helena-marsh/PageHero";
 import { Footer } from "@/components/sites/helena-marsh/Footer";
 import { CtaSection } from "@/components/sites/helena-marsh/CtaSection";
+import { AnimatedImageCard } from "@/components/sites/helena-marsh/AnimatedImageCard";
 import { GALLERY_ITEMS, GALLERY_COLLECTIONS, GalleryItem } from "@/components/sites/helena-marsh/data";
-import { CrossToggle, ArrowRight } from "@/components/sites/helena-marsh/Icons";
+import { CrossToggle, DiamondMark } from "@/components/sites/helena-marsh/Icons";
 
 export default function GalleryPage() {
   const [selectedCollection, setSelectedCollection] = useState<string>("All Collections");
@@ -22,24 +23,36 @@ export default function GalleryPage() {
     <div className="min-h-screen flex flex-col bg-[#F3EFE6] text-[#080F1E]">
       <Header />
       <main className="flex-1">
+        {/* Full-Page Majestic Hero Section */}
         <PageHero
           badge="06 THE GALLERY ARCHIVE"
           title="Moments from the"
           italicWord="boardroom."
-          description="An unvarnished photographic record of closed-door executive boardrooms, sovereign capital keynotes, forensic audit war rooms, and M&A due diligence sessions."
-          chips={["MUMBAI · LONDON · SINGAPORE", "CLOSED-DOOR SESSIONS", "FCA ARCHIVE"]}
+          description="An unvarnished photographic record of closed-door executive boardrooms, sovereign capital keynotes, forensic audit war rooms, and M&A due diligence sessions across Mumbai, London, Singapore, and Zurich."
+          chips={["MUMBAI · LONDON · SINGAPORE", "15 CONFIDENTIAL SESSIONS", "FCA ARCHIVE"]}
+          stats={[
+            { number: "15+", label: "ARCHIVED MANDATES" },
+            { number: "₹14,000+ Cr", label: "TRANSACTIONS AUDITED" },
+            { number: "4", label: "GLOBAL HUBS" },
+            { number: "100%", label: "DISCRETION ASSURED" },
+          ]}
+          ctaText="Inquire on Advisory"
+          ctaHref="/book"
         />
 
-        {/* Gallery Collection Filter & Grid */}
-        <section className="py-20 sm:py-28 px-6 max-w-[1360px] mx-auto">
+        {/* Gallery Collection Filter & 5-Column Grid */}
+        <section className="py-20 sm:py-28 px-4 sm:px-6 max-w-[1440px] mx-auto">
           {/* Collection Tabs Header */}
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12 sm:mb-16 border-b border-[#080F1E]/15 pb-8">
             <div className="space-y-1">
-              <p className="text-xs font-mono tracking-widest uppercase text-[#8E9189]">
-                FILTER ARCHIVE
-              </p>
+              <div className="flex items-center gap-2">
+                <DiamondMark className="w-2.5 h-2.5 bg-[#E6C654]" />
+                <p className="text-xs font-mono tracking-widest uppercase text-[#8E9189]">
+                  FILTER ARCHIVE BY COLLECTION
+                </p>
+              </div>
               <h2 className="text-2xl sm:text-3xl font-light text-[#080F1E]">
-                Select collection
+                Select advisory collection
               </h2>
             </div>
 
@@ -64,50 +77,22 @@ export default function GalleryPage() {
             </div>
           </div>
 
-          {/* Gallery Items Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredItems.map((item) => (
-              <div
+          {/* Maximum 5 Images Per Row Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
+            {filteredItems.map((item, idx) => (
+              <AnimatedImageCard
                 key={item.id}
+                src={item.image}
+                alt={item.title}
+                badge={item.badge || item.category.toUpperCase()}
+                date={item.date || `${item.year}`}
+                meta={item.location}
+                title={item.title}
+                subtitle={item.description}
+                aspectRatio="aspect-[4/5]"
+                index={idx}
                 onClick={() => setActiveItem(item)}
-                className="group relative rounded-3xl overflow-hidden bg-[#080F1E] border border-[#080F1E]/10 cursor-pointer shadow-md hover:shadow-2xl transition-all duration-500 flex flex-col justify-end min-h-[380px]"
-              >
-                {/* Photo */}
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  className="object-cover filter contrast-105 group-hover:scale-105 transition-transform duration-700 ease-out"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 420px"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#080F1E]/95 via-[#080F1E]/40 to-transparent" />
-
-                {/* Top Badge */}
-                <div className="absolute top-4 left-4 z-10 flex items-center gap-2">
-                  <span className="px-3 py-1 rounded-full bg-[#080F1E]/80 backdrop-blur-md border border-white/15 text-[11px] font-mono text-[#E6C654] uppercase tracking-wider">
-                    {item.category}
-                  </span>
-                  <span className="px-2.5 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/10 text-[11px] font-mono text-[#F3EFE6]/80">
-                    {item.year}
-                  </span>
-                </div>
-
-                {/* Bottom Card Content */}
-                <div className="relative z-10 p-6 text-[#F3EFE6] space-y-2">
-                  <div className="flex items-center justify-between text-xs font-mono text-[#E6C654] tracking-wider uppercase">
-                    <span>{item.location}</span>
-                    <span className="text-[#F3EFE6]/50">{item.collection}</span>
-                  </div>
-
-                  <h3 className="text-xl sm:text-2xl font-light tracking-tight text-[#F3EFE6] group-hover:text-[#E6C654] transition-colors leading-snug">
-                    {item.title}
-                  </h3>
-
-                  <p className="text-xs font-light text-[#F3EFE6]/75 line-clamp-2 leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
-              </div>
+              />
             ))}
           </div>
 
@@ -137,11 +122,12 @@ export default function GalleryPage() {
                   <div>
                     <div className="flex items-center justify-between gap-3 mb-4">
                       <span className="px-3 py-1 rounded-full bg-[#E6C654]/15 border border-[#E6C654]/30 text-[#E6C654] font-mono text-xs uppercase tracking-wider">
-                        {activeItem.category}
+                        {activeItem.badge || activeItem.category}
                       </span>
                       <button
                         onClick={() => setActiveItem(null)}
-                        className="cursor-pointer text-[#F3EFE6]/60 hover:text-white"
+                        className="cursor-pointer text-[#F3EFE6]/60 hover:text-white p-1"
+                        aria-label="Close modal"
                       >
                         <CrossToggle isOpen={true} className="w-5 h-5 text-white" />
                       </button>
@@ -151,30 +137,37 @@ export default function GalleryPage() {
                       {activeItem.title}
                     </h3>
 
-                    <p className="text-sm font-light leading-relaxed text-[#F3EFE6]/80 mb-4">
+                    <div className="space-y-2 text-xs font-mono text-[#F3EFE6]/65 border-t border-b border-white/10 py-3 mb-4">
+                      <div className="flex justify-between">
+                        <span>COLLECTION:</span>
+                        <span className="text-[#E6C654]">{activeItem.collection}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>LOCATION:</span>
+                        <span>{activeItem.location}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>DATE:</span>
+                        <span>{activeItem.date || activeItem.year}</span>
+                      </div>
+                    </div>
+
+                    <p className="text-sm font-light text-[#F3EFE6]/80 leading-relaxed">
                       {activeItem.description}
                     </p>
-
-                    <div className="space-y-2 pt-4 border-t border-white/10 text-xs font-mono text-[#F3EFE6]/60">
-                      <p>
-                        <span className="text-[#E6C654]">COLLECTION:</span> {activeItem.collection}
-                      </p>
-                      <p>
-                        <span className="text-[#E6C654]">LOCATION:</span> {activeItem.location}
-                      </p>
-                      <p>
-                        <span className="text-[#E6C654]">YEAR:</span> {activeItem.year}
-                      </p>
-                    </div>
                   </div>
 
-                  <button
-                    onClick={() => setActiveItem(null)}
-                    className="w-full py-3 rounded-full bg-[#E6C654] text-[#080F1E] font-medium text-xs font-mono uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-[#F0D268] transition-colors cursor-pointer"
-                  >
-                    <span>Close Preview</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </button>
+                  <div className="pt-4 border-t border-white/10 flex items-center justify-between">
+                    <span className="text-xs font-mono text-[#E6C654]">
+                      MANDATE CLEARED · CONFIDENTIAL
+                    </span>
+                    <button
+                      onClick={() => setActiveItem(null)}
+                      className="text-xs font-mono tracking-wider text-white hover:text-[#E6C654] cursor-pointer"
+                    >
+                      CLOSE [ESC]
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>

@@ -123,10 +123,10 @@ export function ResultsSection() {
             {/* Case Notes CTA Button */}
             <div className="pt-2">
               <Link
-                href="/results"
+                href="/services"
                 className="inline-flex items-center gap-2 border border-[#F3EFE6]/20 bg-[#080F1E] px-5 py-2.5 rounded-full text-[13px] font-medium text-[#F3EFE6] hover:border-[#E6C654] hover:text-[#E6C654] transition-colors"
               >
-                <span>Read the case notes</span>
+                <span>Explore advisory services</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
@@ -150,7 +150,7 @@ export function ResultsSection() {
                       src={c.image}
                       alt={c.title}
                       fill
-                      className="object-cover filter grayscale contrast-105 hover:grayscale-0 hover:scale-105 transition-all duration-700"
+                      className="object-cover filter grayscale contrast-105 hover:grayscale-0 hover:brightness-110 hover:scale-105 transition-all duration-700"
                       sizes="(max-width: 640px) 100vw, 400px"
                     />
                   </div>

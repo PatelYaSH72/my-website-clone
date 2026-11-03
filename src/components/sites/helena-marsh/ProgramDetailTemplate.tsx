@@ -79,7 +79,7 @@ export function ProgramDetailTemplate({ program, audienceBadge, image }: Program
                   fill
                   priority
                   sizes="(max-width: 1024px) 100vw, 1100px"
-                  className="object-cover filter grayscale contrast-105"
+                  className="object-cover filter grayscale contrast-105 hover:grayscale-0 hover:brightness-110 hover:scale-105 transition-all duration-700 ease-out"
                 />
               </div>
             </div>

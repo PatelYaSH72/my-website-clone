@@ -1,6 +1,5 @@
 import React from "react";
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { Header } from "@/components/sites/helena-marsh/Header";
 import { PageHero } from "@/components/sites/helena-marsh/PageHero";
@@ -10,6 +9,7 @@ import { CtaSection } from "@/components/sites/helena-marsh/CtaSection";
 import { Footer } from "@/components/sites/helena-marsh/Footer";
 import { PROGRAMS, FAQ_ITEMS } from "@/components/sites/helena-marsh/data";
 import { ArrowRight } from "@/components/sites/helena-marsh/Icons";
+import { AnimatedImageCard } from "@/components/sites/helena-marsh/AnimatedImageCard";
 
 export const metadata: Metadata = {
   title: "Advisory — Corporate Finance & Boardroom Mandates | CA Fenil Shah",
@@ -154,15 +154,16 @@ export default function CoachingPage() {
 
                   {/* Right Column: Photo */}
                   <div className="lg:col-span-5 relative">
-                    <div className="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl bg-[#080F1E]">
-                      <Image
-                        src={meta.image}
-                        alt={prog.title}
-                        fill
-                        sizes="(max-width: 1024px) 100vw, 480px"
-                        className="object-cover filter grayscale contrast-105 hover:grayscale-0 transition-all duration-700"
-                      />
-                    </div>
+                    <AnimatedImageCard
+                      src={meta.image}
+                      alt={prog.title}
+                      badge={meta.audience.split(" ")[1]}
+                      date={prog.duration}
+                      title={prog.title}
+                      aspectRatio="aspect-[4/5]"
+                      index={idx}
+                      showCaptionBelow={false}
+                    />
                   </div>
                 </div>
               </div>

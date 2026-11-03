@@ -250,7 +250,7 @@ export function MethodSection() {
                       src={step.image}
                       alt={step.title}
                       fill
-                      className="object-cover filter contrast-105"
+                      className="object-cover filter grayscale contrast-[1.06] hover:grayscale-0 hover:brightness-110 transition-all duration-700 ease-out"
                       sizes="(max-width: 1024px) 100vw, 480px"
                       priority={idx === 0}
                     />
@@ -299,7 +299,7 @@ export function MethodSection() {
                   alt={step.title}
                   fill
                   sizes="(max-width: 1024px) 100vw, 600px"
-                  className="object-cover"
+                  className="object-cover filter grayscale contrast-[1.06] hover:grayscale-0 hover:brightness-110 transition-all duration-700 ease-out"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#080F1E] via-transparent to-transparent" />
                 <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-[#080F1E]/80 backdrop-blur-sm border border-white/10 text-xs font-mono text-[#E6C654]">

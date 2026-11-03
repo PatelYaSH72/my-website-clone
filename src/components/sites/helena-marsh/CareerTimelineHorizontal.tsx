@@ -1,9 +1,9 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
-import Image from "next/image";
 import { initGSAP, isReducedMotion } from "@/lib/animations/gsap";
 import { DiamondMark } from "./Icons";
+import { AnimatedImageCard } from "./AnimatedImageCard";
 
 export interface TimelineItem {
   year: string;
@@ -142,16 +142,15 @@ export function CareerTimelineHorizontal({ timeline }: CareerTimelineHorizontalP
 
               {/* Photo */}
               <div className={`lg:col-span-5 ${i % 2 === 1 ? "lg:order-1" : ""}`}>
-                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md bg-[#080F1E] group">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    className="object-cover filter grayscale contrast-105 group-hover:scale-105 group-hover:grayscale-0 transition-all duration-500"
-                    sizes="(max-width: 1024px) 100vw, 360px"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#080F1E]/50 via-transparent to-transparent pointer-events-none" />
-                </div>
+                <AnimatedImageCard
+                  src={item.image}
+                  alt={item.title}
+                  badge={`PHASE 0${i + 1}`}
+                  date={item.year}
+                  aspectRatio="aspect-[4/3]"
+                  index={i}
+                  showCaptionBelow={false}
+                />
               </div>
             </div>
           ))}
