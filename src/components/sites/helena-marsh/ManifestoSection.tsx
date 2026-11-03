@@ -70,7 +70,7 @@ export function ManifestoSection() {
   const wipeProgress = Math.max(0, Math.min(1, (scrollProgress - 0.64) / 0.32));
 
   // Framer polygon: left edge ascends first, then right edge sweeps up
-  const wipeClip = `polygon(0 calc(100% - ${wipeProgress * 175}%), 100% calc(175% - ${wipeProgress * 175}%), 100% 101%, 0 101%)`;
+  const wipeClip = `polygon(0 calc(175% - ${wipeProgress * 175}%), 100% calc(100% - ${wipeProgress * 175}%), 100% 101%, 0 101%)`;
   const wipeTranslateY = `${(1 - wipeProgress) * 80}px`;
 
   // Photos Parallax positions
