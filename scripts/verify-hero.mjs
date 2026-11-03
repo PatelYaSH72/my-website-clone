@@ -20,12 +20,27 @@ async function run() {
   await page.goto('http://localhost:3000', { waitUntil: 'networkidle2' });
   await new Promise(r => setTimeout(r, 2200)); // wait for GSAP intro
 
-  const heroShot = path.join(ARTIFACTS_DIR, 'hero_option_d_split_horizon.png');
-  await page.screenshot({ path: heroShot, clip: { x: 0, y: 0, width: 1440, height: 960 } });
-  console.log('Saved Option D hero screenshot:', heroShot);
+  const defaultShot = path.join(ARTIFACTS_DIR, 'hero_option_b_refined_default.png');
+  await page.screenshot({ path: defaultShot, clip: { x: 0, y: 0, width: 1440, height: 960 } });
+  console.log('Saved Refined Option B default screenshot:', defaultShot);
+
+  // Hover over the 4th slab (monolith slab 3 / index 3, which is in the right half over Fenil)
+  const slabs = await page.$$('[data-bg-monolith]');
+  console.log(`Found ${slabs.length} background monolith slabs`);
+  if (slabs.length >= 4) {
+    const box = await slabs[3].boundingBox();
+    if (box) {
+      await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2);
+      await new Promise(r => setTimeout(r, 800)); // wait for hover transition
+    }
+  }
+
+  const hoverShot = path.join(ARTIFACTS_DIR, 'hero_option_b_refined_hover.png');
+  await page.screenshot({ path: hoverShot, clip: { x: 0, y: 0, width: 1440, height: 960 } });
+  console.log('Saved Refined Option B hover screenshot:', hoverShot);
 
   await browser.close();
-  console.log('Hero Option D verification finished successfully!');
+  console.log('Hero Option B verification finished successfully!');
 }
 
 run().catch(err => {
