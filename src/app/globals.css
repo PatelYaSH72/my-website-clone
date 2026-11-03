@@ -159,6 +159,35 @@ h1 em, h2 em, h3 em, .serif-italic {
   pointer-events: none;
 }
 
+/* Horizontal Laser Scan for About Section */
+@keyframes horizontal-laser {
+  0% {
+    left: -20%;
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.9;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    left: 120%;
+    opacity: 0;
+  }
+}
+
+.animate-horizontal-laser {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, transparent, #e6c654 30%, #ffffff 50%, #e6c654 70%, transparent);
+  box-shadow: 0 0 16px #e6c654, 0 0 4px #ffffff;
+  animation: horizontal-laser 4.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  pointer-events: none;
+}
+
 @keyframes spark-float {
   0%, 100% {
     transform: translateY(0px) scale(1);

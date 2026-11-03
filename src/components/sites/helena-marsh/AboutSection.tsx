@@ -1,302 +1,413 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "./Icons";
+import { ArrowRight, SparkStar, ElectricBolt } from "./Icons";
 import { initGSAP, isReducedMotion } from "@/lib/animations/gsap";
 
-export function AboutSection() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const archRef = useRef<HTMLDivElement>(null);
-  const portraitRef = useRef<HTMLDivElement>(null);
-  const wordLeftRef = useRef<HTMLSpanElement>(null);
-  const wordRightRef = useRef<HTMLSpanElement>(null);
-  const bioRef = useRef<HTMLDivElement>(null);
-  const vignetteRef = useRef<HTMLDivElement>(null);
+interface AboutPillar {
+  id: number;
+  tag: string;
+  pillarNum: string;
+  title: string;
+  stat: string;
+  statLabel: string;
+  desc: string;
+  highlight: string;
+  image: string;
+  imagePosition: string;
+}
 
-  const credentials = [
-    "FELLOW CHARTERED ACCOUNTANT (FCA) — ICAI",
-    "REGISTERED VALUER (SECURITIES & ASSETS) — IBBI",
-    "DISA (INFORMATION SYSTEMS AUDIT) CERTIFIED",
-    "STRATEGIC CFO & BOARDROOM ADVISOR SINCE 2012",
-  ];
+const ABOUT_PILLARS: AboutPillar[] = [
+  {
+    id: 0,
+    pillarNum: "01",
+    tag: "FORENSIC SCRUTINY",
+    title: "Balance Sheet Truth",
+    stat: "₹14,000+ Cr",
+    statLabel: "Capital & Assets Assured",
+    desc: "Unvarnished forensic auditing before rating agencies or audit committees inspect.",
+    highlight: "Ind AS & IFRS Statutory Rigor",
+    image: "/sites/helena-marsh/images/fenil-arch.png",
+    imagePosition: "object-[50%_18%]",
+  },
+  {
+    id: 1,
+    pillarNum: "02",
+    tag: "M&A DILIGENCE",
+    title: "Transaction Structuring",
+    stat: "40+ Deals",
+    statLabel: "Buy-Side Audits Cleared",
+    desc: "Spotting undisclosed tax liabilities, EBITDA leakages, and debt covenants pre-signing.",
+    highlight: "Defensive Valuation Models",
+    image: "/sites/helena-marsh/images/method-board.webp",
+    imagePosition: "object-[50%_45%]",
+  },
+  {
+    id: 2,
+    pillarNum: "03",
+    tag: "CAPITAL ARCHITECTURE",
+    title: "Multi-Entity Restructuring",
+    stat: "₹42 Cr+",
+    statLabel: "EBITDA Leakage Plugged",
+    desc: "Engineering defensive permanence across holding companies and family offices.",
+    highlight: "Promoter Wealth Protection",
+    image: "/sites/helena-marsh/images/fenil-portrait.png",
+    imagePosition: "object-[50%_18%]",
+  },
+  {
+    id: 3,
+    pillarNum: "04",
+    tag: "BOARDROOM COUNSEL",
+    title: "Sovereign CFO Advisory",
+    stat: "180+",
+    statLabel: "Strategic Mandates Delivered",
+    desc: "Twelve enterprise clients at a time. Fortnightly boardroom counsel across India & UK.",
+    highlight: "FCA ICAI & IBBI Valuer",
+    image: "/sites/helena-marsh/images/fenil-speaking.webp",
+    imagePosition: "object-[50%_20%]",
+  },
+];
+
+const CREDENTIALS = [
+  {
+    badge: "ICAI FELLOW MEMBER",
+    title: "Fellow Chartered Accountant (FCA)",
+    org: "The Institute of Chartered Accountants of India",
+  },
+  {
+    badge: "IBBI REGISTERED",
+    title: "Registered Valuer (Securities & Assets)",
+    org: "Insolvency and Bankruptcy Board of India",
+  },
+  {
+    badge: "SYSTEMS & FORENSICS",
+    title: "DISA Certified (Systems Audit)",
+    org: "Information Systems & Internal Controls Audit",
+  },
+  {
+    badge: "BOARDROOM PRACTICE",
+    title: "14+ Years Enterprise Advisory",
+    org: "Mumbai · London · Singapore Practice",
+  },
+];
+
+export function AboutSection() {
+  const [activePillar, setActivePillar] = useState<number | null>(null);
+  const sectionRef = useRef<HTMLElement>(null);
+  const accordionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (isReducedMotion()) return;
 
+    const section = sectionRef.current;
+    const accordion = accordionRef.current;
+    if (!section || !accordion) return;
+
     const { gsap } = initGSAP();
-    const container = containerRef.current;
-    const arch = archRef.current;
-    const portrait = portraitRef.current;
-    const wordLeft = wordLeftRef.current;
-    const wordRight = wordRightRef.current;
-    const bio = bioRef.current;
-    const vignette = vignetteRef.current;
 
-    if (!container || !arch || !wordLeft || !wordRight || !bio) return;
-
-    const mm = gsap.matchMedia();
-
-    mm.add("(min-width: 1024px)", () => {
-      // Set initial state
-      arch.style.clipPath = "inset(16% 34% 14% 34% round 44vw 44vw 8px 8px)";
-      gsap.set(wordLeft, { opacity: 1, y: 0 });
-      gsap.set(wordRight, { opacity: 1, y: 0 });
-      gsap.set(bio, { opacity: 0, y: 80 });
-      if (vignette) gsap.set(vignette, { opacity: 0 });
-      if (portrait) gsap.set(portrait, { scale: 1.2 });
-
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: container,
-          start: "top top",
-          end: "+=2200",
-          pin: true,
-          pinSpacing: true,
-          scrub: 1.2,
-        },
-      });
-
-      // Dummy progress object for mathematically perfect clipPath unmasking
-      const unmaskObj = { p: 0 };
-
-      // Phase 1: Unmask the arch window to full bleed + words slide away
-      tl.to(
-        wordLeft,
+    const ctx = gsap.context(() => {
+      // 1. Editorial text reveal on scroll
+      gsap.fromTo(
+        "[data-about-reveal]",
+        { autoAlpha: 0, y: 32 },
         {
-          y: -140,
-          opacity: 0,
-          ease: "power2.inOut",
-          duration: 0.45,
-        },
-        0
-      )
-        .to(
-          wordRight,
-          {
-            y: 140,
-            opacity: 0,
-            ease: "power2.inOut",
-            duration: 0.45,
-          },
-          0
-        )
-        .to(
-          unmaskObj,
-          {
-            p: 1,
-            ease: "power2.inOut",
-            duration: 0.6,
-            onUpdate: () => {
-              const u = unmaskObj.p;
-              const top = (1 - u) * 16;
-              const side = (1 - u) * 34;
-              const bottom = (1 - u) * 14;
-              const rTop = (1 - u) * 44;
-              const rBot = (1 - u) * 8;
-              arch.style.clipPath = `inset(${top}% ${side}% ${bottom}% ${side}% round ${rTop}vw ${rTop}vw ${rBot}px ${rBot}px)`;
-            },
-          },
-          0
-        );
-
-      if (portrait) {
-        tl.to(
-          portrait,
-          {
-            scale: 1.04,
-            ease: "power1.out",
-            duration: 0.6,
-          },
-          0
-        );
-      }
-
-      // Phase 2: Fade in dark vignette and glide bio overlay into place
-      if (vignette) {
-        tl.to(
-          vignette,
-          {
-            opacity: 0.9,
-            ease: "power2.out",
-            duration: 0.4,
-          },
-          0.55
-        );
-      }
-
-      tl.to(
-        bio,
-        {
-          opacity: 1,
+          autoAlpha: 1,
           y: 0,
-          ease: "power2.out",
-          duration: 0.4,
-        },
-        0.58
+          duration: 0.85,
+          stagger: 0.14,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: section,
+            start: "top 78%",
+          },
+        }
       );
 
-      // Plateau hold phase at the end so user reads before unpinning
-      tl.to({}, { duration: 0.25 });
-    });
+      // 2. Horizontal Kinetic Aperture Unfold on the 4 Accordion Pillars
+      gsap.fromTo(
+        "[data-about-pillar]",
+        { scaleX: 0.45, autoAlpha: 0.2, y: 24 },
+        {
+          scaleX: 1,
+          autoAlpha: 1,
+          y: 0,
+          duration: 1.15,
+          stagger: 0.1,
+          ease: "power4.out",
+          scrollTrigger: {
+            trigger: accordion,
+            start: "top 82%",
+          },
+        }
+      );
 
-    return () => {
-      mm.revert();
-    };
+      // 3. Staggered credentials reveal
+      gsap.fromTo(
+        "[data-about-cred]",
+        { autoAlpha: 0, y: 20 },
+        {
+          autoAlpha: 1,
+          y: 0,
+          duration: 0.65,
+          stagger: 0.08,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: "[data-about-creds-grid]",
+            start: "top 88%",
+          },
+        }
+      );
+    }, section);
+
+    return () => ctx.revert();
   }, []);
 
   return (
     <section
       id="about"
-      ref={containerRef}
-      className="relative w-full bg-[#F3EFE6] text-[#080F1E] overflow-hidden z-20"
+      ref={sectionRef}
+      className="scroll-mt-24 sm:scroll-mt-32 relative isolate w-full overflow-hidden bg-[#070b15] pt-28 sm:pt-36 pb-24 sm:pb-32 text-[#F3EFE6] z-20"
     >
-      {/* Pinned Desktop Experience (Shown on lg and above) */}
-      <div className="hidden lg:flex relative h-screen w-full overflow-hidden items-center justify-center">
-        {/* Centered Arch Window Morphing to Full Screen */}
-        <div
-          ref={archRef}
-          className="absolute inset-0 w-full h-full bg-[#080F1E] overflow-hidden"
-          style={{
-            clipPath: "inset(16% 34% 14% 34% round 44vw 44vw 8px 8px)",
-          }}
-        >
-          <div ref={portraitRef} className="relative w-full h-full">
-            <Image
-              src="/sites/helena-marsh/images/fenil-arch.png"
-              alt="CA Fenil Shah portrait"
-              fill
-              sizes="(max-width: 1024px) 100vw, 100vw"
-              className="object-cover filter contrast-105"
-              priority
-            />
+      {/* Background Aurora: Royal Blue & Electric Gold Fields */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -z-10"
+        style={{
+          background:
+            "radial-gradient(60% 70% at 50% 20%, rgba(30, 64, 175, 0.22) 0%, transparent 72%), radial-gradient(40% 50% at 85% 75%, rgba(230, 198, 84, 0.10) 0%, transparent 70%), radial-gradient(35% 45% at 15% 85%, rgba(30, 64, 175, 0.14) 0%, transparent 70%)",
+        }}
+      />
+
+      {/* Subtle Micro-Grid */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -z-10 opacity-[0.03]"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(230, 198, 84, 0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(230, 198, 84, 0.4) 1px, transparent 1px)",
+          backgroundSize: "56px 56px",
+        }}
+      />
+
+      <div className="mx-auto w-full max-w-[1360px] px-5 sm:px-8 lg:px-12">
+        {/* TOP: Editorial Story & Authority */}
+        <div className="mb-14 sm:mb-20 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-end">
+          <div className="lg:col-span-8 space-y-5 sm:space-y-6">
+            <div
+              data-about-reveal
+              className="inline-flex items-center gap-2.5 rounded-full border border-[#E6C654]/30 bg-[#E6C654]/10 px-3.5 py-1 text-[11px] font-mono uppercase tracking-widest text-[#E6C654]"
+            >
+              <SparkStar className="h-3 w-3 animate-spin-slow" />
+              <span>ABOUT CA FENIL SHAH · CAPITAL ARCHITECT</span>
+            </div>
+
+            <h2
+              data-about-reveal
+              className="text-[clamp(2.35rem,4.6vw,4.4rem)] font-light leading-[1.03] tracking-[-0.04em] text-[#F3EFE6]"
+            >
+              Fourteen years inside{" "}
+              <span className="font-serif italic text-[#E6C654]">boardrooms like yours.</span>
+            </h2>
+
+            <p
+              data-about-reveal
+              className="max-w-2xl text-[16px] sm:text-[18px] lg:text-[19px] font-light leading-[1.7] text-[#CBD5E1]"
+            >
+              Before establishing this sovereign practice, I advised enterprise boards, high-growth unicorn CFOs, and family office promoters across India, the UK, and Singapore. I know what Monday morning feels like when debt covenants tighten or tax scrutiny arrives — and I know how to engineer defensive permanence.
+            </p>
           </div>
-          {/* Dark Vignette Overlay on Copy Phase */}
+
           <div
-            ref={vignetteRef}
-            className="absolute inset-0 bg-gradient-to-t from-[#080F1E] via-[#080F1E]/85 to-transparent pointer-events-none"
-            style={{ opacity: 0 }}
-          />
-        </div>
-
-        {/* Intro Floating Headline Words ("Meet" on Left, "Fenil" on Right) */}
-        <span
-          ref={wordLeftRef}
-          className="absolute top-1/2 right-[calc(50%+16vw)] -translate-y-1/2 text-[clamp(44px,6.2vw,96px)] font-light tracking-tight text-[#080F1E] uppercase select-none pointer-events-none z-10"
-        >
-          Meet
-        </span>
-        <span
-          ref={wordRightRef}
-          className="absolute top-1/2 left-[calc(50%+16vw)] -translate-y-1/2 text-[clamp(52px,7.8vw,114px)] font-serif italic text-[#E6C654] tracking-tight select-none pointer-events-none z-10"
-        >
-          Fenil
-        </span>
-
-        {/* Bio & Credentials Overlay (Rides up as scroll approaches end) */}
-        <div
-          ref={bioRef}
-          className="absolute inset-0 z-20 flex items-center justify-center px-6 lg:px-12 pointer-events-none"
-          style={{ opacity: 0, transform: "translateY(80px)" }}
-        >
-          <div className="max-w-[1240px] w-full text-[#F3EFE6] pointer-events-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-8 space-y-6">
-              <p className="text-xs font-mono tracking-widest uppercase text-[#E6C654]">
-                ABOUT CA FENIL SHAH
-              </p>
-              <h2 className="text-[clamp(32px,4vw,56px)] leading-[1.05] tracking-tight font-light">
-                Fourteen years inside{" "}
-                <span className="font-serif italic text-[#E6C654]">boardrooms like yours.</span>
-              </h2>
-              <p className="text-[#F3EFE6]/80 text-[18px] sm:text-[20px] font-light leading-relaxed max-w-2xl">
-                Before establishing this strategic advisory, I advised enterprise boards, high-growth
-                unicorn CFOs, and family office promoters across India, the UK, and Singapore. I know
-                what Monday morning feels like when debt covenants tighten or tax scrutiny arrives —
-                and I know how to engineer defensive permanence.
-              </p>
-              <p className="text-[#F3EFE6]/70 text-[15px] sm:text-[16px] font-light leading-relaxed max-w-2xl">
-                My work is grounded in forensic balance sheet analysis, Ind AS / IFRS statutory
-                governance, and working capital optimization. There are no generic templates and no
-                performative bookkeeping: only rigorous auditing, unvarnished fiscal truth, and
-                verifiable EBITDA compounding.
-              </p>
-              {/* Credentials */}
-              <div className="pt-4 border-t border-[#F3EFE6]/15 max-w-2xl">
-                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[12px] sm:text-[13px] font-mono text-[#F3EFE6]/75">
-                  {credentials.map((cred, i) => (
-                    <li key={i} className="flex items-center gap-2.5">
-                      <span className="w-1.5 h-1.5 bg-[#E6C654] rotate-45 shrink-0" />
-                      <span>{cred}</span>
-                    </li>
-                  ))}
-                </ul>
+            data-about-reveal
+            className="lg:col-span-4 flex flex-col justify-between gap-6 border-l border-white/15 pl-6 sm:pl-8 py-1"
+          >
+            <div className="space-y-2">
+              <div className="flex items-center gap-2 text-[10px] font-mono uppercase tracking-widest text-[#E6C654]">
+                <ElectricBolt className="h-3 w-3" />
+                <span>PRACTICE LAW</span>
               </div>
-              <div className="pt-2">
-                <Link
-                  href="/about"
-                  className="inline-flex items-center gap-2 text-base font-medium text-[#E6C654] hover:text-[#F0D268] transition-colors"
-                >
-                  <span>The longer story</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
+              <p className="text-[13.5px] leading-relaxed text-[#94A3B8]">
+                No generic templates and no performative bookkeeping: only rigorous forensic auditing, unvarnished fiscal truth, and verifiable EBITDA compounding.
+              </p>
+            </div>
+
+            <div>
+              <Link
+                href="/about"
+                className="group inline-flex items-center gap-2 text-[14px] font-medium text-[#E6C654] transition-colors hover:text-[#F0D575]"
+              >
+                <span>Read the complete career timeline</span>
+                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </Link>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Mobile Fallback Layout (Shown on screens < lg) */}
-      <div className="block lg:hidden py-24 px-6 max-w-[1360px] mx-auto grid grid-cols-1 gap-12 items-center">
-        <div className="relative w-full max-w-[420px] mx-auto aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl border border-[#080F1E]/10 bg-[#080F1E]">
-          <Image
-            src="/sites/helena-marsh/images/fenil-arch.png"
-            alt="CA Fenil Shah, Chartered Accountant"
-            fill
-            sizes="(max-width: 640px) 100vw, 420px"
-            className="object-cover filter contrast-105"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#080F1E]/80 via-transparent to-transparent" />
-          <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between text-[#F3EFE6]">
-            <span className="font-serif italic text-2xl">CA Fenil Shah</span>
-            <span className="text-xs font-mono uppercase text-[#E6C654] tracking-widest">
-              Mumbai · London
-            </span>
+        {/* CENTER: Kinetic Boardroom Accordion (4 Forensic Pillars Slabs) */}
+        <div className="relative">
+          {/* Laser Scanline Beam Sweeping Horizontally */}
+          <div aria-hidden="true" className="animate-horizontal-laser z-30" />
+
+          <div
+            ref={accordionRef}
+            onMouseLeave={() => setActivePillar(null)}
+            className="relative flex h-[500px] sm:h-[560px] lg:h-[620px] w-full items-stretch gap-2 sm:gap-3 overflow-hidden rounded-[20px] border border-white/10 bg-[#091122]/80 p-2 sm:p-2.5 shadow-[0_32px_90px_rgba(0,0,0,0.6)] backdrop-blur-xl"
+          >
+            {ABOUT_PILLARS.map((pillar, index) => {
+              const isHovered = activePillar === index;
+              const isAnotherHovered = activePillar !== null && !isHovered;
+
+              return (
+                <div
+                  key={pillar.id}
+                  data-about-pillar
+                  onMouseEnter={() => setActivePillar(index)}
+                  onClick={() => setActivePillar(activePillar === index ? null : index)}
+                  style={{
+                    flex: isHovered ? "2.3" : isAnotherHovered ? "0.65" : "1",
+                    transition:
+                      "flex 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s ease, border-color 0.4s ease, box-shadow 0.4s ease",
+                  }}
+                  className={`group relative min-w-0 cursor-pointer overflow-hidden rounded-[14px] border transition-all select-none ${
+                    isHovered
+                      ? "border-[#E6C654]/85 shadow-[0_0_36px_rgba(230,198,84,0.32)] z-20 bg-[#0d1627]"
+                      : "border-white/[0.10] hover:border-white/30 z-10 bg-[#0b1220]"
+                  }`}
+                >
+                  {/* Pillar Visual Layer */}
+                  <div className="absolute inset-0 h-full w-full overflow-hidden">
+                    <Image
+                      src={pillar.image}
+                      alt={`CA Fenil Shah — ${pillar.title}`}
+                      fill
+                      sizes="(max-width: 1024px) 50vw, 30vw"
+                      className={`object-cover transition-all duration-700 ${pillar.imagePosition} ${
+                        isHovered
+                          ? "grayscale-0 brightness-[1.08] contrast-[1.05] scale-[1.05]"
+                          : "grayscale-[60%] brightness-[0.76] scale-[1.01]"
+                      }`}
+                    />
+                  </div>
+
+                  {/* Dark Vignette Overlay for Crisp Readability */}
+                  <div
+                    className={`absolute inset-0 transition-opacity duration-500 pointer-events-none ${
+                      isHovered
+                        ? "bg-gradient-to-t from-[#070b15]/90 via-[#070b15]/35 to-[#070b15]/40"
+                        : "bg-gradient-to-t from-[#070b15]/95 via-[#070b15]/65 to-[#070b15]/50"
+                    }`}
+                  />
+
+                  {/* TOP: Pillar Number & Spark Node */}
+                  <div className="absolute top-3 sm:top-4 left-3 sm:left-4 right-3 sm:right-4 z-10 flex items-center justify-between">
+                    <div className="flex items-center gap-1.5 rounded-full border border-white/10 bg-black/50 px-2.5 py-1 backdrop-blur-md">
+                      <SparkStar
+                        className={`h-2.5 w-2.5 transition-colors ${
+                          isHovered ? "text-[#E6C654] animate-spin-slow" : "text-white/40"
+                        }`}
+                      />
+                      <span className="font-mono text-[9px] font-bold uppercase tracking-widest text-[#E6C654]">
+                        {pillar.pillarNum}
+                      </span>
+                    </div>
+
+                    <span className="hidden sm:inline-block font-mono text-[8px] font-semibold uppercase tracking-wider text-white/50">
+                      {pillar.tag}
+                    </span>
+                  </div>
+
+                  {/* BOTTOM: Accordion Expansion Content */}
+                  <div className="absolute inset-x-0 bottom-0 z-10 p-4 sm:p-6 flex flex-col justify-end">
+                    {/* Collapsed State Title (Visible when not expanded) */}
+                    <div
+                      className={`transition-opacity duration-300 ${
+                        isHovered ? "opacity-0 h-0 overflow-hidden" : "opacity-100"
+                      }`}
+                    >
+                      <p className="font-serif italic text-[16px] sm:text-[18px] text-[#F3EFE6] leading-tight line-clamp-1">
+                        {pillar.title}
+                      </p>
+                      <p className="mt-1 font-mono text-[10px] text-[#E6C654] tracking-wider">
+                        {pillar.stat}
+                      </p>
+                    </div>
+
+                    {/* Expanded State Content (Reveals rich impact metrics on hover/click) */}
+                    <div
+                      className={`transition-all duration-500 ease-out ${
+                        isHovered
+                          ? "opacity-100 translate-y-0"
+                          : "opacity-0 translate-y-4 pointer-events-none h-0 overflow-hidden"
+                      }`}
+                    >
+                      <div className="rounded-xl border border-white/15 bg-[#080F1E]/90 p-4 sm:p-5 shadow-2xl backdrop-blur-xl space-y-3">
+                        <div className="flex items-baseline justify-between border-b border-white/10 pb-2.5">
+                          <span className="text-[clamp(1.5rem,2.8vw,2.4rem)] font-medium tracking-tight text-[#E6C654] leading-none">
+                            {pillar.stat}
+                          </span>
+                          <span className="font-mono text-[10px] uppercase tracking-widest text-[#94A3B8]">
+                            {pillar.statLabel}
+                          </span>
+                        </div>
+
+                        <div>
+                          <h3 className="font-serif italic text-[18px] sm:text-[21px] text-[#F3EFE6] leading-tight">
+                            {pillar.title}
+                          </h3>
+                          <p className="mt-1.5 text-[12.5px] sm:text-[13.5px] font-light leading-relaxed text-[#CBD5E1]">
+                            {pillar.desc}
+                          </p>
+                        </div>
+
+                        <div className="flex items-center gap-2 pt-1 text-[11px] font-mono text-[#E6C654]/90">
+                          <span className="h-1.5 w-1.5 rounded-full bg-[#E6C654] animate-live-pulse" />
+                          <span>{pillar.highlight}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Micro Helper Text */}
+          <div className="mt-3 flex items-center justify-between px-2 text-[10px] font-mono uppercase tracking-widest text-white/40">
+            <span>✦ KINETIC ACCORDION · HOVER OR TAP TO EXPAND PILLARS</span>
+            <span>MUMBAI · LONDON ADVISORY</span>
           </div>
         </div>
 
-        <div className="space-y-6">
-          <p className="text-xs font-mono tracking-widest uppercase text-[#8E9189]">
-            ABOUT CA FENIL SHAH
-          </p>
-          <h2 className="text-[clamp(32px,4vw,56px)] leading-[1.05] tracking-tight font-light text-[#080F1E]">
-            Fourteen years inside{" "}
-            <span className="font-serif italic text-[#E6C654]">boardrooms like yours.</span>
-          </h2>
-          <p className="text-[#080F1E]/80 text-[18px] font-light leading-relaxed">
-            Before establishing this strategic advisory, I advised enterprise boards, high-growth
-            unicorn CFOs, and family office promoters across India, the UK, and Singapore. I know how to
-            engineer defensive balance sheet permanence.
-          </p>
-          <div className="pt-4 border-t border-[#080F1E]/15 space-y-3">
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[12px] font-mono text-[#080F1E]/75">
-              {credentials.map((cred, i) => (
-                <li key={i} className="flex items-center gap-2.5">
-                  <span className="w-1.5 h-1.5 bg-[#E6C654] rotate-45 shrink-0" />
-                  <span>{cred}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="pt-2">
-            <Link
-              href="/about"
-              className="inline-flex items-center gap-2 text-base font-medium text-[#080F1E] hover:text-[#E6C654] transition-colors"
+        {/* BOTTOM: Credentials & Statutory Badges Grid */}
+        <div
+          data-about-creds-grid
+          className="mt-14 sm:mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 border-t border-white/10 pt-8 sm:pt-10"
+        >
+          {CREDENTIALS.map((cred, idx) => (
+            <div
+              key={idx}
+              data-about-cred
+              className="group flex flex-col justify-between gap-3 p-5 rounded-2xl border border-white/[0.08] bg-white/[0.02] backdrop-blur-sm transition-all duration-300 hover:border-[#E6C654]/40 hover:bg-white/[0.05]"
             >
-              <span>The longer story</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
+              <div className="flex items-center justify-between">
+                <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-[#E6C654]">
+                  {cred.badge}
+                </span>
+                <SparkStar className="h-2.5 w-2.5 text-white/30 transition-transform group-hover:rotate-45 group-hover:text-[#E6C654]" />
+              </div>
+
+              <div>
+                <h4 className="text-[15px] font-medium text-[#F3EFE6] leading-snug">
+                  {cred.title}
+                </h4>
+                <p className="mt-1 text-[12px] font-light text-[#94A3B8]">
+                  {cred.org}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
