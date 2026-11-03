@@ -1,0 +1,182 @@
+{
+  "routes": [
+    {
+      "route": "/",
+      "name": "home",
+      "title": "Helena Marsh — Executive & Leadership Coach, London",
+      "heading1": "The room changes when you do.",
+      "metaDesc": "Executive coaching for founders, first-time CEOs and the leaders behind them. One hour a fortnight, twelve months, measured by the people around you.",
+      "imageCount": 34
+    },
+    {
+      "route": "/coaching",
+      "name": "coaching",
+      "title": "Coaching — Executive & Leadership Programmes",
+      "heading1": "Three ways to work together.",
+      "metaDesc": "Three engagements for founders, first-time CEOs and executive teams — each one scored by the people around you.",
+      "imageCount": 20
+    },
+    {
+      "route": "/results",
+      "name": "results",
+      "title": "Results — Measured by the People Around You",
+      "heading1": "Scored by the people around you.",
+      "metaDesc": "Case notes and numbers from coaching engagements, scored by each principal's own team before and after.",
+      "imageCount": 13
+    },
+    {
+      "route": "/about",
+      "name": "about",
+      "title": "About — Helena Marsh, Executive Coach",
+      "heading1": "Twenty years inside the room.",
+      "metaDesc": "Twenty years inside the room: operations, two boards, and thirteen years coaching founders and chief executives.",
+      "imageCount": 13
+    },
+    {
+      "route": "/insights",
+      "name": "insights",
+      "title": "Insights — Notes on Leading from Helena Marsh",
+      "heading1": "Notes from the corridor.",
+      "metaDesc": "Short, practical writing on executive teams, transitions, judgement and self-awareness.",
+      "imageCount": 13
+    },
+    {
+      "route": "/speaking",
+      "name": "speaking",
+      "title": "Speaking — Keynotes & Workshops for Leadership Teams",
+      "heading1": "Talks for rooms that decide things.",
+      "metaDesc": "Talks and working sessions for boards, executive teams and leadership conferences.",
+      "imageCount": 13
+    },
+    {
+      "route": "/book",
+      "name": "book",
+      "title": "Book a Chemistry Call — Helena Marsh",
+      "heading1": "Start with a conversation.",
+      "metaDesc": "Twenty-five minutes, no charge, no pitch. Tell me what is going on and we will both decide whether there is a fit.",
+      "imageCount": 1
+    },
+    {
+      "route": "/coaching/the-principal-year",
+      "name": "coaching-principal-year",
+      "title": "The Principal Year — Coaching with Helena Marsh",
+      "heading1": "The Principal Year",
+      "metaDesc": "One hour a fortnight. Twelve months. A different room.",
+      "imageCount": 2
+    },
+    {
+      "route": "/coaching/the-first-hundred-days",
+      "name": "coaching-first-hundred-days",
+      "title": "The First Hundred Days — Coaching with Helena Marsh",
+      "heading1": "The First Hundred Days",
+      "metaDesc": "Land the role before the role lands on you.",
+      "imageCount": 2
+    },
+    {
+      "route": "/coaching/the-leadership-bench",
+      "name": "coaching-leadership-bench",
+      "title": "The Leadership Bench — Coaching with Helena Marsh",
+      "heading1": "The Leadership Bench",
+      "metaDesc": "Coach the team that has to carry the strategy.",
+      "imageCount": 2
+    },
+    {
+      "route": "/insights/the-meeting-after-the-meeting",
+      "name": "insight-meeting",
+      "title": "The meeting after the meeting — Insights by Helena Marsh",
+      "heading1": "The meeting after the meeting",
+      "metaDesc": "If the real conversation happens in the corridor, your meeting is theatre. How to move the truth back into the room.",
+      "imageCount": 5
+    },
+    {
+      "route": "/insights/your-first-ninety-days-are-not-a-plan",
+      "name": "insight-ninety-days",
+      "title": "Your first ninety days are not a plan — Insights by Helena Marsh",
+      "heading1": "Your first ninety days are not a plan",
+      "metaDesc": "New CEOs arrive with a deck. The ones who last arrive with questions and a very short list of promises.",
+      "imageCount": 5
+    },
+    {
+      "route": "/insights/feedback-travels-upward-slowly",
+      "name": "insight-feedback",
+      "title": "Feedback travels upward slowly — Insights by Helena Marsh",
+      "heading1": "Feedback travels upward slowly",
+      "metaDesc": "The more senior you are, the older your information about yourself. A practical way to shorten the delay.",
+      "imageCount": 5
+    },
+    {
+      "route": "/insights/deciding-what-not-to-decide",
+      "name": "insight-deciding",
+      "title": "Deciding what not to decide — Insights by Helena Marsh",
+      "heading1": "Deciding what not to decide",
+      "metaDesc": "Tempo is a leadership tool. Some decisions improve with a week; some rot. Telling them apart is the job.",
+      "imageCount": 5
+    },
+    {
+      "route": "/privacy",
+      "name": "privacy",
+      "title": "Privacy Policy — Helena Marsh",
+      "heading1": "Privacy policy.",
+      "metaDesc": "What is collected, why, and what you can do about it.",
+      "imageCount": 0
+    },
+    {
+      "route": "/terms",
+      "name": "terms",
+      "title": "Terms of Engagement — Helena Marsh",
+      "heading1": "Terms of engagement.",
+      "metaDesc": "How coaching engagements run: confidentiality, fees, rescheduling and ending early.",
+      "imageCount": 0
+    }
+  ],
+  "assets": [
+    "https://framerusercontent.com/images/8jkfueKXIFT9daAnH9YTyNySoBE.webp?scale-down-to=1024&width=1208&height=1800",
+    "https://framerusercontent.com/images/8jkfueKXIFT9daAnH9YTyNySoBE.webp?width=1208&height=1800",
+    "https://framerusercontent.com/images/nQ1lApEF5N0b1CKgXj9flJrYc.webp?scale-down-to=512&width=1400&height=781",
+    "https://framerusercontent.com/images/nQ1lApEF5N0b1CKgXj9flJrYc.webp?width=1400&height=781",
+    "https://framerusercontent.com/images/LDXsntWmcYCKrjXMgNxFQrMysaU.webp?scale-down-to=1024&width=1128&height=1400",
+    "https://framerusercontent.com/images/LDXsntWmcYCKrjXMgNxFQrMysaU.webp?width=1128&height=1400",
+    "https://framerusercontent.com/images/rs5SIFNdctg5E33P9h0yVvwhi8.webp?scale-down-to=1024&width=1128&height=1400",
+    "https://framerusercontent.com/images/rs5SIFNdctg5E33P9h0yVvwhi8.webp?width=1128&height=1400",
+    "https://framerusercontent.com/images/DacUzNQu0nh2FZrhAlbJuwuDDDk.webp?scale-down-to=512&width=1400&height=1128",
+    "https://framerusercontent.com/images/DacUzNQu0nh2FZrhAlbJuwuDDDk.webp?width=1400&height=1128",
+    "https://framerusercontent.com/images/Hid0HSBIHRkxCBU9ruRDeYDj5M.webp?scale-down-to=1024&width=1128&height=1400",
+    "https://framerusercontent.com/images/Hid0HSBIHRkxCBU9ruRDeYDj5M.webp?width=1128&height=1400",
+    "https://framerusercontent.com/images/HCjYYjTexKt0r1TQmgj5kUcREBY.webp?scale-down-to=1024&width=1400&height=939",
+    "https://framerusercontent.com/images/HCjYYjTexKt0r1TQmgj5kUcREBY.webp?width=1400&height=939",
+    "https://framerusercontent.com/images/xW7mWNmDb2pifyrrP0WmkpoURzY.webp?scale-down-to=1024&width=1128&height=1400",
+    "https://framerusercontent.com/images/xW7mWNmDb2pifyrrP0WmkpoURzY.webp?width=1128&height=1400",
+    "https://framerusercontent.com/images/xUfkQ3AvEuRZQ49nQGqyn66JE.webp?scale-down-to=1024&width=1400&height=939",
+    "https://framerusercontent.com/images/xUfkQ3AvEuRZQ49nQGqyn66JE.webp?width=1400&height=939",
+    "https://framerusercontent.com/images/X7TMWu97EmYu2pyiDKsqlbwE.webp?scale-down-to=1024&width=1400&height=1400",
+    "https://framerusercontent.com/images/X7TMWu97EmYu2pyiDKsqlbwE.webp?width=1400&height=1400",
+    "https://framerusercontent.com/images/NpSrhA2Bm9APpRNWlHhyQ7AMxA.webp?scale-down-to=512&width=1400&height=939",
+    "https://framerusercontent.com/images/NpSrhA2Bm9APpRNWlHhyQ7AMxA.webp?width=1400&height=939",
+    "https://framerusercontent.com/images/AVs6BQrXnM8hz0pZejOrzTUsw.webp?scale-down-to=512&width=1400&height=1400",
+    "https://framerusercontent.com/images/AVs6BQrXnM8hz0pZejOrzTUsw.webp?width=1400&height=1400",
+    "https://framerusercontent.com/images/4oRyGDG58GnNYE1NKjA8V2BUo6U.webp?scale-down-to=512&width=1400&height=1400",
+    "https://framerusercontent.com/images/4oRyGDG58GnNYE1NKjA8V2BUo6U.webp?width=1400&height=1400",
+    "https://framerusercontent.com/images/LXjSe5Iux2mFkU18HiTo0PjAQ.webp?scale-down-to=512&width=1400&height=1400",
+    "https://framerusercontent.com/images/LXjSe5Iux2mFkU18HiTo0PjAQ.webp?width=1400&height=1400",
+    "https://framerusercontent.com/images/kwq8GP8UML6E0MeHeEQK6aCkYDU.webp?width=2000&height=1116",
+    "https://framerusercontent.com/images/BvE0UdZxDKSGoGIwN0uOxbvc5E.webp?scale-down-to=512&width=1400&height=781",
+    "https://framerusercontent.com/images/BvE0UdZxDKSGoGIwN0uOxbvc5E.webp?width=1400&height=781",
+    "https://framerusercontent.com/images/qNu5vvbm5fbXRo9QelIr0erM0.webp?scale-down-to=512&width=1400&height=781",
+    "https://framerusercontent.com/images/qNu5vvbm5fbXRo9QelIr0erM0.webp?width=1400&height=781",
+    "https://framerusercontent.com/images/z5MQSE0EqfjxmDrgOPiYdNc.webp?scale-down-to=512&width=1400&height=781",
+    "https://framerusercontent.com/images/z5MQSE0EqfjxmDrgOPiYdNc.webp?width=1400&height=781",
+    "https://framerusercontent.com/images/VPOIc4pdK0cHCzoht0gmrwM7dPs.webp?width=2000&height=848",
+    "https://framerusercontent.com/images/NpSrhA2Bm9APpRNWlHhyQ7AMxA.webp?scale-down-to=1024&width=1400&height=939",
+    "https://framerusercontent.com/images/F4BMGs9tm52zDzTZkYhfudaQMhw.webp?width=2000&height=848",
+    "https://framerusercontent.com/images/wruXIygtMZyQhN47HNWBHei9bg.webp?width=2000&height=848",
+    "https://framerusercontent.com/images/LgNADwBOxzQnUJKT22dgfTMSpg.webp?scale-down-to=1024&width=1400&height=1128",
+    "https://framerusercontent.com/images/LgNADwBOxzQnUJKT22dgfTMSpg.webp?width=1400&height=1128",
+    "https://framerusercontent.com/images/DacUzNQu0nh2FZrhAlbJuwuDDDk.webp?scale-down-to=1024&width=1400&height=1128",
+    "https://framerusercontent.com/images/nQ1lApEF5N0b1CKgXj9flJrYc.webp?scale-down-to=1024&width=1400&height=781",
+    "https://framerusercontent.com/images/XdJl0p6gnjbHXAXDn5EP89EOQ.webp?width=2000&height=848",
+    "https://framerusercontent.com/images/BvE0UdZxDKSGoGIwN0uOxbvc5E.webp?scale-down-to=1024&width=1400&height=781",
+    "https://framerusercontent.com/images/qNu5vvbm5fbXRo9QelIr0erM0.webp?scale-down-to=1024&width=1400&height=781",
+    "https://framerusercontent.com/images/z5MQSE0EqfjxmDrgOPiYdNc.webp?scale-down-to=1024&width=1400&height=781",
+    "https://framerusercontent.com/images/A3VPsTuMWc4wAva9neVQyQZjw.webp?width=2000&height=848"
+  ]
+}

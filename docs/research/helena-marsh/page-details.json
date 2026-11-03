@@ -1,0 +1,50 @@
+{
+  "headerFixed": {
+    "position": "relative",
+    "top": "0px",
+    "zIndex": "auto",
+    "background": "rgba(0, 0, 0, 0)",
+    "backdropFilter": "none"
+  },
+  "faqItems": [
+    {
+      "question": "What happens on a chemistry call?",
+      "answer": ""
+    },
+    {
+      "question": "Who pays — me or my company?",
+      "answer": ""
+    },
+    {
+      "question": "How is coaching different from mentoring or therapy?",
+      "answer": ""
+    },
+    {
+      "question": "How do you measure whether it worked?",
+      "answer": ""
+    },
+    {
+      "question": "Do we meet in person?",
+      "answer": ""
+    },
+    {
+      "question": "How soon could we start?",
+      "answer": ""
+    }
+  ],
+  "clients": [
+    "Northwind Energy",
+    "Halcyon Bank",
+    "Arden Health",
+    "Volta Robotics",
+    "Meridian Rail",
+    "Juniper & Co",
+    "Fieldwork Labs",
+    "The Calder Trust",
+    "CFO — SERIES C FINTECH",
+    "FOUNDER & CEO — CLIMATE HARDWARE",
+    "VP ENGINEERING — PUBLIC SAAS",
+    "CHIEF EXECUTIVE — HOSPITAL TRUST"
+  ],
+  "h1HTML": "<h1 class=\"framer-text framer-styles-preset-1sq1d3q fx-head fx-shown\" data-styles-preset=\"E8uLPpBV_\" dir=\"auto\" style=\"--framer-text-color:var(--token-bbd19607-f636-402f-8c05-05ddd1ca9b92)\" data-fx-h=\"1\"><span class=\"fx-hw\"><span class=\"fx-hi\" style=\"transition-delay: 0ms;\">The</span></span> <span class=\"fx-hw\"><span class=\"fx-hi\" style=\"transition-delay: 30ms;\">room</span></span> <span class=\"fx-hw\"><span class=\"fx-hi\" style=\"transition-delay: 60ms;\">changes</span></span> <span class=\"fx-hw\"><span class=\"fx-hi\" style=\"transition-delay: 90ms;\">when</span></span> <span style=\"--framer-text-color:var(--token-9014226c-9b3b-42d1-8856-efa9a467162c)\" class=\"framer-text\"><em class=\"framer-text\"><span class=\"fx-hw\"><span class=\"fx-hi\" style=\"transition-delay: 120ms;\">you</span></span></em></span> <span class=\"fx-hw\"><span class=\"fx-hi\" style=\"transition-delay: 150ms;\">do.</span></span></h1>"
+}

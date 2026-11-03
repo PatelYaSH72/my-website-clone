@@ -1,0 +1,3720 @@
+{
+  "Site Header": {
+    "name": "Site Header",
+    "rect": {
+      "width": 1440,
+      "height": 70,
+      "top": 0
+    },
+    "bg": "rgba(0, 0, 0, 0)",
+    "padding": "0px",
+    "color": "rgb(0, 0, 0)",
+    "textItems": [
+      {
+        "tag": "P",
+        "text": "Helena Marsh",
+        "font": "600 17px/17px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.34px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "EXECUTIVE COACH",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgba(243, 239, 230, 0.55)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "Coaching",
+        "font": "500 14px/16.8px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.28px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Results",
+        "font": "500 14px/16.8px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.28px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "About",
+        "font": "500 14px/16.8px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.28px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Insights",
+        "font": "500 14px/16.8px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.28px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Speaking",
+        "font": "500 14px/16.8px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.28px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Book a call",
+        "font": "500 14px/16.8px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(14, 19, 17)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.28px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Menu",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      }
+    ],
+    "imgs": [],
+    "links": [
+      {
+        "tag": "A",
+        "text": "Helena Marsh EXECUTIVE COACH",
+        "href": "https://easier-spots-537272.framer.app/"
+      },
+      {
+        "tag": "A",
+        "text": "Coaching",
+        "href": "https://easier-spots-537272.framer.app/coaching"
+      },
+      {
+        "tag": "A",
+        "text": "Results",
+        "href": "https://easier-spots-537272.framer.app/results"
+      },
+      {
+        "tag": "A",
+        "text": "About",
+        "href": "https://easier-spots-537272.framer.app/about"
+      },
+      {
+        "tag": "A",
+        "text": "Insights",
+        "href": "https://easier-spots-537272.framer.app/insights"
+      },
+      {
+        "tag": "A",
+        "text": "Speaking",
+        "href": "https://easier-spots-537272.framer.app/speaking"
+      },
+      {
+        "tag": "A",
+        "text": "Book a call",
+        "href": "https://easier-spots-537272.framer.app/book"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Menu",
+        "href": ""
+      }
+    ]
+  },
+  "Hero": {
+    "name": "Hero",
+    "rect": {
+      "width": 1440,
+      "height": 900,
+      "top": 0
+    },
+    "bg": "rgba(0, 0, 0, 0)",
+    "padding": "0px",
+    "color": "rgb(0, 0, 0)",
+    "textItems": [
+      {
+        "tag": "P",
+        "text": "ACCEPTING THREE PRINCIPALS — Q4 2026",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgba(243, 239, 230, 0.78)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "SPAN",
+        "text": "The",
+        "font": "500 88px/86.24px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-3.96px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "room",
+        "font": "500 88px/86.24px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-3.96px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "changes",
+        "font": "500 88px/86.24px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-3.96px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "when",
+        "font": "500 88px/86.24px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-3.96px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "you",
+        "font": "400 88px/86.24px \"Instrument Serif\", Georgia, serif",
+        "color": "rgb(201, 160, 100)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.88px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "do.",
+        "font": "500 88px/86.24px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-3.96px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Executive coaching for founders, first-time CEOs and the leaders behind them. One hour a fortnight, twelve months, and a measurable change in how your team experiences you.",
+        "font": "400 17px/27.2px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgba(243, 239, 230, 0.78)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.34px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Book a chemistry call",
+        "font": "500 14px/16.8px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(14, 19, 17)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.28px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "How it works",
+        "font": "500 14px/16.8px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.28px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "1,400+",
+        "font": "500 40px/40px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.6px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "COACHING HOURS",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgba(243, 239, 230, 0.55)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "86",
+        "font": "500 40px/40px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.6px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "EXECUTIVES COACHED",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgba(243, 239, 230, 0.55)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "PCC",
+        "font": "500 40px/40px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.6px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "ICF CREDENTIALED",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgba(243, 239, 230, 0.55)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "“",
+        "font": "400 56px/56px \"Instrument Serif\", \"Instrument Serif Placeholder\", serif",
+        "color": "rgb(201, 160, 100)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.12px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Six months in, my exec team stopped managing me and started arguing with me. That was the point.",
+        "font": "400 15px/23.25px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.3px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "FOUNDER & CEO — CLIMATE HARDWARE",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgba(243, 239, 230, 0.55)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      }
+    ],
+    "imgs": [
+      {
+        "src": "https://framerusercontent.com/images/8jkfueKXIFT9daAnH9YTyNySoBE.webp?width=1208&height=1800",
+        "currentSrc": "https://framerusercontent.com/images/8jkfueKXIFT9daAnH9YTyNySoBE.webp?scale-down-to=1024&width=1208&height=1800",
+        "alt": "",
+        "width": 537,
+        "height": 900
+      },
+      {
+        "src": "https://framerusercontent.com/images/8jkfueKXIFT9daAnH9YTyNySoBE.webp?scale-down-to=1024&width=1208&height=1800",
+        "currentSrc": "https://framerusercontent.com/images/8jkfueKXIFT9daAnH9YTyNySoBE.webp?scale-down-to=1024&width=1208&height=1800",
+        "alt": "",
+        "width": 537,
+        "height": 900
+      },
+      {
+        "src": "https://framerusercontent.com/images/8jkfueKXIFT9daAnH9YTyNySoBE.webp?scale-down-to=1024&width=1208&height=1800",
+        "currentSrc": "https://framerusercontent.com/images/8jkfueKXIFT9daAnH9YTyNySoBE.webp?scale-down-to=1024&width=1208&height=1800",
+        "alt": "",
+        "width": 537,
+        "height": 900
+      },
+      {
+        "src": "https://framerusercontent.com/images/8jkfueKXIFT9daAnH9YTyNySoBE.webp?scale-down-to=1024&width=1208&height=1800",
+        "currentSrc": "https://framerusercontent.com/images/8jkfueKXIFT9daAnH9YTyNySoBE.webp?scale-down-to=1024&width=1208&height=1800",
+        "alt": "",
+        "width": 537,
+        "height": 900
+      },
+      {
+        "src": "https://framerusercontent.com/images/8jkfueKXIFT9daAnH9YTyNySoBE.webp?scale-down-to=1024&width=1208&height=1800",
+        "currentSrc": "https://framerusercontent.com/images/8jkfueKXIFT9daAnH9YTyNySoBE.webp?scale-down-to=1024&width=1208&height=1800",
+        "alt": "",
+        "width": 537,
+        "height": 900
+      },
+      {
+        "src": "https://framerusercontent.com/images/8jkfueKXIFT9daAnH9YTyNySoBE.webp?scale-down-to=1024&width=1208&height=1800",
+        "currentSrc": "https://framerusercontent.com/images/8jkfueKXIFT9daAnH9YTyNySoBE.webp?scale-down-to=1024&width=1208&height=1800",
+        "alt": "",
+        "width": 537,
+        "height": 900
+      },
+      {
+        "src": "https://framerusercontent.com/images/8jkfueKXIFT9daAnH9YTyNySoBE.webp?scale-down-to=1024&width=1208&height=1800",
+        "currentSrc": "https://framerusercontent.com/images/8jkfueKXIFT9daAnH9YTyNySoBE.webp?scale-down-to=1024&width=1208&height=1800",
+        "alt": "",
+        "width": 537,
+        "height": 900
+      }
+    ],
+    "links": [
+      {
+        "tag": "A",
+        "text": "Book a chemistry call",
+        "href": "https://easier-spots-537272.framer.app/book"
+      },
+      {
+        "tag": "A",
+        "text": "How it works",
+        "href": "https://easier-spots-537272.framer.app/coaching"
+      }
+    ]
+  },
+  "Clients": {
+    "name": "Clients",
+    "rect": {
+      "width": 1440,
+      "height": 177.40625,
+      "top": 900
+    },
+    "bg": "rgba(0, 0, 0, 0)",
+    "padding": "0px",
+    "color": "rgb(0, 0, 0)",
+    "textItems": [
+      {
+        "tag": "P",
+        "text": "PRINCIPALS I HAVE WORKED WITH LEAD AT",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(142, 145, 137)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "Northwind Energy",
+        "font": "500 38px/49.4px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.33px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Halcyon Bank",
+        "font": "500 38px/49.4px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.33px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Arden Health",
+        "font": "500 38px/49.4px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.33px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Volta Robotics",
+        "font": "500 38px/49.4px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.33px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Meridian Rail",
+        "font": "500 38px/49.4px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.33px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Juniper & Co",
+        "font": "500 38px/49.4px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.33px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Fieldwork Labs",
+        "font": "500 38px/49.4px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.33px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "The Calder Trust",
+        "font": "500 38px/49.4px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.33px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Northwind Energy",
+        "font": "500 38px/49.4px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.33px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Halcyon Bank",
+        "font": "500 38px/49.4px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.33px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Arden Health",
+        "font": "500 38px/49.4px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.33px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Volta Robotics",
+        "font": "500 38px/49.4px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.33px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Meridian Rail",
+        "font": "500 38px/49.4px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.33px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Juniper & Co",
+        "font": "500 38px/49.4px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.33px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Fieldwork Labs",
+        "font": "500 38px/49.4px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.33px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "The Calder Trust",
+        "font": "500 38px/49.4px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.33px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Northwind Energy",
+        "font": "500 38px/49.4px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.33px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Halcyon Bank",
+        "font": "500 38px/49.4px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.33px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Arden Health",
+        "font": "500 38px/49.4px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.33px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Volta Robotics",
+        "font": "500 38px/49.4px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.33px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Meridian Rail",
+        "font": "500 38px/49.4px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.33px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Juniper & Co",
+        "font": "500 38px/49.4px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.33px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Fieldwork Labs",
+        "font": "500 38px/49.4px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.33px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "The Calder Trust",
+        "font": "500 38px/49.4px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.33px",
+        "textTransform": "none"
+      }
+    ],
+    "imgs": [],
+    "links": []
+  },
+  "Manifesto": {
+    "name": "Manifesto",
+    "rect": {
+      "width": 1440,
+      "height": 3060,
+      "top": 1077.40625
+    },
+    "bg": "rgba(0, 0, 0, 0)",
+    "padding": "0px",
+    "color": "rgb(0, 0, 0)",
+    "textItems": [
+      {
+        "tag": "P",
+        "text": "WHAT I BELIEVE",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(142, 145, 137)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "SPAN",
+        "text": "Most",
+        "font": "500 62px/66.96px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "color(srgb 0.556863 0.568627 0.537255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.48px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "leaders",
+        "font": "500 62px/66.96px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "color(srgb 0.556863 0.568627 0.537255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.48px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "do",
+        "font": "500 62px/66.96px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "color(srgb 0.556863 0.568627 0.537255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.48px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "not",
+        "font": "500 62px/66.96px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "color(srgb 0.556863 0.568627 0.537255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.48px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "need",
+        "font": "500 62px/66.96px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "color(srgb 0.556863 0.568627 0.537255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.48px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "more",
+        "font": "500 62px/66.96px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "color(srgb 0.556863 0.568627 0.537255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.48px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "advice.",
+        "font": "400 62px/66.96px \"Instrument Serif\", Georgia, serif",
+        "color": "color(srgb 0.556863 0.568627 0.537255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.62px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "They",
+        "font": "500 62px/66.96px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "color(srgb 0.556863 0.568627 0.537255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.48px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "need",
+        "font": "500 62px/66.96px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "color(srgb 0.556863 0.568627 0.537255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.48px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "one",
+        "font": "500 62px/66.96px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "color(srgb 0.556863 0.568627 0.537255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.48px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "room",
+        "font": "500 62px/66.96px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "color(srgb 0.556863 0.568627 0.537255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.48px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "where",
+        "font": "500 62px/66.96px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "color(srgb 0.556863 0.568627 0.537255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.48px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "nobody",
+        "font": "500 62px/66.96px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "color(srgb 0.556863 0.568627 0.537255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.48px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "needs",
+        "font": "500 62px/66.96px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "color(srgb 0.556863 0.568627 0.537255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.48px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "anything",
+        "font": "500 62px/66.96px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "color(srgb 0.556863 0.568627 0.537255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.48px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "from",
+        "font": "500 62px/66.96px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "color(srgb 0.556863 0.568627 0.537255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.48px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "them",
+        "font": "500 62px/66.96px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "color(srgb 0.556863 0.568627 0.537255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.48px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "—",
+        "font": "500 62px/66.96px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "color(srgb 0.556863 0.568627 0.537255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.48px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "and",
+        "font": "500 62px/66.96px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "color(srgb 0.556863 0.568627 0.537255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.48px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "someone",
+        "font": "500 62px/66.96px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "color(srgb 0.556863 0.568627 0.537255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.48px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "in",
+        "font": "500 62px/66.96px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "color(srgb 0.556863 0.568627 0.537255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.48px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "it",
+        "font": "500 62px/66.96px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "color(srgb 0.556863 0.568627 0.537255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.48px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "who",
+        "font": "500 62px/66.96px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "color(srgb 0.556863 0.568627 0.537255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.48px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "will",
+        "font": "500 62px/66.96px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "color(srgb 0.556863 0.568627 0.537255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.48px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "say",
+        "font": "500 62px/66.96px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "color(srgb 0.556863 0.568627 0.537255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.48px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "the",
+        "font": "500 62px/66.96px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "color(srgb 0.556863 0.568627 0.537255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.48px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "thing",
+        "font": "500 62px/66.96px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "color(srgb 0.556863 0.568627 0.537255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.48px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "their",
+        "font": "500 62px/66.96px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "color(srgb 0.556863 0.568627 0.537255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.48px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "team",
+        "font": "500 62px/66.96px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "color(srgb 0.556863 0.568627 0.537255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.48px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "has",
+        "font": "500 62px/66.96px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "color(srgb 0.556863 0.568627 0.537255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.48px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "stopped",
+        "font": "400 62px/66.96px \"Instrument Serif\", Georgia, serif",
+        "color": "color(srgb 0.556863 0.568627 0.537255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.62px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "saying.",
+        "font": "500 62px/66.96px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "color(srgb 0.556863 0.568627 0.537255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.48px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "HELENA MARSH — COACHING SINCE 2013",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(142, 145, 137)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "WHO I WORK WITH",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgba(243, 239, 230, 0.7)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      }
+    ],
+    "imgs": [
+      {
+        "src": "https://framerusercontent.com/images/nQ1lApEF5N0b1CKgXj9flJrYc.webp?width=1400&height=781",
+        "currentSrc": "https://framerusercontent.com/images/nQ1lApEF5N0b1CKgXj9flJrYc.webp?scale-down-to=512&width=1400&height=781",
+        "alt": "",
+        "width": 216,
+        "height": 270
+      },
+      {
+        "src": "https://framerusercontent.com/images/LDXsntWmcYCKrjXMgNxFQrMysaU.webp?width=1128&height=1400",
+        "currentSrc": "https://framerusercontent.com/images/LDXsntWmcYCKrjXMgNxFQrMysaU.webp?scale-down-to=1024&width=1128&height=1400",
+        "alt": "",
+        "width": 166,
+        "height": 221
+      }
+    ],
+    "links": []
+  },
+  "Who": {
+    "name": "Who",
+    "rect": {
+      "width": 1440,
+      "height": 1035.1875,
+      "top": 4137.40625
+    },
+    "bg": "rgba(0, 0, 0, 0)",
+    "padding": "0px",
+    "color": "rgb(0, 0, 0)",
+    "textItems": [
+      {
+        "tag": "P",
+        "text": "01",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(142, 145, 137)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "SPAN",
+        "text": "Founders",
+        "font": "500 84px/79.8px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-3.78px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "who have outgrown the company they built",
+        "font": "400 17px/27.2px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgba(243, 239, 230, 0.78)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.34px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "02",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(142, 145, 137)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "SPAN",
+        "text": "First-time",
+        "font": "500 84px/79.8px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-3.78px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "CEOs",
+        "font": "500 84px/79.8px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-3.78px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "in the first year of a bigger seat",
+        "font": "400 17px/27.2px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgba(243, 239, 230, 0.78)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.34px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "03",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(142, 145, 137)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "SPAN",
+        "text": "Executives",
+        "font": "500 84px/79.8px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-3.78px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "one step from the board, and unsure they want it",
+        "font": "400 17px/27.2px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgba(243, 239, 230, 0.78)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.34px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "04",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(142, 145, 137)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "SPAN",
+        "text": "Leadership",
+        "font": "500 84px/79.8px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-3.78px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "teams",
+        "font": "500 84px/79.8px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-3.78px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "that are polite in the room and honest in the corridor",
+        "font": "400 17px/27.2px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgba(243, 239, 230, 0.78)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.34px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "NOT A FIT: ANYONE LOOKING FOR A CHEERLEADER.",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgba(243, 239, 230, 0.55)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "See how the work runs",
+        "font": "500 14px/16.8px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.28px",
+        "textTransform": "none"
+      }
+    ],
+    "imgs": [
+      {
+        "src": "https://framerusercontent.com/images/rs5SIFNdctg5E33P9h0yVvwhi8.webp?width=1128&height=1400",
+        "currentSrc": "",
+        "alt": "",
+        "width": 1,
+        "height": 1
+      },
+      {
+        "src": "https://framerusercontent.com/images/DacUzNQu0nh2FZrhAlbJuwuDDDk.webp?width=1400&height=1128",
+        "currentSrc": "",
+        "alt": "",
+        "width": 1,
+        "height": 1
+      },
+      {
+        "src": "https://framerusercontent.com/images/LDXsntWmcYCKrjXMgNxFQrMysaU.webp?width=1128&height=1400",
+        "currentSrc": "https://framerusercontent.com/images/LDXsntWmcYCKrjXMgNxFQrMysaU.webp?scale-down-to=1024&width=1128&height=1400",
+        "alt": "",
+        "width": 1,
+        "height": 1
+      },
+      {
+        "src": "https://framerusercontent.com/images/Hid0HSBIHRkxCBU9ruRDeYDj5M.webp?width=1128&height=1400",
+        "currentSrc": "",
+        "alt": "",
+        "width": 1,
+        "height": 1
+      }
+    ],
+    "links": [
+      {
+        "tag": "A",
+        "text": "01 Founders who have outgrown the company they built",
+        "href": "https://easier-spots-537272.framer.app/coaching/the-principal-year"
+      },
+      {
+        "tag": "A",
+        "text": "02 First-time CEOs in the first year of a bigger seat",
+        "href": "https://easier-spots-537272.framer.app/coaching/the-first-hundred-days"
+      },
+      {
+        "tag": "A",
+        "text": "03 Executives one step from the board, and unsure they want it",
+        "href": "https://easier-spots-537272.framer.app/coaching/the-principal-year"
+      },
+      {
+        "tag": "A",
+        "text": "04 Leadership teams that are polite in the room and honest in the corridor",
+        "href": "https://easier-spots-537272.framer.app/coaching/the-leadership-bench"
+      },
+      {
+        "tag": "A",
+        "text": "See how the work runs",
+        "href": "https://easier-spots-537272.framer.app/coaching"
+      }
+    ]
+  },
+  "Method": {
+    "name": "Method",
+    "rect": {
+      "width": 1440,
+      "height": 3780,
+      "top": 5172.59375
+    },
+    "bg": "rgba(0, 0, 0, 0)",
+    "padding": "0px",
+    "color": "rgb(0, 0, 0)",
+    "textItems": [
+      {
+        "tag": "P",
+        "text": "HOW THE WORK RUNS",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(142, 145, 137)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "SPAN",
+        "text": "Four",
+        "font": "500 56px/56px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.24px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "moves,",
+        "font": "500 56px/56px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.24px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "in",
+        "font": "500 56px/56px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.24px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "this",
+        "font": "400 56px/56px \"Instrument Serif\", Georgia, serif",
+        "color": "rgb(201, 160, 100)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.56px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "order.",
+        "font": "500 56px/56px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.24px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "01",
+        "font": "500 210px/180.6px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(201, 160, 100)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-14.7px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "01",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(142, 145, 137)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "H3",
+        "text": "Listen",
+        "font": "500 26px/29.9px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.65px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Before we meet I interview six to ten people around you. You get the unedited themes — what they say when you are not in the room.",
+        "font": "400 15px/23.25px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgba(21, 26, 24, 0.7)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.3px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "02",
+        "font": "500 210px/180.6px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(201, 160, 100)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-14.7px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "02",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(142, 145, 137)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "H3",
+        "text": "Choose",
+        "font": "500 26px/29.9px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.65px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "We pick two or three behaviours that would change the most if they changed. Not ten. Not a personality transplant.",
+        "font": "400 15px/23.25px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgba(21, 26, 24, 0.7)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.3px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "03",
+        "font": "500 210px/180.6px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(201, 160, 100)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-14.7px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "03",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(142, 145, 137)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "H3",
+        "text": "Practise",
+        "font": "500 26px/29.9px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.65px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Fortnightly sessions built around real meetings in your diary: the board paper, the hard conversation, the offsite you are dreading.",
+        "font": "400 15px/23.25px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgba(21, 26, 24, 0.7)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.3px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "04",
+        "font": "500 210px/180.6px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(201, 160, 100)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-14.7px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "04",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(142, 145, 137)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "H3",
+        "text": "Measure",
+        "font": "500 26px/29.9px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.65px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Short 360 pulses at the start, midpoint and end. The people around you tell us whether it worked. We adjust until they say yes.",
+        "font": "400 15px/23.25px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgba(21, 26, 24, 0.7)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.3px",
+        "textTransform": "none"
+      }
+    ],
+    "imgs": [
+      {
+        "src": "https://framerusercontent.com/images/HCjYYjTexKt0r1TQmgj5kUcREBY.webp?width=1400&height=939",
+        "currentSrc": "https://framerusercontent.com/images/HCjYYjTexKt0r1TQmgj5kUcREBY.webp?scale-down-to=1024&width=1400&height=939",
+        "alt": "",
+        "width": 1400,
+        "height": 939
+      },
+      {
+        "src": "https://framerusercontent.com/images/xW7mWNmDb2pifyrrP0WmkpoURzY.webp?width=1128&height=1400",
+        "currentSrc": "https://framerusercontent.com/images/xW7mWNmDb2pifyrrP0WmkpoURzY.webp?scale-down-to=1024&width=1128&height=1400",
+        "alt": "",
+        "width": 1128,
+        "height": 1400
+      },
+      {
+        "src": "https://framerusercontent.com/images/xUfkQ3AvEuRZQ49nQGqyn66JE.webp?width=1400&height=939",
+        "currentSrc": "https://framerusercontent.com/images/xUfkQ3AvEuRZQ49nQGqyn66JE.webp?scale-down-to=1024&width=1400&height=939",
+        "alt": "",
+        "width": 1400,
+        "height": 939
+      },
+      {
+        "src": "https://framerusercontent.com/images/X7TMWu97EmYu2pyiDKsqlbwE.webp?width=1400&height=1400",
+        "currentSrc": "https://framerusercontent.com/images/X7TMWu97EmYu2pyiDKsqlbwE.webp?scale-down-to=1024&width=1400&height=1400",
+        "alt": "",
+        "width": 1400,
+        "height": 1400
+      },
+      {
+        "src": "https://framerusercontent.com/images/HCjYYjTexKt0r1TQmgj5kUcREBY.webp?width=1400&height=939",
+        "currentSrc": "https://framerusercontent.com/images/HCjYYjTexKt0r1TQmgj5kUcREBY.webp?scale-down-to=1024&width=1400&height=939",
+        "alt": "",
+        "width": 570,
+        "height": 648
+      },
+      {
+        "src": "https://framerusercontent.com/images/xW7mWNmDb2pifyrrP0WmkpoURzY.webp?width=1128&height=1400",
+        "currentSrc": "https://framerusercontent.com/images/xW7mWNmDb2pifyrrP0WmkpoURzY.webp?scale-down-to=1024&width=1128&height=1400",
+        "alt": "",
+        "width": 570,
+        "height": 648
+      },
+      {
+        "src": "https://framerusercontent.com/images/xUfkQ3AvEuRZQ49nQGqyn66JE.webp?width=1400&height=939",
+        "currentSrc": "https://framerusercontent.com/images/xUfkQ3AvEuRZQ49nQGqyn66JE.webp?scale-down-to=1024&width=1400&height=939",
+        "alt": "",
+        "width": 570,
+        "height": 648
+      },
+      {
+        "src": "https://framerusercontent.com/images/X7TMWu97EmYu2pyiDKsqlbwE.webp?width=1400&height=1400",
+        "currentSrc": "https://framerusercontent.com/images/X7TMWu97EmYu2pyiDKsqlbwE.webp?scale-down-to=1024&width=1400&height=1400",
+        "alt": "",
+        "width": 570,
+        "height": 648
+      }
+    ],
+    "links": []
+  },
+  "Programs": {
+    "name": "Programs",
+    "rect": {
+      "width": 1440,
+      "height": 1118.40625,
+      "top": 8952.59375
+    },
+    "bg": "rgba(0, 0, 0, 0)",
+    "padding": "0px",
+    "color": "rgb(0, 0, 0)",
+    "textItems": [
+      {
+        "tag": "P",
+        "text": "WAYS TO WORK TOGETHER",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(142, 145, 137)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "SPAN",
+        "text": "Three",
+        "font": "500 56px/56px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.24px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "engagements.",
+        "font": "500 56px/56px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.24px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "No",
+        "font": "500 56px/56px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.24px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "packages.",
+        "font": "400 56px/56px \"Instrument Serif\", Georgia, serif",
+        "color": "rgb(201, 160, 100)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.56px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Every engagement starts with the same chemistry call and the same question: what would have to be different a year from now?",
+        "font": "400 17px/27.2px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgba(21, 26, 24, 0.78)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.34px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "FIRST-TIME CEOS & NEW MDS",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(201, 160, 100)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "H3",
+        "text": "The First Hundred Days",
+        "font": "500 26px/29.9px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.65px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Land the role before the role lands on you.",
+        "font": "400 15px/23.25px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgba(21, 26, 24, 0.75)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.3px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "14 WEEKS",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(142, 145, 137)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "£9,600",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(142, 145, 137)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "THE FIRST HUNDRED DAYS",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(201, 160, 100)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "A focused engagement for the first quarter in a bigger seat: reading the board, resetting the team you inherited, and deciding what you will be known for.",
+        "font": "400 15px/23.25px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgba(243, 239, 230, 0.78)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.3px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Six 90-minute sessions",
+        "font": "400 15px/23.25px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgba(243, 239, 230, 0.85)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.3px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Stakeholder map & 360 interviews",
+        "font": "400 15px/23.25px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgba(243, 239, 230, 0.85)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.3px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Board-readiness rehearsal",
+        "font": "400 15px/23.25px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgba(243, 239, 230, 0.85)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.3px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Messaging between sessions",
+        "font": "400 15px/23.25px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgba(243, 239, 230, 0.85)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.3px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "£9,600",
+        "font": "500 36px/36px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.44px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "14 WEEKS",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgba(243, 239, 230, 0.6)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "See the programme",
+        "font": "500 14px/16.8px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(14, 19, 17)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.28px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "FOUNDERS & SITTING EXECUTIVES",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(201, 160, 100)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "H3",
+        "text": "The Principal Year",
+        "font": "500 26px/29.9px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.65px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "One hour a fortnight. Twelve months. A different room.",
+        "font": "400 15px/23.25px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgba(21, 26, 24, 0.75)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.3px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "12 MONTHS",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(142, 145, 137)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "£2,400 / MONTH",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(142, 145, 137)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "THE PRINCIPAL YEAR",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(201, 160, 100)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "The core engagement. We work on the three or four behaviours that decide how your team experiences you, and we measure them — before, midway and after.",
+        "font": "400 15px/23.25px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgba(243, 239, 230, 0.78)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.3px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "24 fortnightly sessions",
+        "font": "400 15px/23.25px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgba(243, 239, 230, 0.85)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.3px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Three 360 pulse surveys",
+        "font": "400 15px/23.25px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgba(243, 239, 230, 0.85)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.3px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Two shadowing days",
+        "font": "400 15px/23.25px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgba(243, 239, 230, 0.85)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.3px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Quarterly sponsor check-in",
+        "font": "400 15px/23.25px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgba(243, 239, 230, 0.85)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.3px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Unlimited short calls",
+        "font": "400 15px/23.25px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgba(243, 239, 230, 0.85)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.3px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "£2,400 / month",
+        "font": "500 36px/36px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.44px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "12 MONTHS",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgba(243, 239, 230, 0.6)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "See the programme",
+        "font": "500 14px/16.8px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(14, 19, 17)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.28px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "EXECUTIVE TEAMS OF 5–9",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(201, 160, 100)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "H3",
+        "text": "The Leadership Bench",
+        "font": "500 26px/29.9px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.65px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Coach the team that has to carry the strategy.",
+        "font": "400 15px/23.25px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgba(21, 26, 24, 0.75)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.3px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "6 MONTHS",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(142, 145, 137)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "FROM £38,000",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(142, 145, 137)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "THE LEADERSHIP BENCH",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(201, 160, 100)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "Team coaching for the layer below the CEO: how you disagree, how you decide, and what happens in the room after the CEO leaves it.",
+        "font": "400 15px/23.25px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgba(243, 239, 230, 0.78)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.3px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Team diagnostic",
+        "font": "400 15px/23.25px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgba(243, 239, 230, 0.85)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.3px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Four off-site days",
+        "font": "400 15px/23.25px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgba(243, 239, 230, 0.85)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.3px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Individual sessions for each member",
+        "font": "400 15px/23.25px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgba(243, 239, 230, 0.85)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.3px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Operating-rhythm redesign",
+        "font": "400 15px/23.25px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgba(243, 239, 230, 0.85)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.3px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "From £38,000",
+        "font": "500 36px/36px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.44px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "6 MONTHS",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgba(243, 239, 230, 0.6)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "See the programme",
+        "font": "500 14px/16.8px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(14, 19, 17)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.28px",
+        "textTransform": "none"
+      }
+    ],
+    "imgs": [
+      {
+        "src": "https://framerusercontent.com/images/NpSrhA2Bm9APpRNWlHhyQ7AMxA.webp?width=1400&height=939",
+        "currentSrc": "https://framerusercontent.com/images/NpSrhA2Bm9APpRNWlHhyQ7AMxA.webp?scale-down-to=512&width=1400&height=939",
+        "alt": "",
+        "width": 427,
+        "height": 420
+      },
+      {
+        "src": "https://framerusercontent.com/images/HCjYYjTexKt0r1TQmgj5kUcREBY.webp?width=1400&height=939",
+        "currentSrc": "https://framerusercontent.com/images/HCjYYjTexKt0r1TQmgj5kUcREBY.webp?scale-down-to=1024&width=1400&height=939",
+        "alt": "",
+        "width": 427,
+        "height": 420
+      },
+      {
+        "src": "https://framerusercontent.com/images/xUfkQ3AvEuRZQ49nQGqyn66JE.webp?width=1400&height=939",
+        "currentSrc": "https://framerusercontent.com/images/xUfkQ3AvEuRZQ49nQGqyn66JE.webp?scale-down-to=1024&width=1400&height=939",
+        "alt": "",
+        "width": 427,
+        "height": 420
+      }
+    ],
+    "links": [
+      {
+        "tag": "A",
+        "text": "See the programme",
+        "href": "https://easier-spots-537272.framer.app/coaching/the-first-hundred-days"
+      },
+      {
+        "tag": "A",
+        "text": "See the programme",
+        "href": "https://easier-spots-537272.framer.app/coaching/the-principal-year"
+      },
+      {
+        "tag": "A",
+        "text": "See the programme",
+        "href": "https://easier-spots-537272.framer.app/coaching/the-leadership-bench"
+      }
+    ]
+  },
+  "Results": {
+    "name": "Results",
+    "rect": {
+      "width": 1440,
+      "height": 1564.3125,
+      "top": 9970.203125
+    },
+    "bg": "rgba(0, 0, 0, 0)",
+    "padding": "0px",
+    "color": "rgb(0, 0, 0)",
+    "textItems": [
+      {
+        "tag": "P",
+        "text": "EVIDENCE",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgba(243, 239, 230, 0.7)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "SPAN",
+        "text": "Measured",
+        "font": "500 56px/56px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.24px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "by",
+        "font": "500 56px/56px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.24px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "the",
+        "font": "500 56px/56px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.24px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "people",
+        "font": "500 56px/56px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.24px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "around",
+        "font": "400 56px/56px \"Instrument Serif\", Georgia, serif",
+        "color": "rgb(201, 160, 100)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.56px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "you.",
+        "font": "500 56px/56px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.24px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Every engagement is scored by the principal's own team, before and after. These are their numbers, not mine.",
+        "font": "400 17px/27.2px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgba(243, 239, 230, 0.78)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.34px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "92%",
+        "font": "500 36px/36px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(201, 160, 100)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.44px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "OF SPONSORS RENEW OR REFER",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgba(243, 239, 230, 0.55)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "+31",
+        "font": "500 36px/36px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(201, 160, 100)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.44px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "AVERAGE SHIFT IN TEAM TRUST SCORE",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgba(243, 239, 230, 0.55)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "13 yrs",
+        "font": "500 36px/36px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(201, 160, 100)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.44px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "OF FORTNIGHTLY ROOMS",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgba(243, 239, 230, 0.55)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "Read the case notes",
+        "font": "500 14px/16.8px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.28px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "CFO — SERIES C FINTECH",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(201, 160, 100)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "H3",
+        "text": "From the numbers person to the second voice in the room.",
+        "font": "500 26px/29.9px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.65px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Promoted from finance director eight months before an IPO process. We worked on presence with the board and on letting a strong team be strong.",
+        "font": "400 15px/23.25px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgba(243, 239, 230, 0.78)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.3px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "+41",
+        "font": "500 36px/36px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.44px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "TEAM TRUST SCORE, 12 MONTHS",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgba(243, 239, 230, 0.55)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "9 of 9",
+        "font": "500 36px/36px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.44px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "DIRECT REPORTS RETAINED",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgba(243, 239, 230, 0.55)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "FOUNDER & CEO — CLIMATE HARDWARE",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(201, 160, 100)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "H3",
+        "text": "A founder who stopped being the bottleneck.",
+        "font": "500 26px/29.9px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.65px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Forty people, every decision through one inbox. A year later the exec team runs the week and the founder runs the next three years.",
+        "font": "400 15px/23.25px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgba(243, 239, 230, 0.78)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.3px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "62%",
+        "font": "500 36px/36px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.44px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "FEWER DECISIONS ESCALATED",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgba(243, 239, 230, 0.55)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "2.3×",
+        "font": "500 36px/36px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.44px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "REVENUE, SAME HEADCOUNT",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgba(243, 239, 230, 0.55)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "VP ENGINEERING — PUBLIC SAAS",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(201, 160, 100)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "H3",
+        "text": "Promoted twice in eighteen months.",
+        "font": "500 26px/29.9px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.65px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Technically brilliant, politically invisible. We built a way of being heard in rooms where the loudest voice usually won.",
+        "font": "400 15px/23.25px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgba(243, 239, 230, 0.78)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.3px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "2",
+        "font": "500 36px/36px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.44px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "PROMOTIONS IN 18 MONTHS",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgba(243, 239, 230, 0.55)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "+27",
+        "font": "500 36px/36px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.44px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "ENGAGEMENT, 140-PERSON ORG",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgba(243, 239, 230, 0.55)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "CHIEF EXECUTIVE — HOSPITAL TRUST",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(201, 160, 100)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "H3",
+        "text": "Leading eleven thousand people through a merger.",
+        "font": "500 26px/29.9px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.65px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Two cultures, one winter. The work was about tempo: what to decide this week, what to refuse to decide, and how to say both out loud.",
+        "font": "400 15px/23.25px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgba(243, 239, 230, 0.78)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.3px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "11k",
+        "font": "500 36px/36px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.44px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "STAFF THROUGH THE MERGER",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgba(243, 239, 230, 0.55)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "−18%",
+        "font": "500 36px/36px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.44px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "SENIOR TURNOVER",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgba(243, 239, 230, 0.55)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      }
+    ],
+    "imgs": [
+      {
+        "src": "https://framerusercontent.com/images/X7TMWu97EmYu2pyiDKsqlbwE.webp?width=1400&height=1400",
+        "currentSrc": "https://framerusercontent.com/images/X7TMWu97EmYu2pyiDKsqlbwE.webp?scale-down-to=1024&width=1400&height=1400",
+        "alt": "",
+        "width": 394,
+        "height": 358
+      },
+      {
+        "src": "https://framerusercontent.com/images/AVs6BQrXnM8hz0pZejOrzTUsw.webp?width=1400&height=1400",
+        "currentSrc": "",
+        "alt": "",
+        "width": 394,
+        "height": 358
+      },
+      {
+        "src": "https://framerusercontent.com/images/4oRyGDG58GnNYE1NKjA8V2BUo6U.webp?width=1400&height=1400",
+        "currentSrc": "",
+        "alt": "",
+        "width": 394,
+        "height": 358
+      },
+      {
+        "src": "https://framerusercontent.com/images/LXjSe5Iux2mFkU18HiTo0PjAQ.webp?width=1400&height=1400",
+        "currentSrc": "",
+        "alt": "",
+        "width": 394,
+        "height": 358
+      }
+    ],
+    "links": [
+      {
+        "tag": "A",
+        "text": "Read the case notes",
+        "href": "https://easier-spots-537272.framer.app/results"
+      }
+    ]
+  },
+  "Voices": {
+    "name": "Voices",
+    "rect": {
+      "width": 1440,
+      "height": 3240,
+      "top": 11433.71875
+    },
+    "bg": "rgba(0, 0, 0, 0)",
+    "padding": "0px",
+    "color": "rgb(0, 0, 0)",
+    "textItems": [
+      {
+        "tag": "P",
+        "text": "IN THEIR WORDS",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(142, 145, 137)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "SPAN",
+        "text": "What",
+        "font": "500 56px/56px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.24px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "principals",
+        "font": "500 56px/56px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.24px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "say",
+        "font": "500 56px/56px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.24px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "when",
+        "font": "500 56px/56px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.24px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "I",
+        "font": "500 56px/56px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.24px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "am",
+        "font": "500 56px/56px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.24px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "not",
+        "font": "400 56px/56px \"Instrument Serif\", Georgia, serif",
+        "color": "rgb(201, 160, 100)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.56px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "in",
+        "font": "500 56px/56px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.24px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "the",
+        "font": "500 56px/56px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.24px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "room.",
+        "font": "500 56px/56px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.24px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Names are shortened at clients' request. References are available after a chemistry call.",
+        "font": "400 15px/23.25px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgba(21, 26, 24, 0.78)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.3px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "05 VOICES",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(201, 160, 100)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "“",
+        "font": "400 56px/56px \"Instrument Serif\", \"Instrument Serif Placeholder\", serif",
+        "color": "rgb(201, 160, 100)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.12px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "She is the only person who tells me the truth before the board does.",
+        "font": "500 30px/36px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.9px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Priya N.",
+        "font": "500 14px/16.8px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.28px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "CFO — SERIES C FINTECH",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgba(21, 26, 24, 0.6)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "“",
+        "font": "400 56px/56px \"Instrument Serif\", \"Instrument Serif Placeholder\", serif",
+        "color": "rgb(201, 160, 100)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.12px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Six months in, my exec team stopped managing me and started arguing with me. That was the point.",
+        "font": "500 30px/36px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.9px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Tomas R.",
+        "font": "500 14px/16.8px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.28px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "FOUNDER & CEO — CLIMATE HARDWARE",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgba(243, 239, 230, 0.6)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "“",
+        "font": "400 56px/56px \"Instrument Serif\", \"Instrument Serif Placeholder\", serif",
+        "color": "rgb(201, 160, 100)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.12px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "I came for a promotion plan. I left with a different way of running a room.",
+        "font": "500 30px/36px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.9px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Dana K.",
+        "font": "500 14px/16.8px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.28px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "VP ENGINEERING — PUBLIC SAAS",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgba(21, 26, 24, 0.6)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "“",
+        "font": "400 56px/56px \"Instrument Serif\", \"Instrument Serif Placeholder\", serif",
+        "color": "rgb(201, 160, 100)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.12px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Helena does not give advice. She asks the question you have been avoiding for a year, then waits.",
+        "font": "500 30px/36px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.9px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Sir Alan W.",
+        "font": "500 14px/16.8px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.28px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "CHAIR — NATIONAL CHARITY",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgba(243, 239, 230, 0.6)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "“",
+        "font": "400 56px/56px \"Instrument Serif\", \"Instrument Serif Placeholder\", serif",
+        "color": "rgb(14, 19, 17)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.12px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "The 360 was brutal and she made it useful. My team noticed the change before I did.",
+        "font": "500 30px/36px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(14, 19, 17)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.9px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Marguerite L.",
+        "font": "500 14px/16.8px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(14, 19, 17)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.28px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "COO — RETAIL GROUP",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgba(14, 19, 17, 0.65)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      }
+    ],
+    "imgs": [],
+    "links": []
+  },
+  "About": {
+    "name": "About",
+    "rect": {
+      "width": 1440,
+      "height": 2700,
+      "top": 14673.71875
+    },
+    "bg": "rgba(0, 0, 0, 0)",
+    "padding": "0px",
+    "color": "rgb(0, 0, 0)",
+    "textItems": [
+      {
+        "tag": "P",
+        "text": "Meet",
+        "font": "500 190px/190px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-11.4px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "ABOUT",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgba(243, 239, 230, 0.7)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "SPAN",
+        "text": "Twenty",
+        "font": "500 56px/56px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.24px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "years",
+        "font": "500 56px/56px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.24px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "inside",
+        "font": "400 56px/56px \"Instrument Serif\", Georgia, serif",
+        "color": "rgb(201, 160, 100)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.56px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "rooms",
+        "font": "500 56px/56px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.24px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "like",
+        "font": "500 56px/56px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.24px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "yours.",
+        "font": "500 56px/56px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.24px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Before coaching I ran operations for a 900-person business and sat on two boards. I know what Monday morning feels like after a bad Friday board meeting — and I know most of it is fixable.",
+        "font": "400 17px/27.2px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgba(243, 239, 230, 0.84)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.34px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "ICF PROFESSIONAL CERTIFIED COACH",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "MSC ORGANISATIONAL PSYCHOLOGY, LSE",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "HOGAN & LVI 360 ACCREDITED",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "SUPERVISED PRACTICE SINCE 2011",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "Helena Marsh",
+        "font": "400 40px/40px \"Instrument Serif\", \"Instrument Serif Placeholder\", serif",
+        "color": "rgb(201, 160, 100)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.8px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "The longer story",
+        "font": "500 14px/16.8px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.28px",
+        "textTransform": "none"
+      }
+    ],
+    "imgs": [
+      {
+        "src": "https://framerusercontent.com/images/kwq8GP8UML6E0MeHeEQK6aCkYDU.webp?width=2000&height=1116",
+        "currentSrc": "https://framerusercontent.com/images/kwq8GP8UML6E0MeHeEQK6aCkYDU.webp?width=2000&height=1116",
+        "alt": "",
+        "width": 1440,
+        "height": 900
+      }
+    ],
+    "links": [
+      {
+        "tag": "A",
+        "text": "The longer story",
+        "href": "https://easier-spots-537272.framer.app/about"
+      }
+    ]
+  },
+  "Insights": {
+    "name": "Insights",
+    "rect": {
+      "width": 1440,
+      "height": 880.375,
+      "top": 17373.71875
+    },
+    "bg": "rgba(0, 0, 0, 0)",
+    "padding": "0px",
+    "color": "rgb(0, 0, 0)",
+    "textItems": [
+      {
+        "tag": "P",
+        "text": "INSIGHTS",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(142, 145, 137)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "SPAN",
+        "text": "Notes",
+        "font": "500 56px/56px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.24px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "from",
+        "font": "500 56px/56px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.24px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "the",
+        "font": "500 56px/56px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.24px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "corridor.",
+        "font": "400 56px/56px \"Instrument Serif\", Georgia, serif",
+        "color": "rgb(201, 160, 100)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.56px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "All insights",
+        "font": "500 14px/16.8px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.28px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "TEAMS",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "SEPTEMBER 2026",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgba(21, 26, 24, 0.55)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "6 MIN",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgba(21, 26, 24, 0.55)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "H3",
+        "text": "The meeting after the meeting",
+        "font": "500 26px/29.9px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.65px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "If the real conversation happens in the corridor, your meeting is theatre. How to move the truth back into the room.",
+        "font": "400 15px/23.25px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgba(21, 26, 24, 0.65)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.3px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "READ →",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "TRANSITIONS",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "AUGUST 2026",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgba(21, 26, 24, 0.55)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "8 MIN",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgba(21, 26, 24, 0.55)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "H3",
+        "text": "Your first ninety days are not a plan",
+        "font": "500 26px/29.9px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.65px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "New CEOs arrive with a deck. The ones who last arrive with questions and a very short list of promises.",
+        "font": "400 15px/23.25px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgba(21, 26, 24, 0.65)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.3px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "READ →",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "SELF-AWARENESS",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "JULY 2026",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgba(21, 26, 24, 0.55)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "5 MIN",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgba(21, 26, 24, 0.55)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "H3",
+        "text": "Feedback travels upward slowly",
+        "font": "500 26px/29.9px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.65px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "The more senior you are, the older your information about yourself. A practical way to shorten the delay.",
+        "font": "400 15px/23.25px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgba(21, 26, 24, 0.65)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.3px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "READ →",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "JUDGEMENT",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "JUNE 2026",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgba(21, 26, 24, 0.55)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "7 MIN",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgba(21, 26, 24, 0.55)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "H3",
+        "text": "Deciding what not to decide",
+        "font": "500 26px/29.9px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.65px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Tempo is a leadership tool. Some decisions improve with a week; some rot. Telling them apart is the job.",
+        "font": "400 15px/23.25px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgba(21, 26, 24, 0.65)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.3px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "READ →",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      }
+    ],
+    "imgs": [
+      {
+        "src": "https://framerusercontent.com/images/BvE0UdZxDKSGoGIwN0uOxbvc5E.webp?width=1400&height=781",
+        "currentSrc": "",
+        "alt": "",
+        "width": 322,
+        "height": 258
+      },
+      {
+        "src": "https://framerusercontent.com/images/qNu5vvbm5fbXRo9QelIr0erM0.webp?width=1400&height=781",
+        "currentSrc": "",
+        "alt": "",
+        "width": 322,
+        "height": 258
+      },
+      {
+        "src": "https://framerusercontent.com/images/nQ1lApEF5N0b1CKgXj9flJrYc.webp?width=1400&height=781",
+        "currentSrc": "https://framerusercontent.com/images/nQ1lApEF5N0b1CKgXj9flJrYc.webp?scale-down-to=512&width=1400&height=781",
+        "alt": "",
+        "width": 322,
+        "height": 258
+      },
+      {
+        "src": "https://framerusercontent.com/images/z5MQSE0EqfjxmDrgOPiYdNc.webp?width=1400&height=781",
+        "currentSrc": "",
+        "alt": "",
+        "width": 322,
+        "height": 258
+      }
+    ],
+    "links": [
+      {
+        "tag": "A",
+        "text": "All insights",
+        "href": "https://easier-spots-537272.framer.app/insights"
+      },
+      {
+        "tag": "A",
+        "text": "TEAMS SEPTEMBER 2026 6 MIN The meeting after the meeting If the real conversation happens in the corridor, your meeting is theatre. How to move the truth back into the room. READ →",
+        "href": "https://easier-spots-537272.framer.app/insights/the-meeting-after-the-meeting"
+      },
+      {
+        "tag": "A",
+        "text": "TRANSITIONS AUGUST 2026 8 MIN Your first ninety days are not a plan New CEOs arrive with a deck. The ones who last arrive with questions and a very short list of promises. READ →",
+        "href": "https://easier-spots-537272.framer.app/insights/your-first-ninety-days-are-not-a-plan"
+      },
+      {
+        "tag": "A",
+        "text": "SELF-AWARENESS JULY 2026 5 MIN Feedback travels upward slowly The more senior you are, the older your information about yourself. A practical way to shorten the delay. READ →",
+        "href": "https://easier-spots-537272.framer.app/insights/feedback-travels-upward-slowly"
+      },
+      {
+        "tag": "A",
+        "text": "JUDGEMENT JUNE 2026 7 MIN Deciding what not to decide Tempo is a leadership tool. Some decisions improve with a week; some rot. Telling them apart is the job. READ →",
+        "href": "https://easier-spots-537272.framer.app/insights/deciding-what-not-to-decide"
+      }
+    ]
+  },
+  "FAQ": {
+    "name": "FAQ",
+    "rect": {
+      "width": 1440,
+      "height": 808,
+      "top": 18254.09375
+    },
+    "bg": "rgba(0, 0, 0, 0)",
+    "padding": "0px",
+    "color": "rgb(0, 0, 0)",
+    "textItems": [
+      {
+        "tag": "P",
+        "text": "BEFORE YOU ASK",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(142, 145, 137)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "SPAN",
+        "text": "Straight",
+        "font": "500 56px/56px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.24px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "answers",
+        "font": "500 56px/56px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.24px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "to",
+        "font": "500 56px/56px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.24px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "the",
+        "font": "500 56px/56px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.24px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "usual",
+        "font": "400 56px/56px \"Instrument Serif\", Georgia, serif",
+        "color": "rgb(201, 160, 100)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.56px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "questions.",
+        "font": "500 56px/56px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-2.24px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Anything else, ask on the chemistry call — that is what it is for.",
+        "font": "400 15px/23.25px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgba(21, 26, 24, 0.65)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.3px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Book a chemistry call",
+        "font": "500 14px/16.8px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(255, 255, 255)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.28px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "H3",
+        "text": "What happens on a chemistry call?",
+        "font": "500 26px/29.9px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.65px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "H3",
+        "text": "Who pays — me or my company?",
+        "font": "500 26px/29.9px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.65px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "H3",
+        "text": "How is coaching different from mentoring or therapy?",
+        "font": "500 26px/29.9px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.65px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "H3",
+        "text": "How do you measure whether it worked?",
+        "font": "500 26px/29.9px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.65px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "H3",
+        "text": "Do we meet in person?",
+        "font": "500 26px/29.9px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.65px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "H3",
+        "text": "How soon could we start?",
+        "font": "500 26px/29.9px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(21, 26, 24)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.65px",
+        "textTransform": "none"
+      }
+    ],
+    "imgs": [],
+    "links": [
+      {
+        "tag": "A",
+        "text": "Book a chemistry call",
+        "href": "https://easier-spots-537272.framer.app/book"
+      }
+    ]
+  },
+  "CTA": {
+    "name": "CTA",
+    "rect": {
+      "width": 1440,
+      "height": 878.625,
+      "top": 19062.09375
+    },
+    "bg": "rgba(0, 0, 0, 0)",
+    "padding": "0px",
+    "color": "rgb(0, 0, 0)",
+    "textItems": [
+      {
+        "tag": "P",
+        "text": "ACCEPTING THREE PRINCIPALS — Q4 2026",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgba(243, 239, 230, 0.7)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "SPAN",
+        "text": "Start",
+        "font": "500 160px/147.2px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-8px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "with",
+        "font": "500 160px/147.2px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-8px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "twenty-five",
+        "font": "500 160px/147.2px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-8px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "SPAN",
+        "text": "minutes.",
+        "font": "400 160px/147.2px \"Instrument Serif\", Georgia, serif",
+        "color": "rgb(201, 160, 100)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-1.6px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "No deck, no pitch. You talk, I listen, and we both find out whether I am the right person for the next year of your working life.",
+        "font": "400 17px/27.2px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgba(243, 239, 230, 0.8)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.34px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Book a chemistry call",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(14, 19, 17)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      }
+    ],
+    "imgs": [
+      {
+        "src": "https://framerusercontent.com/images/kwq8GP8UML6E0MeHeEQK6aCkYDU.webp?width=2000&height=1116",
+        "currentSrc": "https://framerusercontent.com/images/kwq8GP8UML6E0MeHeEQK6aCkYDU.webp?width=2000&height=1116",
+        "alt": "",
+        "width": 1440,
+        "height": 994
+      }
+    ],
+    "links": [
+      {
+        "tag": "A",
+        "text": "BOOK A CHEMISTRY CALL · BOOK A CHEMISTRY CALL ·",
+        "href": "https://easier-spots-537272.framer.app/book"
+      }
+    ]
+  },
+  "Site Footer": {
+    "name": "Site Footer",
+    "rect": {
+      "width": 1440,
+      "height": 623.96875,
+      "top": 19316.71875
+    },
+    "bg": "rgba(0, 0, 0, 0)",
+    "padding": "0px",
+    "color": "rgb(0, 0, 0)",
+    "textItems": [
+      {
+        "tag": "P",
+        "text": "Executive coaching for founders, first-time CEOs and the leaders behind them.",
+        "font": "400 15px/23.25px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgba(243, 239, 230, 0.72)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.3px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Coaching",
+        "font": "500 26px/29.9px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.65px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "A",
+        "text": "About",
+        "font": "500 26px/29.9px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.65px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Speaking",
+        "font": "500 26px/29.9px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.65px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Results",
+        "font": "500 26px/29.9px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.65px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Insights",
+        "font": "500 26px/29.9px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.65px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Book a call",
+        "font": "500 26px/29.9px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.65px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "CONTACT",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgba(243, 239, 230, 0.6)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "A",
+        "text": "helena@helenamarsh.co",
+        "font": "400 15px/23.25px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.3px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "A",
+        "text": "+44 20 7946 0321",
+        "font": "400 15px/23.25px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.3px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "ELSEWHERE",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgba(243, 239, 230, 0.6)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "A",
+        "text": "LinkedIn",
+        "font": "400 15px/23.25px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.3px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Substack",
+        "font": "400 15px/23.25px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.3px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "A",
+        "text": "Podcast",
+        "font": "400 15px/23.25px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-0.3px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "Helena Marsh",
+        "font": "500 210px/178.5px Geist, \"Geist Placeholder\", sans-serif",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "-11.55px",
+        "textTransform": "none"
+      },
+      {
+        "tag": "P",
+        "text": "© 2026 HELENA MARSH. ALL RIGHTS RESERVED.",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgba(243, 239, 230, 0.6)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "LONDON",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgba(243, 239, 230, 0.6)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "17:25",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "A",
+        "text": "PRIVACY",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgba(243, 239, 230, 0.6)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "A",
+        "text": "TERMS",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgba(243, 239, 230, 0.6)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      },
+      {
+        "tag": "P",
+        "text": "BACK TO TOP ↑",
+        "font": "400 12px/14.4px \"Geist Mono\", \"Geist Mono Placeholder\", monospace",
+        "color": "rgb(243, 239, 230)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "letterSpacing": "1.44px",
+        "textTransform": "uppercase"
+      }
+    ],
+    "imgs": [],
+    "links": [
+      {
+        "tag": "A",
+        "text": "Coaching",
+        "href": "https://easier-spots-537272.framer.app/coaching"
+      },
+      {
+        "tag": "A",
+        "text": "About",
+        "href": "https://easier-spots-537272.framer.app/about"
+      },
+      {
+        "tag": "A",
+        "text": "Speaking",
+        "href": "https://easier-spots-537272.framer.app/speaking"
+      },
+      {
+        "tag": "A",
+        "text": "Results",
+        "href": "https://easier-spots-537272.framer.app/results"
+      },
+      {
+        "tag": "A",
+        "text": "Insights",
+        "href": "https://easier-spots-537272.framer.app/insights"
+      },
+      {
+        "tag": "A",
+        "text": "Book a call",
+        "href": "https://easier-spots-537272.framer.app/book"
+      },
+      {
+        "tag": "A",
+        "text": "helena@helenamarsh.co",
+        "href": "mailto:helena@helenamarsh.co"
+      },
+      {
+        "tag": "A",
+        "text": "+44 20 7946 0321",
+        "href": "tel:+442079460321"
+      },
+      {
+        "tag": "A",
+        "text": "LinkedIn",
+        "href": "https://linkedin.com/"
+      },
+      {
+        "tag": "A",
+        "text": "Substack",
+        "href": "https://substack.com/"
+      },
+      {
+        "tag": "A",
+        "text": "Podcast",
+        "href": "https://spotify.com/"
+      },
+      {
+        "tag": "A",
+        "text": "PRIVACY",
+        "href": "https://easier-spots-537272.framer.app/privacy"
+      },
+      {
+        "tag": "A",
+        "text": "TERMS",
+        "href": "https://easier-spots-537272.framer.app/terms"
+      }
+    ]
+  }
+}
