@@ -20,23 +20,12 @@ async function run() {
   await page.goto('http://localhost:3000', { waitUntil: 'networkidle2' });
   await new Promise(r => setTimeout(r, 2200)); // wait for GSAP intro
 
-  const heroShot = path.join(ARTIFACTS_DIR, 'hero_option_b_monoliths.png');
+  const heroShot = path.join(ARTIFACTS_DIR, 'hero_option_d_split_horizon.png');
   await page.screenshot({ path: heroShot, clip: { x: 0, y: 0, width: 1440, height: 960 } });
-  console.log('Saved Option B hero screenshot:', heroShot);
-
-  // Hover over the center background monolith
-  const monoliths = await page.$$('[data-bg-monolith]');
-  console.log('Found monoliths:', monoliths.length);
-  if (monoliths.length >= 3) {
-    await monoliths[2].hover();
-    await new Promise(r => setTimeout(r, 700));
-    const hoverShot = path.join(ARTIFACTS_DIR, 'hero_option_b_hover_monolith.png');
-    await page.screenshot({ path: hoverShot, clip: { x: 0, y: 0, width: 1440, height: 960 } });
-    console.log('Saved Option B hover monolith screenshot:', hoverShot);
-  }
+  console.log('Saved Option D hero screenshot:', heroShot);
 
   await browser.close();
-  console.log('Hero Option B verification finished successfully!');
+  console.log('Hero Option D verification finished successfully!');
 }
 
 run().catch(err => {
