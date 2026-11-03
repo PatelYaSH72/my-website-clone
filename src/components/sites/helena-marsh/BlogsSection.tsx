@@ -15,6 +15,17 @@ export function BlogsSection() {
     const el = sectionRef.current;
     if (!el) return;
 
+    const checkVisibility = () => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 80) {
+        setIsRevealed(true);
+        return true;
+      }
+      return false;
+    };
+
+    if (checkVisibility()) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -22,19 +33,34 @@ export function BlogsSection() {
           observer.unobserve(el);
         }
       },
-      { threshold: 0.08, rootMargin: "60px 0px 60px 0px" }
+      { threshold: 0.05, rootMargin: "0px 0px -50px 0px" }
     );
 
     observer.observe(el);
-    return () => observer.disconnect();
+
+    const handleScroll = () => {
+      if (checkVisibility()) {
+        observer.disconnect();
+        window.removeEventListener("scroll", handleScroll);
+      }
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   // Featured top blog
-  const featuredBlog = ARTICLES.find((a) => a.featured && a.slug === "promoter-debt-defense") || ARTICLES[0];
+  const featuredBlog =
+    ARTICLES.find((a) => a.featured && a.slug === "promoter-debt-defense") || ARTICLES[0];
 
   // Secondary grid blogs (2 articles)
   const secondaryBlogs = ARTICLES.filter(
-    (a) => a.slug === "feedback-travels-upward-slowly" || a.slug === "the-meeting-after-the-meeting"
+    (a) =>
+      a.slug === "feedback-travels-upward-slowly" ||
+      a.slug === "the-meeting-after-the-meeting"
   );
 
   // Recent Blogs: sorted by date (newest first)
@@ -49,12 +75,12 @@ export function BlogsSection() {
     <section
       id="blogs"
       ref={sectionRef}
-      className="relative py-28 sm:py-36 px-4 sm:px-6 max-w-[1440px] mx-auto z-10 bg-[#F3EFE6] text-[#080F1E]"
+      className="relative py-28 sm:py-36 px-4 sm:px-6 max-w-[1440px] mx-auto z-10 bg-[#F3EFE6] text-[#080F1E] overflow-hidden"
     >
-      {/* Section Header */}
+      {/* Section Header with Staggered Line Unmask */}
       <div
-        className={`flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12 sm:mb-16 border-b border-[#080F1E]/15 pb-8 transition-all duration-700 ${
-          isRevealed ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+        className={`flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12 sm:mb-16 border-b border-[#080F1E]/15 pb-8 transition-all duration-850 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+          isRevealed ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
       >
         <div className="space-y-3">
@@ -88,10 +114,15 @@ export function BlogsSection() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
         {/* Left Area: Hero Featured Blog + 2-Column Sub-grid (Span 8) */}
         <div className="lg:col-span-8 space-y-10">
-          {/* Primary Featured Blog Hero Card */}
+          {/* Primary Featured Blog Hero Card with Reveal */}
           <Link
             href={`/blogs/${featuredBlog.slug}`}
-            className="group block rounded-3xl p-6 sm:p-8 bg-white/70 border border-[#080F1E]/10 hover:border-[#1E40AF]/30 shadow-sm hover:shadow-xl transition-all duration-500"
+            className={`group block rounded-3xl p-6 sm:p-8 bg-white/70 border border-[#080F1E]/10 hover:border-[#1E40AF]/30 shadow-sm hover:shadow-xl transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+              isRevealed
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-10"
+            }`}
+            style={{ transitionDelay: "120ms" }}
           >
             <div className="space-y-6">
               <AnimatedImageCard
@@ -133,13 +164,18 @@ export function BlogsSection() {
             </div>
           </Link>
 
-          {/* 2-Column Secondary Blogs Grid */}
+          {/* 2-Column Secondary Blogs Grid with Staggered Reveal */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
             {secondaryBlogs.map((blog, idx) => (
               <Link
                 key={blog.slug}
                 href={`/blogs/${blog.slug}`}
-                className="group flex flex-col justify-between p-6 rounded-2xl bg-white/50 border border-[#080F1E]/10 hover:border-[#1E40AF]/30 hover:bg-white shadow-sm hover:shadow-md transition-all duration-400"
+                className={`group flex flex-col justify-between p-6 rounded-2xl bg-white/50 border border-[#080F1E]/10 hover:border-[#1E40AF]/30 hover:bg-white shadow-sm hover:shadow-md transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                  isRevealed
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-12"
+                }`}
+                style={{ transitionDelay: `${220 + idx * 120}ms` }}
               >
                 <div className="space-y-4">
                   <AnimatedImageCard
@@ -182,8 +218,15 @@ export function BlogsSection() {
 
         {/* Right Sidebar: Recent Blogs & Most Viewed Blogs (Span 4) */}
         <div className="lg:col-span-4 space-y-8">
-          {/* Box 1: Recent Blogs */}
-          <div className="p-6 sm:p-7 rounded-3xl bg-white border border-[#080F1E]/10 shadow-sm space-y-6">
+          {/* Box 1: Recent Blogs with Cascade Reveal */}
+          <div
+            className={`p-6 sm:p-7 rounded-3xl bg-white border border-[#080F1E]/10 shadow-sm space-y-6 transition-all duration-800 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+              isRevealed
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-10"
+            }`}
+            style={{ transitionDelay: "200ms" }}
+          >
             <div className="flex items-center justify-between border-b border-[#080F1E]/10 pb-4">
               <div className="flex items-center gap-2">
                 <span className="relative flex h-2 w-2">
@@ -198,11 +241,16 @@ export function BlogsSection() {
             </div>
 
             <div className="divide-y divide-[#080F1E]/10 space-y-4">
-              {recentBlogs.map((blog) => (
+              {recentBlogs.map((blog, bIdx) => (
                 <Link
                   key={blog.slug}
                   href={`/blogs/${blog.slug}`}
-                  className="group flex gap-4 pt-4 first:pt-0 items-start cursor-pointer"
+                  className={`group flex gap-4 pt-4 first:pt-0 items-start cursor-pointer transition-all duration-600 ${
+                    isRevealed
+                      ? "opacity-100 translate-x-0"
+                      : "opacity-0 translate-x-4"
+                  }`}
+                  style={{ transitionDelay: `${260 + bIdx * 80}ms` }}
                 >
                   {/* Thumbnail */}
                   <div className="relative w-20 h-20 rounded-xl overflow-hidden bg-[#080F1E] shrink-0 border border-[#080F1E]/10">
@@ -239,8 +287,15 @@ export function BlogsSection() {
             </div>
           </div>
 
-          {/* Box 2: Most Viewed Blogs */}
-          <div className="p-6 sm:p-7 rounded-3xl bg-[#080F1E] text-[#F3EFE6] border border-[#F3EFE6]/10 shadow-xl space-y-6">
+          {/* Box 2: Most Viewed Blogs with Gold Accent Reveal */}
+          <div
+            className={`p-6 sm:p-7 rounded-3xl bg-[#080F1E] text-[#F3EFE6] border border-[#F3EFE6]/10 shadow-xl space-y-6 transition-all duration-800 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+              isRevealed
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-10"
+            }`}
+            style={{ transitionDelay: "320ms" }}
+          >
             <div className="flex items-center justify-between border-b border-[#F3EFE6]/15 pb-4">
               <div className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-[#E6C654]" />
@@ -256,7 +311,12 @@ export function BlogsSection() {
                 <Link
                   key={blog.slug}
                   href={`/blogs/${blog.slug}`}
-                  className="group flex gap-4 pt-4 first:pt-0 items-start cursor-pointer"
+                  className={`group flex gap-4 pt-4 first:pt-0 items-start cursor-pointer transition-all duration-600 ${
+                    isRevealed
+                      ? "opacity-100 translate-x-0"
+                      : "opacity-0 translate-x-4"
+                  }`}
+                  style={{ transitionDelay: `${360 + idx * 90}ms` }}
                 >
                   {/* Rank Number */}
                   <span className="font-mono text-xl sm:text-2xl font-light text-[#E6C654] group-hover:text-white transition-colors shrink-0 w-7">
@@ -288,7 +348,14 @@ export function BlogsSection() {
           </div>
 
           {/* Box 3: Priority Audit Dispatch / Consultation CTA */}
-          <div className="p-6 rounded-3xl bg-gradient-to-br from-[#1E40AF]/15 to-[#E6C654]/10 border border-[#1E40AF]/20 space-y-4">
+          <div
+            className={`p-6 rounded-3xl bg-gradient-to-br from-[#1E40AF]/15 to-[#E6C654]/10 border border-[#1E40AF]/20 space-y-4 transition-all duration-700 ${
+              isRevealed
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-8"
+            }`}
+            style={{ transitionDelay: "450ms" }}
+          >
             <span className="text-[10px] font-mono text-[#1E40AF] tracking-widest uppercase font-semibold">
               CLOSED-DOOR SESSIONS
             </span>

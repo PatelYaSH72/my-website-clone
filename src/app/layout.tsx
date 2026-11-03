@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { SparkCursor } from "@/components/ui/SparkCursor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,6 +35,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-[#F3EFE6] text-[#080F1E] selection:bg-[#E6C654] selection:text-[#080F1E]">
+        <SparkCursor />
         {children}
       </body>
     </html>

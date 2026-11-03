@@ -9,6 +9,40 @@ export function DiamondMark({ className = "w-2.5 h-2.5 bg-[#E6C654]" }: { classN
   );
 }
 
+export function SparkStar({ className = "w-3.5 h-3.5 text-[#E6C654]" }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <path d="M12 0C12 6.627 6.627 12 0 12C6.627 12 12 17.373 12 24C12 17.373 17.373 12 24 12C17.373 12 12 6.627 12 0Z" />
+    </svg>
+  );
+}
+
+export function ElectricBolt({ className = "w-3.5 h-3.5 text-[#E6C654]" }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <path
+        d="M13 2L3 14H12L11 22L21 10H12L13 2Z"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 export function ArrowRight({ className = "w-4 h-4" }: { className?: string }) {
   return (
     <svg

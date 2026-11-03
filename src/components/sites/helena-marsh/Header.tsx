@@ -42,7 +42,7 @@ export function Header() {
         className={`w-full max-w-[1360px] h-[54px] sm:h-[60px] rounded-full px-4 sm:px-5 flex items-center justify-between transition-all duration-500 ${
           scrolled || mobileMenuOpen
             ? "bg-[#080F1E]/90 backdrop-blur-xl border border-[#F3EFE6]/15 text-[#F3EFE6] shadow-[0_12px_34px_-18px_rgba(4,10,24,0.7)]"
-            : "bg-[#080F1E]/10 backdrop-blur-sm border border-[#080F1E]/10 text-[#080F1E]"
+            : "bg-[#080F1E]/50 backdrop-blur-md border border-white/10 text-[#F3EFE6] shadow-[0_4px_20px_rgba(0,0,0,0.3)]"
         }`}
       >
         {/* Logo with Elastic Hover Rotation */}
