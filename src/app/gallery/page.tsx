@@ -127,6 +127,7 @@ export default function GalleryPage() {
                     src={activeItem.image}
                     alt={activeItem.title}
                     fill
+                    sizes="(max-width: 768px) 100vw, 600px"
                     className="object-cover"
                   />
                 </div>

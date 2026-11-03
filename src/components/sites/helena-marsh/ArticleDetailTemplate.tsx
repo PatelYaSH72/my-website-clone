@@ -45,6 +45,7 @@ export function ArticleDetailTemplate({ article }: { article: Article }) {
                 alt={article.title}
                 fill
                 priority
+                sizes="(max-width: 1024px) 100vw, 1100px"
                 className="object-cover filter grayscale contrast-105"
               />
             </div>
@@ -113,6 +114,7 @@ export function ArticleDetailTemplate({ article }: { article: Article }) {
                       src="/sites/helena-marsh/images/fenil-portrait.png"
                       alt="CA Fenil Shah"
                       fill
+                      sizes="48px"
                       className="object-cover"
                     />
                   </div>

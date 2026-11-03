@@ -78,6 +78,7 @@ export function ProgramDetailTemplate({ program, audienceBadge, image }: Program
                   alt={program.title}
                   fill
                   priority
+                  sizes="(max-width: 1024px) 100vw, 1100px"
                   className="object-cover filter grayscale contrast-105"
                 />
               </div>

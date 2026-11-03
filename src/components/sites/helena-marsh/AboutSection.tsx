@@ -53,8 +53,8 @@ export function AboutSection() {
           start: "top top",
           end: "+=2200",
           pin: true,
+          pinSpacing: true,
           scrub: 1.2,
-          anticipatePin: 1,
         },
       });
 
@@ -150,7 +150,7 @@ export function AboutSection() {
     <section
       id="about"
       ref={containerRef}
-      className="relative w-full bg-[#F3EFE6] text-[#080F1E] overflow-hidden"
+      className="relative w-full bg-[#F3EFE6] text-[#080F1E] overflow-hidden z-20"
     >
       {/* Pinned Desktop Experience (Shown on lg and above) */}
       <div className="hidden lg:flex relative h-screen w-full overflow-hidden items-center justify-center">
@@ -167,6 +167,7 @@ export function AboutSection() {
               src="/sites/helena-marsh/images/fenil-arch.png"
               alt="CA Fenil Shah portrait"
               fill
+              sizes="(max-width: 1024px) 100vw, 100vw"
               className="object-cover filter contrast-105"
               priority
             />
@@ -252,6 +253,7 @@ export function AboutSection() {
             src="/sites/helena-marsh/images/fenil-arch.png"
             alt="CA Fenil Shah, Chartered Accountant"
             fill
+            sizes="(max-width: 640px) 100vw, 420px"
             className="object-cover filter contrast-105"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#080F1E]/80 via-transparent to-transparent" />

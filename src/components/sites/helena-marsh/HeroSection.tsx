@@ -219,6 +219,7 @@ export function HeroSection() {
                         alt="CA Fenil Shah, Chartered Accountant & Strategic Financial Advisor"
                         fill
                         priority
+                        sizes="(max-width: 1024px) 100vw, 460px"
                         className="object-cover object-[50%_18%]"
                       />
                     </div>

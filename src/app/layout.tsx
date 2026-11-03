@@ -29,6 +29,8 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      data-scroll-behavior="smooth"
+      suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-[#F3EFE6] text-[#080F1E] selection:bg-[#E6C654] selection:text-[#080F1E]">

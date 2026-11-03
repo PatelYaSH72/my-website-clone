@@ -22,6 +22,7 @@ export function CtaSection() {
           src="/sites/helena-marsh/images/fenil-speaking.webp"
           alt="CA Fenil Shah advisory"
           fill
+          sizes="100vw"
           className="object-cover object-center filter grayscale opacity-20 contrast-125"
         />
         {/* Royal Blue & Deep Navy Atmospheric Gradients */}
