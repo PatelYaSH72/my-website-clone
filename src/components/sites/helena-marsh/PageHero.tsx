@@ -36,7 +36,7 @@ export function PageHero({
   const slabsContainerRef = useRef<HTMLDivElement>(null);
 
   const bandCols = 7;
-  const bandOffsets = ["0px", "20px", "6px", "26px", "12px", "30px", "8px"];
+  const bandOffsets = ["0px", "14px", "4px", "18px", "8px", "20px", "6px"];
 
   useEffect(() => {
     if (isReducedMotion()) return;
@@ -81,15 +81,15 @@ export function PageHero({
           "-=0.3"
         );
 
-      // Staggered vertical unmask of the background bottom slabs
+      // Gentle vertical unmask of the background bottom slabs
       gsap.fromTo(
         "[data-bg-slab]",
-        { clipPath: "inset(100% 0 0 0)", autoAlpha: 0.2 },
+        { clipPath: "inset(100% 0 0 0)", autoAlpha: 0.1 },
         {
           clipPath: "inset(0% 0 0 0)",
           autoAlpha: 1,
-          duration: 1.2,
-          stagger: 0.06,
+          duration: 1.3,
+          stagger: 0.05,
           delay: 0.1,
           ease: "power4.inOut",
           clearProps: "clipPath",
@@ -98,8 +98,8 @@ export function PageHero({
 
       // Subtle scroll scrub on the bottom slabs container
       gsap.to(slabsContainer, {
-        yPercent: 8,
-        scale: 1.03,
+        yPercent: 6,
+        scale: 1.02,
         ease: "none",
         scrollTrigger: {
           trigger: hero,
@@ -118,6 +118,7 @@ export function PageHero({
   const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
     if (isReducedMotion()) return;
     const { clientX, clientY } = e;
+    // Calmer, gentler mouse tilt
     const x = clientX / window.innerWidth - 0.5;
     const y = clientY / window.innerHeight - 0.5;
     setMouseTilt({ x, y });
@@ -139,13 +140,17 @@ export function PageHero({
       onMouseLeave={handleMouseLeave}
       className="relative isolate min-h-[100svh] w-full overflow-hidden bg-[#060a14] text-[#F3EFE6] flex flex-col justify-between pt-28 pb-8 sm:pt-36 sm:pb-10 lg:pt-36 lg:pb-12 px-5 sm:px-8 lg:px-12 select-none"
     >
-      {/* 1. ARCHITECTURAL SLAB ANIMATION IN THE BOTTOM BACKGROUND (Bright & Vibrant) */}
+      {/* 1. ARCHITECTURAL SLAB ANIMATION AT THE BOTTOM (Blended with soft gradient feathering) */}
       <div
         ref={slabsContainerRef}
         aria-hidden="true"
-        className="pointer-events-none absolute bottom-0 inset-x-0 h-[46vh] sm:h-[52vh] lg:h-[56vh] -z-20 flex items-stretch gap-1.5 sm:gap-2 px-2 sm:px-4 will-change-transform"
+        className="pointer-events-none absolute bottom-0 inset-x-0 h-[44vh] sm:h-[48vh] lg:h-[52vh] -z-20 flex items-stretch gap-1.5 sm:gap-2 px-2 sm:px-4 will-change-transform"
         style={{
           perspective: "1200px",
+          maskImage:
+            "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.15) 22%, rgba(0,0,0,0.7) 50%, black 100%)",
+          WebkitMaskImage:
+            "linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.15) 22%, rgba(0,0,0,0.7) 50%, black 100%)",
         }}
       >
         {Array.from({ length: bandCols }).map((_, i) => {
@@ -153,10 +158,10 @@ export function PageHero({
           const isAnotherHovered = hoveredSlab !== null && !isHovered;
           const distFromCenter = i - Math.floor(bandCols / 2);
 
-          // 3D kinetic parallax wave
-          const rotateY = mouseTilt.x * (8 + Math.abs(distFromCenter) * 2.5);
-          const translateY = mouseTilt.y * (6 + (i % 2) * 3);
-          const translateZ = isHovered ? 26 : -Math.abs(distFromCenter) * 5;
+          // Calmer, subtle 3D kinetic tilt (lowered by 65%)
+          const rotateY = mouseTilt.x * (3.5 + Math.abs(distFromCenter) * 1.2);
+          const translateY = mouseTilt.y * (3 + (i % 2) * 1.5);
+          const translateZ = isHovered ? 8 : -Math.abs(distFromCenter) * 2;
 
           return (
             <div
@@ -168,17 +173,17 @@ export function PageHero({
                 marginTop: bandOffsets[i],
                 transform: `rotateY(${rotateY}deg) translateY(${translateY}px) translateZ(${translateZ}px)`,
                 transition:
-                  "transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), filter 0.45s ease, border-color 0.35s ease, box-shadow 0.35s ease",
+                  "transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease, border-color 0.4s ease, box-shadow 0.4s ease",
                 filter: isHovered
-                  ? "brightness(1.22) contrast(1.10) saturate(1.25)"
+                  ? "brightness(1.08) contrast(1.04)"
                   : isAnotherHovered
-                  ? "brightness(0.78) contrast(0.98) grayscale(35%)"
-                  : "brightness(1.12) contrast(1.08) saturate(1.15)",
+                  ? "brightness(0.85) contrast(0.98) grayscale(20%)"
+                  : "brightness(0.96) contrast(1.03)",
               }}
-              className={`group pointer-events-auto relative min-w-0 h-full overflow-hidden rounded-t-[14px] sm:rounded-t-[20px] rounded-b-[4px] border transition-all ${
+              className={`group pointer-events-auto relative min-w-0 h-full overflow-hidden rounded-t-[14px] sm:rounded-t-[20px] rounded-b-[4px] border transition-all duration-500 ${
                 isHovered
-                  ? "border-[#E6C654] shadow-[0_0_45px_rgba(230,198,84,0.40)] z-20 bg-[#091122]"
-                  : "border-white/[0.18] shadow-[0_4px_24px_rgba(0,0,0,0.45)] z-0 bg-[#070d1a]"
+                  ? "border-[#E6C654]/60 shadow-[0_0_24px_rgba(230,198,84,0.20)] z-10 bg-[#091122]/60"
+                  : "border-white/[0.08] shadow-[0_4px_16px_rgba(0,0,0,0.3)] z-0 bg-[#070d1a]/40"
               }`}
             >
               {/* Registered Sliced Image across all 7 bottom slabs */}
@@ -187,7 +192,7 @@ export function PageHero({
                 style={{
                   width: `${bandCols * 100}%`,
                   left: `-${i * 100}%`,
-                  transform: isHovered ? "scale(1.05)" : "scale(1.01)",
+                  transform: isHovered ? "scale(1.02)" : "scale(1.0)",
                 }}
               >
                 <Image
@@ -196,25 +201,25 @@ export function PageHero({
                   fill
                   priority={i === 3 || i === 4}
                   sizes="15vw"
-                  className="object-cover object-[50%_25%]"
+                  className="object-cover object-[50%_35%]"
                 />
               </div>
 
-              {/* Monolith Slab Top Indicator */}
+              {/* Monolith Slab Top Indicator (Subtle, elegant) */}
               <div
                 aria-hidden="true"
-                className="pointer-events-none absolute top-3 left-3 z-10 flex items-center gap-1.5"
+                className="pointer-events-none absolute top-3 left-3 z-10 flex items-center gap-1.5 opacity-70 group-hover:opacity-100 transition-opacity"
               >
                 <span
-                  className={`flex h-4 w-4 items-center justify-center rounded-full transition-colors ${
+                  className={`flex h-3.5 w-3.5 items-center justify-center rounded-full transition-colors ${
                     isHovered
-                      ? "bg-[#E6C654] text-[#070b15] shadow-[0_0_10px_#E6C654]"
-                      : "bg-black/60 text-[#E6C654]/80 backdrop-blur-md"
+                      ? "bg-[#E6C654] text-[#070b15]"
+                      : "bg-black/50 text-[#E6C654]/80 backdrop-blur-md"
                   }`}
                 >
-                  <SparkStar className="h-2.5 w-2.5" />
+                  <SparkStar className="h-2 w-2" />
                 </span>
-                <span className="hidden font-mono text-[8px] font-bold uppercase tracking-widest text-[#E6C654]/90 sm:inline-block">
+                <span className="hidden font-mono text-[7.5px] font-bold uppercase tracking-widest text-[#E6C654]/80 sm:inline-block">
                   {`0${i + 1}`}
                 </span>
               </div>
@@ -222,35 +227,34 @@ export function PageHero({
               {/* Traveling Voltage Surge along the slab edge */}
               <div
                 aria-hidden="true"
-                className="animate-voltage-surge right-0"
+                className="animate-voltage-surge right-0 opacity-60"
                 style={{
-                  animationDelay: `${i * 0.55}s`,
+                  animationDelay: `${i * 0.7}s`,
                 }}
               />
 
-              {/* Active Golden Glow Flare inside slab */}
+              {/* Active Golden Glow Flare inside slab (Subtle) */}
               <div
                 aria-hidden="true"
-                className={`pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#E6C654]/25 via-[#1E40AF]/15 to-transparent transition-opacity duration-500 ${
+                className={`pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#E6C654]/15 via-transparent to-transparent transition-opacity duration-500 ${
                   isHovered ? "opacity-100" : "opacity-0"
                 }`}
               />
 
-              {/* Subtle Ambient Vignette (Keeps slabs bright and punchy) */}
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#060a14]/50 via-transparent to-[#060a14]/15" />
+              {/* Ambient Dark Gradient Vignette inside each slab (Top fades into deep darkness) */}
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#060a14]/60 via-[#060a14]/20 to-[#060a14]/85" />
             </div>
           );
         })}
       </div>
 
-      {/* 2. DIRECTIONAL LIGHTING MASK & AMBIENT ATMOSPHERE */}
-      {/* Dark top behind text, fading out completely over bottom slabs so slabs stay bright */}
+      {/* 2. DIRECTIONAL NAVY BLUE BLEND: Deep solid navy at top, smoothly revealing cards toward bottom */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 -z-15"
         style={{
           background:
-            "linear-gradient(180deg, #060a14 0%, #060a14 38%, rgba(6, 10, 20, 0.60) 52%, rgba(6, 10, 20, 0.08) 68%, transparent 100%)",
+            "linear-gradient(180deg, #060a14 0%, #060a14 44%, rgba(6, 10, 20, 0.94) 58%, rgba(6, 10, 20, 0.55) 75%, rgba(6, 10, 20, 0.15) 92%, rgba(6, 10, 20, 0.35) 100%)",
         }}
       />
 
@@ -260,7 +264,7 @@ export function PageHero({
         className="pointer-events-none absolute inset-0 -z-10"
         style={{
           background:
-            "radial-gradient(55% 50% at 75% 25%, rgba(30, 64, 175, 0.20) 0%, transparent 70%), radial-gradient(40% 40% at 20% 65%, rgba(230, 198, 84, 0.08) 0%, transparent 65%)",
+            "radial-gradient(55% 45% at 75% 25%, rgba(30, 64, 175, 0.18) 0%, transparent 70%), radial-gradient(40% 40% at 20% 65%, rgba(230, 198, 84, 0.06) 0%, transparent 65%)",
         }}
       />
 
@@ -341,7 +345,7 @@ export function PageHero({
           )}
         </div>
 
-        {/* 4. BOTTOM DOCK: FLOATING STATS ROW OR BRAND CAPSULE (Floating above bright bottom slabs) */}
+        {/* 4. BOTTOM DOCK: FLOATING STATS ROW OR BRAND CAPSULE */}
         <div data-page-hero="bottom-block" className="pointer-events-auto mt-auto pt-6">
           {stats && stats.length > 0 ? (
             <div className="rounded-[20px] border border-white/15 bg-[#080d19]/85 p-4 sm:p-5 shadow-[0_20px_60px_rgba(0,0,0,0.65)] backdrop-blur-2xl grid grid-cols-2 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-white/10 gap-4">
